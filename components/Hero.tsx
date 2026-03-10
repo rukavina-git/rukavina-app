@@ -173,6 +173,7 @@ export default function Hero() {
 
         {/* Stats */}
         <motion.div {...fadeUp(0.5)}>
+          <div style={{ width: '100%', display: 'flex', justifyContent: 'center', overflowX: 'auto' }}>
           <div
             style={{
               display: 'inline-flex',
@@ -180,6 +181,7 @@ export default function Hero() {
               border: '1px solid rgba(255,255,255,0.08)',
               borderRadius: '1rem',
               overflow: 'hidden',
+              flexShrink: 0,
             }}
           >
             {stats.map((s, i) => (
@@ -212,6 +214,7 @@ export default function Hero() {
                 </div>
               </div>
             ))}
+          </div>
           </div>
         </motion.div>
       </div>

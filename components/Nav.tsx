@@ -33,7 +33,7 @@ export default function Nav() {
       </div>
 
       {/* Links */}
-      <div style={{ display: 'flex', gap: '2rem' }}>
+      <div className="hidden md:flex" style={{ gap: '2rem' }}>
         {links.map((l) => (
           <a
             key={l.href}
@@ -50,6 +50,7 @@ export default function Nav() {
       {/* CTA */}
       <a
         href="#contact"
+        className="nav-cta"
         style={{
           fontSize: '0.82rem',
           fontWeight: 600,

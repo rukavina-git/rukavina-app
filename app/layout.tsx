@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     'Freelance senior software engineer specializing in Android development, web solutions, and architecture consulting. Based in Split, Croatia. Working globally.',
   metadataBase: new URL('https://rukavina.app'),
   alternates: { canonical: '/' },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'Ivan Karlo Rukavina — Senior Software Engineer',
     description:

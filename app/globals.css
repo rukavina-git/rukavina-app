@@ -62,6 +62,10 @@ a {
     grid-template-columns: 1fr !important;
   }
 
+  .about-card {
+    order: -1;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr !important;
   }
@@ -75,14 +79,17 @@ a {
   }
 
   .portfolio-slide .slide-visual {
-    min-height: 180px;
-    border-right: none !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    display: none !important;
   }
 
   .footer-inner {
     flex-direction: column !important;
     gap: 1rem !important;
     text-align: center !important;
+  }
+
+  .nav-cta {
+    font-size: 0.72rem !important;
+    padding: 0.35rem 0.85rem !important;
   }
 }
