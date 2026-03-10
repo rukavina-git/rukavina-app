@@ -92,4 +92,18 @@ a {
     font-size: 0.72rem !important;
     padding: 0.35rem 0.85rem !important;
   }
+
+  .hero-stats {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  .hero-stats > div {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .hero-stats > div:last-child {
+    border-bottom: none !important;
+  }
 }
