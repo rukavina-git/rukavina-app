@@ -8,6 +8,14 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.6, delay, ease: 'easeOut' },
 })
 
+// LCP-safe variant: text is immediately visible (opacity: 1) so crawlers and
+// Lighthouse see it on first paint. Only the vertical slide animates.
+const fadeUpLCP = (delay = 0) => ({
+  initial: { opacity: 1, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay, ease: 'easeOut' },
+})
+
 const stats = [
   { val: 'On-time delivery', label: 'Commitment' },
   { val: '100k+', label: 'Users reached' },
@@ -64,9 +72,9 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* H1 */}
+        {/* H1 — uses fadeUpLCP so opacity is 1 from first paint (LCP fix) */}
         <motion.h1
-          {...fadeUp(0.2)}
+          {...fadeUpLCP(0.2)}
           style={{
             fontSize: 'clamp(2.8rem, 6vw, 5rem)',
             fontWeight: 800,

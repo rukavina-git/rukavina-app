@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     'Freelance senior software engineer specializing in Android development, web solutions, and architecture consulting. Based in Split, Croatia. Working globally.',
   metadataBase: new URL('https://rukavina.app'),
   alternates: { canonical: '/' },
+  // TODO: when launching, remove this robots block entirely (Next.js defaults to indexable)
+  robots: {
+    index: false,
+    follow: false,
+  },
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',

@@ -9,15 +9,22 @@ import ScrollToTop from '@/components/ScrollToTop'
 
 export default function Home() {
   return (
-    <main>
-      <Nav />
-      <Hero />
-      <Services />
-      <Portfolio />
-      <About />
-      <Contact />
-      <Footer />
+    <>
+      <header>
+        <Nav />
+      </header>
+      <main>
+        {/* Each component renders its own <section id="..."> internally */}
+        <Hero />
+        <Services />
+        <Portfolio />
+        <About />
+        <Contact />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
       <ScrollToTop />
-    </main>
+    </>
   )
 }
