@@ -74,9 +74,9 @@ function ServiceModal({ service, onClose }: { service: Service; onClose: () => v
         alignItems: 'center',
         justifyContent: 'center',
         padding: '2rem',
-        background: 'rgba(6,6,9,0.75)',
-        backdropFilter: 'blur(8px)',
-        WebkitBackdropFilter: 'blur(8px)',
+        background: 'rgba(6,6,9,0.92)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
       }}
     >
       <motion.div
@@ -103,8 +103,8 @@ function ServiceModal({ service, onClose }: { service: Service; onClose: () => v
             position: 'absolute',
             top: '1.25rem',
             right: '1.25rem',
-            width: 32,
-            height: 32,
+            width: 44,
+            height: 44,
             borderRadius: '50%',
             background: 'rgba(255,255,255,0.06)',
             border: '1px solid rgba(255,255,255,0.1)',
@@ -124,7 +124,7 @@ function ServiceModal({ service, onClose }: { service: Service; onClose: () => v
             e.currentTarget.style.color = 'var(--muted)'
           }}
         >
-          <X size={15} />
+          <X size={20} />
         </button>
 
         {/* Icon */}

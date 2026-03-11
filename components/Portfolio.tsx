@@ -179,6 +179,7 @@ export default function Portfolio() {
 
           {/* Slide box */}
           <div
+            className="portfolio-slider-box"
             style={{ flex: 1, overflow: 'hidden', borderRadius: '1.5rem', height: 485, cursor: 'grab', userSelect: 'none' }}
             onMouseDown={(e) => onDragStart(e.clientX)}
             onMouseUp={(e) => onDragEnd(e.clientX)}
@@ -195,6 +196,7 @@ export default function Portfolio() {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                className="portfolio-slide-motion"
                 style={{ height: '100%' }}
               >
                 <div
@@ -254,7 +256,7 @@ export default function Portfolio() {
                   </div>
 
                   {/* Content half */}
-                  <div style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <div className="slide-content" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <div
                       style={{
                         display: 'inline-block',

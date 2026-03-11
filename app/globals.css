@@ -74,12 +74,26 @@ a {
     grid-template-columns: 1fr !important;
   }
 
+  .portfolio-slider-box {
+    height: auto !important;
+  }
+
+  .portfolio-slide-motion {
+    height: auto !important;
+  }
+
   .portfolio-slide {
     grid-template-columns: 1fr !important;
+    height: auto !important;
   }
 
   .portfolio-slide .slide-visual {
     display: none !important;
+  }
+
+  .portfolio-slide .slide-content {
+    padding: 1.75rem !important;
+    justify-content: flex-start !important;
   }
 
   .footer-inner {
