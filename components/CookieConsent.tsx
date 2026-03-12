@@ -73,7 +73,7 @@ export default function CookieConsent() {
                 margin: 0,
               }}
             >
-              This site uses cookies to improve your experience and for security purposes.
+              We use optional cookies to improve your experience and analyse site usage. If you decline, no optional cookies will be set. You can change your choice at any time.
             </p>
             <div className="cookie-buttons">
               <button
