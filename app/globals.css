@@ -52,6 +52,21 @@ a {
   visibility: hidden !important;
 }
 
+.cookie-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
 /* Responsive overrides */
 @media (max-width: 768px) {
   .services-grid {
@@ -94,6 +109,20 @@ a {
   .portfolio-slide .slide-content {
     padding: 1.75rem !important;
     justify-content: flex-start !important;
+  }
+
+  .cookie-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .cookie-buttons {
+    width: 100%;
+  }
+
+  .cookie-buttons button {
+    flex: 1;
   }
 
   .footer-inner {

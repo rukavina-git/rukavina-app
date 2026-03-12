@@ -3,6 +3,7 @@ import { Outfit, Fira_Code } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import Background from '@/components/Background'
+import CookieConsent from '@/components/CookieConsent'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Background />
         {children}
+        <CookieConsent />
 {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
           <Script
             src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
