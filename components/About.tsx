@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { Mail, Linkedin } from 'lucide-react'
 
 const skills = [
   'Android / Kotlin',
@@ -241,6 +242,50 @@ export default function About() {
               <span style={{ color: 'var(--accent)' }}>✦</span>
               Remote · Worldwide
             </div>
+
+            <div style={{ width: '100%', height: 1, background: 'rgba(255,255,255,0.07)' }} />
+
+            <a
+              href="mailto:ivan@rukavina.app"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                fontFamily: 'var(--font-fira-code)',
+                fontSize: '0.75rem',
+                color: 'var(--muted)',
+                letterSpacing: '0.04em',
+                textDecoration: 'none',
+                transition: 'color 0.2s',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--text)')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--muted)')}
+            >
+              <Mail size={13} style={{ color: 'var(--accent)', flexShrink: 0 }} />
+              E-mail
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/ivan-karlo-rukavina"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                fontFamily: 'var(--font-fira-code)',
+                fontSize: '0.75rem',
+                color: 'var(--muted)',
+                letterSpacing: '0.04em',
+                textDecoration: 'none',
+                transition: 'color 0.2s',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--text)')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--muted)')}
+            >
+              <Linkedin size={13} style={{ color: 'var(--accent)', flexShrink: 0 }} />
+              LinkedIn
+            </a>
           </motion.div>
         </div>
       </div>

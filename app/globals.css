@@ -97,6 +97,14 @@ a {
     justify-content: flex-start !important;
   }
 
+  .slide-title {
+    font-size: 1.05rem !important;
+  }
+
+  .slide-desc {
+    font-size: 0.78rem !important;
+  }
+
 .footer-inner {
     flex-direction: column !important;
     gap: 1rem !important;
