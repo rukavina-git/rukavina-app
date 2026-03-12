@@ -33,7 +33,7 @@ export default function Hero() {
         justifyContent: 'center',
         textAlign: 'center',
         position: 'relative',
-        padding: '7rem 2rem 4rem',
+        padding: '7rem 2rem 2rem',
         zIndex: 1,
       }}
     >
@@ -46,7 +46,7 @@ export default function Hero() {
               alignItems: 'center',
               gap: '0.5rem',
               fontFamily: 'var(--font-fira-code)',
-              fontSize: '0.68rem',
+              fontSize: 'clamp(0.7rem, 1vw, 0.8rem)',
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
               color: 'var(--accent)',
@@ -76,7 +76,7 @@ export default function Hero() {
         <motion.h1
           {...fadeUpLCP(0.2)}
           style={{
-            fontSize: 'clamp(2.8rem, 6vw, 5rem)',
+            fontSize: 'clamp(2.5rem, 5vw, 5rem)',
             fontWeight: 800,
             letterSpacing: '-0.03em',
             lineHeight: 1.1,
@@ -101,7 +101,7 @@ export default function Hero() {
         <motion.p
           {...fadeUp(0.3)}
           style={{
-            fontSize: '1rem',
+            fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)',
             color: 'var(--muted)',
             fontWeight: 300,
             lineHeight: 1.75,
@@ -204,13 +204,13 @@ export default function Hero() {
                 onMouseEnter={(e) => ((e.currentTarget as HTMLDivElement).style.background = 'rgba(95,111,255,0.05)')}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLDivElement).style.background = 'transparent')}
               >
-                <div style={{ fontSize: '0.88rem', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.01em', whiteSpace: 'nowrap' }}>
+                <div style={{ fontSize: 'clamp(1rem, 1.5vw, 1.25rem)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.01em', whiteSpace: 'nowrap' }}>
                   {s.val}
                 </div>
                 <div
                   style={{
                     fontFamily: 'var(--font-fira-code)',
-                    fontSize: '0.6rem',
+                    fontSize: 'clamp(0.55rem, 0.8vw, 0.65rem)',
                     color: 'var(--subtle)',
                     letterSpacing: '0.1em',
                     textTransform: 'uppercase',
