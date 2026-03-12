@@ -17,7 +17,7 @@ const skills = [
 export default function About() {
   return (
     <section id="about" style={{ position: 'relative', zIndex: 1 }}>
-      <div style={{ padding: '7rem 2rem', maxWidth: 1000, margin: '0 auto' }}>
+      <div style={{ padding: 'clamp(4rem, 7vw, 7rem) clamp(1rem, 3vw, 2rem)', maxWidth: 1000, margin: '0 auto' }}>
         <motion.div
           style={{ textAlign: 'center', marginBottom: '4rem' }}
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export default function About() {
 
         <div
           className="about-grid"
-          style={{ display: 'grid', gridTemplateColumns: '1fr 420px', gap: '3.5rem', alignItems: 'start' }}
+          style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) clamp(300px, 30vw, 420px)', gap: '3.5rem', alignItems: 'start' }}
         >
           {/* Bio */}
           <motion.div

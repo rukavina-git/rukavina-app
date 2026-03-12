@@ -105,7 +105,7 @@ export default function Contact() {
 
   return (
     <section id="contact" style={{ position: 'relative', zIndex: 1 }}>
-      <div style={{ padding: '7rem 2rem', maxWidth: 680, margin: '0 auto' }}>
+      <div style={{ padding: 'clamp(4rem, 7vw, 7rem) clamp(1rem, 3vw, 2rem)', maxWidth: 680, margin: '0 auto' }}>
         {/* Header */}
         <motion.div
           style={{ textAlign: 'center', marginBottom: '3rem' }}

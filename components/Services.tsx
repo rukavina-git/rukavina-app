@@ -189,7 +189,7 @@ export default function Services() {
 
   return (
     <section id="services" style={{ position: 'relative', zIndex: 1 }}>
-      <div style={{ padding: '7rem 2rem', maxWidth: 1000, margin: '0 auto' }}>
+      <div style={{ padding: 'clamp(4rem, 7vw, 7rem) clamp(1rem, 3vw, 2rem)', maxWidth: 1000, margin: '0 auto' }}>
         <motion.div
           style={{ textAlign: 'center', marginBottom: '4rem' }}
           initial={{ opacity: 0, y: 20 }}

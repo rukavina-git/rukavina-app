@@ -27,13 +27,12 @@ export default function Hero() {
     <section
       id="home"
       style={{
-        minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
         position: 'relative',
-        padding: '7rem 2rem 2rem',
+        padding: 'clamp(6rem, 10vw, 10rem) clamp(1rem, 3vw, 2rem) clamp(4rem, 7vw, 7rem)',
         zIndex: 1,
       }}
     >

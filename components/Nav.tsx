@@ -20,13 +20,14 @@ export default function Nav() {
         backdropFilter: 'blur(24px)',
         WebkitBackdropFilter: 'blur(24px)',
         borderBottom: '1px solid rgba(255,255,255,0.08)',
-        padding: '0 2rem',
+        padding: '0 clamp(1rem, 3vw, 2rem)',
         height: 60,
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
       }}
     >
+      <div style={{ maxWidth: 1200, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
       {/* Logo */}
       <div style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.02em' }}>
         IKR<span style={{ color: 'var(--accent)' }}>.</span>
@@ -74,6 +75,7 @@ export default function Nav() {
       >
         Get in Touch
       </a>
+      </div>
     </nav>
   )
 }
