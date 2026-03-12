@@ -17,7 +17,6 @@ export function useCookieConsent(): ConsentValue {
     }
   }, [])
 
-  // Listen for consent changes made in the same tab (e.g. from the banner)
   useEffect(() => {
     const handler = () => {
       const stored = localStorage.getItem(STORAGE_KEY) as ConsentValue
@@ -48,79 +47,88 @@ export default function CookieConsent() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 16 }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
+          exit={{ opacity: 0, y: 24 }}
+          transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
           style={{
             position: 'fixed',
-            bottom: 0,
+            bottom: 24,
             left: 0,
             right: 0,
+            margin: '0 auto',
+            width: 'calc(100vw - 48px)',
+            maxWidth: 860,
             zIndex: 1000,
-            background: 'var(--surface)',
-            borderTop: '1px solid var(--border)',
-            padding: '1rem 2rem',
+            background: '#0F0F1A',
+            border: '1px solid rgba(255,255,255,0.1)',
+            borderRadius: 16,
+            padding: '1.25rem 1.75rem',
+            boxShadow: '0 8px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(95,111,255,0.06)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '1rem',
+            flexWrap: 'wrap',
           }}
         >
-          <div className="cookie-inner">
-            <p
+          <p
+            style={{
+              flex: 1,
+              minWidth: 200,
+              fontSize: '0.875rem',
+              color: 'var(--muted)',
+              fontWeight: 300,
+              lineHeight: 1.6,
+              margin: 0,
+            }}
+          >
+            We use optional cookies to improve your experience and analyse site usage. You can change your choice at any time.
+          </p>
+          <div style={{ display: 'flex', gap: '0.6rem', flexShrink: 0 }}>
+            <button
+              onClick={() => choose('accepted')}
               style={{
-                fontSize: '0.82rem',
+                fontSize: '0.875rem',
+                fontWeight: 600,
+                color: '#fff',
+                background: 'var(--accent)',
+                border: 'none',
+                borderRadius: '0.6rem',
+                padding: '0.65rem 1.6rem',
+                cursor: 'pointer',
+                transition: 'background 0.2s',
+                whiteSpace: 'nowrap',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--accent-hover)')}
+              onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--accent)')}
+            >
+              Accept
+            </button>
+            <button
+              onClick={() => choose('declined')}
+              style={{
+                fontSize: '0.875rem',
+                fontWeight: 400,
                 color: 'var(--muted)',
-                fontWeight: 300,
-                lineHeight: 1.6,
-                margin: 0,
+                background: 'transparent',
+                border: '1px solid rgba(255,255,255,0.15)',
+                borderRadius: '0.6rem',
+                padding: '0.65rem 1.6rem',
+                cursor: 'pointer',
+                transition: 'border-color 0.2s, color 0.2s',
+                whiteSpace: 'nowrap',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.35)'
+                e.currentTarget.style.color = 'var(--text)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'
+                e.currentTarget.style.color = 'var(--muted)'
               }}
             >
-              We use optional cookies to improve your experience and analyse site usage. If you decline, no optional cookies will be set. You can change your choice at any time.
-            </p>
-            <div className="cookie-buttons">
-              <button
-                onClick={() => choose('accepted')}
-                style={{
-                  fontSize: '0.8rem',
-                  fontWeight: 600,
-                  color: '#fff',
-                  background: 'var(--accent)',
-                  border: 'none',
-                  borderRadius: '0.6rem',
-                  padding: '0.55rem 1.4rem',
-                  cursor: 'pointer',
-                  transition: 'background 0.2s',
-                  whiteSpace: 'nowrap',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--accent-hover)')}
-                onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--accent)')}
-              >
-                Accept
-              </button>
-              <button
-                onClick={() => choose('declined')}
-                style={{
-                  fontSize: '0.8rem',
-                  fontWeight: 400,
-                  color: 'var(--muted)',
-                  background: 'transparent',
-                  border: '1px solid rgba(255,255,255,0.15)',
-                  borderRadius: '0.6rem',
-                  padding: '0.55rem 1.4rem',
-                  cursor: 'pointer',
-                  transition: 'border-color 0.2s, color 0.2s',
-                  whiteSpace: 'nowrap',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.35)'
-                  e.currentTarget.style.color = 'var(--text)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'
-                  e.currentTarget.style.color = 'var(--muted)'
-                }}
-              >
-                Decline
-              </button>
-            </div>
+              Decline
+            </button>
           </div>
         </motion.div>
       )}

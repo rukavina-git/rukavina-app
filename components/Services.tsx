@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Smartphone, Globe, Bot, Building2, Maximize2, X } from 'lucide-react'
 
@@ -59,7 +60,7 @@ type Service = (typeof services)[0]
 
 function ServiceModal({ service, onClose }: { service: Service; onClose: () => void }) {
   const { Icon, title, desc, details } = service
-  return (
+  return createPortal(
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -177,7 +178,8 @@ function ServiceModal({ service, onClose }: { service: Service; onClose: () => v
           ))}
         </div>
       </motion.div>
-    </motion.div>
+    </motion.div>,
+    document.body
   )
 }
 
@@ -234,8 +236,8 @@ export default function Services() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 style={{
-                  background: 'rgba(255,255,255,0.025)',
-                  border: '1px solid rgba(255,255,255,0.07)',
+                  background: '#0F0F1A',
+                  border: '1px solid rgba(255,255,255,0.1)',
                   borderRadius: '1.25rem',
                   padding: '2rem',
                   cursor: 'default',
@@ -250,8 +252,8 @@ export default function Services() {
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLDivElement
-                  el.style.borderColor = 'rgba(255,255,255,0.07)'
-                  el.style.background = 'rgba(255,255,255,0.025)'
+                  el.style.borderColor = 'rgba(255,255,255,0.1)'
+                  el.style.background = '#0F0F1A'
                   el.style.boxShadow = 'none'
                 }}
               >

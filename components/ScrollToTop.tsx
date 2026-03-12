@@ -3,15 +3,20 @@
 import { useEffect, useState } from 'react'
 import { ChevronUp } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useCookieConsent } from './CookieConsent'
 
 export default function ScrollToTop() {
-  const [visible, setVisible] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const consent = useCookieConsent()
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 300)
+    const onScroll = () => setScrolled(window.scrollY > 300)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // Hide while the cookie banner is showing (consent === null means not yet decided)
+  const visible = scrolled && consent !== null
 
   return (
     <AnimatePresence>
