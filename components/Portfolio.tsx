@@ -2,7 +2,8 @@
 
 import { useState, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight, Smartphone, Shield, Globe, Cpu } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Smartphone, Shield, Globe, Cpu, type LucideIcon } from 'lucide-react'
+import { useLang } from '@/contexts/LanguageContext'
 
 const arrowStyle = {
   width: 44,
@@ -18,44 +19,15 @@ const arrowStyle = {
   transition: 'background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s',
 }
 
-const projects = [
-  {
-    Icon: Smartphone,
-    cat: 'Android · Mobile',
-    badge: 'NDA',
-    badgeType: 'nda' as const,
-    title: 'Government-Scale Android Platform',
-    desc: 'Android application deployed across a national government agency, serving tens of thousands of users. Built for real-time field coordination, live location tracking, interactive maps, and strict security requirements.',
-    tags: ['Kotlin', 'Jetpack Compose', 'MVVM', 'Hilt', 'Coroutines'],
-  },
-  {
-    Icon: Shield,
-    cat: 'Android · Fintech',
-    badge: 'NDA',
-    badgeType: 'nda' as const,
-    title: 'Secure Payments Android App',
-    desc: 'Android application for secure digital payment simulation. NFC communication with physical smart cards, cryptographic key generation using Android Secure Element, and blockchain integration for transaction processing.',
-    tags: ['Kotlin', 'NFC', 'Cryptography', 'gRPC', 'Blockchain'],
-  },
-  {
-    Icon: Globe,
-    cat: 'Web · CMS',
-    badge: 'Client',
-    badgeType: 'client' as const,
-    title: 'Restaurant Web Presence',
-    desc: 'Complete web presence for a local restaurant. Custom site, menu CMS so staff can update content without technical knowledge, reservation integration, and managed hosting.',
-    tags: ['Next.js', 'Tailwind CSS', 'Sanity CMS', 'Vercel'],
-  },
-  {
-    Icon: Cpu,
-    cat: 'AI · Automation',
-    badge: 'NDA',
-    badgeType: 'nda' as const,
-    title: 'AI Document Processor',
-    desc: 'Automated document processing pipeline integrated into an existing business workflow. LLM-powered extraction, classification, and structured output, reducing manual processing time significantly.',
-    tags: ['Python', 'OpenAI API', 'REST', 'Firebase'],
-  },
-]
+type Project = {
+  Icon: LucideIcon
+  cat: string
+  badge: string
+  badgeType: 'nda' | 'client'
+  title: string
+  desc: string
+  tags: string[]
+}
 
 const variants = {
   enter: (dir: number) => ({ x: dir * 48, opacity: 0 }),
@@ -64,8 +36,49 @@ const variants = {
 }
 
 export default function Portfolio() {
+  const { t } = useLang()
   const [index, setIndex] = useState(0)
   const [dir, setDir] = useState(1)
+
+  const projects: Project[] = [
+    {
+      Icon: Smartphone,
+      cat: 'Android · Mobile',
+      badge: 'NDA',
+      badgeType: 'nda',
+      title: t.portfolio.p1title,
+      desc: t.portfolio.p1desc,
+      tags: ['Kotlin', 'Jetpack Compose', 'MVVM', 'Hilt', 'Coroutines'],
+    },
+    {
+      Icon: Shield,
+      cat: 'Android · Fintech',
+      badge: 'NDA',
+      badgeType: 'nda',
+      title: t.portfolio.p2title,
+      desc: t.portfolio.p2desc,
+      tags: ['Kotlin', 'NFC', 'Cryptography', 'gRPC', 'Blockchain'],
+    },
+    {
+      Icon: Globe,
+      cat: 'Web · CMS',
+      badge: 'Client',
+      badgeType: 'client',
+      title: t.portfolio.p3title,
+      desc: t.portfolio.p3desc,
+      tags: ['Next.js', 'Tailwind CSS', 'Sanity CMS', 'Vercel'],
+    },
+    {
+      Icon: Cpu,
+      cat: 'AI · Automation',
+      badge: 'NDA',
+      badgeType: 'nda',
+      title: t.portfolio.p4title,
+      desc: t.portfolio.p4desc,
+      tags: ['Python', 'OpenAI API', 'REST', 'Firebase'],
+    },
+  ]
+
   const N = projects.length
 
   const prev = () => {
@@ -124,7 +137,7 @@ export default function Portfolio() {
               display: 'block',
             }}
           >
-            Selected Work
+            {t.portfolio.label}
           </span>
           <h2
             style={{
@@ -135,7 +148,7 @@ export default function Portfolio() {
               marginBottom: '0.75rem',
             }}
           >
-            Portfolio
+            {t.portfolio.title}
           </h2>
           <p
             style={{
@@ -147,7 +160,7 @@ export default function Portfolio() {
               lineHeight: 1.7,
             }}
           >
-            Most work is under NDA. Descriptions cover the problem solved and tech used — client names withheld.
+            {t.portfolio.nda}
           </p>
         </motion.div>
 
@@ -301,9 +314,9 @@ export default function Portfolio() {
                     </div>
                   </div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', paddingTop: '1.25rem' }}>
-                    {p.tags.map((t) => (
+                    {p.tags.map((tag) => (
                       <span
-                        key={t}
+                        key={tag}
                         style={{
                           fontFamily: 'var(--font-fira-code)',
                           fontSize: '0.68rem',
@@ -314,7 +327,7 @@ export default function Portfolio() {
                           padding: '0.3rem 0.7rem',
                         }}
                       >
-                        {t}
+                        {tag}
                       </span>
                     ))}
                   </div>

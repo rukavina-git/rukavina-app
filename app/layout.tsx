@@ -4,6 +4,7 @@ import Script from 'next/script'
 import './globals.css'
 import Background from '@/components/Background'
 import CookieConsent from '@/components/CookieConsent'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -52,8 +53,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${outfit.variable} ${firaCode.variable}`}>
       <body>
         <Background />
-        {children}
-        <CookieConsent />
+        <LanguageProvider>
+          {children}
+          <CookieConsent />
+        </LanguageProvider>
 {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
           <Script
             src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Send } from 'lucide-react'
+import { useLang } from '@/contexts/LanguageContext'
 
 declare global {
   interface Window {
@@ -53,6 +54,7 @@ function Field({ label, children }: { label: React.ReactNode; children: React.Re
 }
 
 export default function Contact() {
+  const { t } = useLang()
   const [form, setForm] = useState<FormState>({ name: '', email: '', subject: '', phone: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
@@ -95,11 +97,11 @@ export default function Contact() {
         setForm({ name: '', email: '', subject: '', phone: '', message: '' })
       } else {
         setStatus('error')
-        setErrorMsg(data.error || 'Something went wrong. Please try again.')
+        setErrorMsg(data.error || t.contact.error)
       }
     } catch {
       setStatus('error')
-      setErrorMsg('Failed to send message. Please try again.')
+      setErrorMsg(t.contact.errorFailed)
     }
   }
 
@@ -125,7 +127,7 @@ export default function Contact() {
               display: 'block',
             }}
           >
-            Get in touch
+            {t.contact.label}
           </span>
           <h2
             style={{
@@ -136,13 +138,13 @@ export default function Contact() {
               marginBottom: '0.75rem',
             }}
           >
-            Let&apos;s Work Together
+            {t.contact.title}
           </h2>
           <p style={{ fontSize: '0.9rem', color: 'var(--muted)', fontWeight: 300, lineHeight: 1.7, marginBottom: '0.5rem' }}>
-            Have a project in mind or want to explore what&apos;s possible? Send a message and I&apos;ll get back to you within 24 hours.
+            {t.contact.sub}
           </p>
           <p style={{ fontSize: '0.82rem', color: 'var(--accent)', fontFamily: 'var(--font-fira-code)', letterSpacing: '0.02em' }}>
-            First consultation is complimentary.
+            {t.contact.consultation}
           </p>
         </motion.div>
 
@@ -156,10 +158,10 @@ export default function Contact() {
           style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
         >
           <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-            <Field label="Name">
+            <Field label={t.contact.name}>
               <input
                 type="text"
-                placeholder="Your name"
+                placeholder={t.contact.namePlaceholder}
                 value={form.name}
                 onChange={set('name')}
                 onFocus={onFocus}
@@ -168,10 +170,10 @@ export default function Contact() {
                 style={{ ...inputStyle }}
               />
             </Field>
-            <Field label="Email">
+            <Field label={t.contact.email}>
               <input
                 type="email"
-                placeholder="your@email.com"
+                placeholder={t.contact.emailPlaceholder}
                 value={form.email}
                 onChange={set('email')}
                 onFocus={onFocus}
@@ -183,10 +185,10 @@ export default function Contact() {
           </div>
 
           <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-            <Field label="Subject">
+            <Field label={t.contact.subject}>
               <input
                 type="text"
-                placeholder="What's this about?"
+                placeholder={t.contact.subjectPlaceholder}
                 value={form.subject}
                 onChange={set('subject')}
                 onFocus={onFocus}
@@ -198,14 +200,14 @@ export default function Contact() {
             <Field
               label={
                 <>
-                  Phone{' '}
-                  <span style={{ color: 'var(--faint)', fontSize: '0.58rem', letterSpacing: '0.08em' }}>OPTIONAL</span>
+                  {t.contact.phone}{' '}
+                  <span style={{ color: 'var(--faint)', fontSize: '0.58rem', letterSpacing: '0.08em' }}>{t.contact.optional}</span>
                 </>
               }
             >
               <input
                 type="tel"
-                placeholder="+1 234 567 890"
+                placeholder={t.contact.phonePlaceholder}
                 value={form.phone}
                 onChange={set('phone')}
                 onFocus={onFocus}
@@ -215,9 +217,9 @@ export default function Contact() {
             </Field>
           </div>
 
-          <Field label="Message">
+          <Field label={t.contact.message}>
             <textarea
-              placeholder="Tell me about your project..."
+              placeholder={t.contact.messagePlaceholder}
               value={form.message}
               onChange={set('message')}
               onFocus={onFocus}
@@ -234,7 +236,7 @@ export default function Contact() {
           )}
           {status === 'success' && (
             <div style={{ fontSize: '0.85rem', color: 'var(--green)', fontFamily: 'var(--font-fira-code)' }}>
-              Message sent! I&apos;ll get back to you within 24 hours.
+              {t.contact.success}
             </div>
           )}
 
@@ -274,7 +276,7 @@ export default function Contact() {
               el.style.transform = 'translateY(0)'
             }}
           >
-            {status === 'loading' ? 'Sending...' : 'Send Message'}
+            {status === 'loading' ? t.contact.sending : t.contact.send}
             {status !== 'loading' && <Send size={16} />}
           </button>
         </motion.form>

@@ -2,45 +2,24 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { ChevronDown } from 'lucide-react'
+import { useLang } from '@/contexts/LanguageContext'
 
 const langOptions = [
   { code: 'en' as const, flagSrc: '/flags/gb.png', flagAlt: 'English', label: 'English' },
   { code: 'hr' as const, flagSrc: '/flags/hr.png', flagAlt: 'Hrvatski', label: 'Hrvatski' },
 ]
 
-const links = [
-  { href: '#services', label: 'Services' },
-  { href: '#portfolio', label: 'Portfolio' },
-  { href: '#about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
-]
-
-function detectDefaultLang(): 'en' | 'hr' {
-  if (typeof navigator === 'undefined') return 'en'
-
-  const langs = [
-    navigator.language,
-    ...(navigator.languages || []),
-  ].map(l => l.toLowerCase())
-
-  const hrMatch = langs.some(l => /^(hr|bs|sr)/.test(l))
-  if (hrMatch) return 'hr'
-
-  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
-  if (['Europe/Zagreb', 'Europe/Sarajevo', 'Europe/Belgrade'].includes(tz)) return 'hr'
-
-  return 'en'
-}
-
 export default function Nav() {
-  const [lang, setLang] = useState<'en' | 'hr'>('en')
+  const { lang, setLang, t } = useLang()
   const [open, setOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const stored = localStorage.getItem('language') as 'en' | 'hr' | null
-    setLang(stored ?? detectDefaultLang())
-  }, [])
+  const links = [
+    { href: '#services', label: t.nav.services },
+    { href: '#portfolio', label: t.nav.portfolio },
+    { href: '#about', label: t.nav.about },
+    { href: '#contact', label: t.nav.contact },
+  ]
 
   useEffect(() => {
     if (!open) return
@@ -55,7 +34,6 @@ export default function Nav() {
 
   function switchLang(l: 'en' | 'hr') {
     setLang(l)
-    localStorage.setItem('language', l)
     setOpen(false)
   }
 
@@ -215,7 +193,7 @@ export default function Nav() {
           el.style.boxShadow = '0 0 16px rgba(95,111,255,0.25)'
         }}
       >
-        Get in Touch
+        {t.nav.cta}
         </a>
       </div>
 

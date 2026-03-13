@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLang } from '@/contexts/LanguageContext'
 
 const STORAGE_KEY = 'cookie_consent'
 
@@ -30,6 +31,7 @@ export function useCookieConsent(): ConsentValue {
 }
 
 export default function CookieConsent() {
+  const { t } = useLang()
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -82,7 +84,7 @@ export default function CookieConsent() {
               margin: 0,
             }}
           >
-            We use optional cookies to improve your experience and analyse site usage. You can change your choice at any time.
+            {t.cookies.text}
           </p>
           <div style={{ display: 'flex', gap: '0.6rem', flexShrink: 0 }}>
             <button
@@ -102,7 +104,7 @@ export default function CookieConsent() {
               onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--accent-hover)')}
               onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--accent)')}
             >
-              Accept
+              {t.cookies.accept}
             </button>
             <button
               onClick={() => choose('declined')}
@@ -127,7 +129,7 @@ export default function CookieConsent() {
                 e.currentTarget.style.color = 'var(--muted)'
               }}
             >
-              Decline
+              {t.cookies.decline}
             </button>
           </div>
         </motion.div>

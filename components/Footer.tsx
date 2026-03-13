@@ -1,8 +1,11 @@
 'use client'
 
 import { Mail } from 'lucide-react'
+import { useLang } from '@/contexts/LanguageContext'
 
 export default function Footer() {
+  const { t } = useLang()
+
   return (
     <footer style={{ borderTop: '1px solid rgba(255,255,255,0.06)', position: 'relative', zIndex: 1 }}>
       <div
@@ -25,7 +28,7 @@ export default function Footer() {
               letterSpacing: '0.06em',
             }}
           >
-            © 2026 Ivan Karlo Rukavina. All rights reserved.
+            © 2026 Ivan Karlo Rukavina. {t.footer.rights}
           </div>
           <div
             style={{
@@ -36,7 +39,7 @@ export default function Footer() {
               lineHeight: 1.5,
             }}
           >
-            This site is protected by reCAPTCHA and the Google{' '}
+            {t.footer.recaptcha}{' '}
             <a
               href="https://policies.google.com/privacy"
               target="_blank"
@@ -45,9 +48,9 @@ export default function Footer() {
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
             >
-              Privacy Policy
+              {t.footer.privacy}
             </a>
-            {' '}and{' '}
+            {' '}{t.footer.recaptchaAnd}{' '}
             <a
               href="https://policies.google.com/terms"
               target="_blank"
@@ -56,9 +59,9 @@ export default function Footer() {
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
             >
-              Terms of Service
+              {t.footer.terms}
             </a>
-            {' '}apply.
+            {t.footer.recaptchaEnd ? <>{' '}{t.footer.recaptchaEnd}</> : null}
           </div>
         </div>
 
@@ -78,7 +81,7 @@ export default function Footer() {
             onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--muted)')}
           >
             <Mail size={14} />
-            Email
+            {t.about.email}
           </a>
 
           <a
@@ -101,7 +104,7 @@ export default function Footer() {
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
               <circle cx="4" cy="4" r="2" />
             </svg>
-            LinkedIn
+            {t.about.linkedin}
           </a>
         </div>
       </div>

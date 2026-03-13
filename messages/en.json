@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Get in Touch"
+  },
+  "hero": {
+    "badge": "Available for work",
+    "headline1": "Bring your idea.",
+    "headline2": "Leave with a product.",
+    "sub": "Mobile apps, web solutions, and technical consulting, delivered on time, with clear communication from start to finish.",
+    "cta1": "Get in Touch",
+    "cta2": "See My Work",
+    "stat1val": "On-time delivery",
+    "stat1label": "Commitment",
+    "stat2val": "100k+",
+    "stat2label": "Users reached",
+    "stat3val": "10+",
+    "stat3label": "Projects shipped"
+  },
+  "services": {
+    "label": "What I Offer",
+    "title": "Services",
+    "mobile": {
+      "title": "Mobile Development",
+      "desc": "Native Android and iOS apps, or cross-platform. Whichever fits your project, built to ship and built to last.",
+      "d1": "Native Android (Kotlin) or iOS (Swift), built to platform standards",
+      "d2": "Cross-platform (React Native) when speed to market is the priority",
+      "d3": "Biometrics, offline mode, maps, push notifications, camera and more",
+      "d4": "Payments, social login, real-time features, and multi-language support",
+      "d5": "Google Play and App Store submission and release management"
+    },
+    "web": {
+      "title": "Web Solutions for Businesses",
+      "desc": "Modern websites for restaurants, shops, studios, and service businesses. Built to be found on Google, with a simple CMS to manage it yourself, or ongoing support for maintenance and updates.",
+      "d1": "Custom built, fast, and SEO-ready so customers can find you",
+      "d2": "CMS included — update your menu, photos, and content yourself, no developer needed",
+      "d3": "Booking, reservations, contact forms and payment integrations",
+      "d4": "Domain, DNS, and hosting setup handled end to end",
+      "d5": "Flexible after launch: self-managed or ongoing support, your choice"
+    },
+    "arch": {
+      "title": "Architecture & Consulting",
+      "desc": "Technical guidance for teams and founders who need to get it right. From a first architecture decision to a full system review.",
+      "d1": "System design from scratch or architecture review of existing systems",
+      "d2": "Security design, cryptography, secure communication, and compliance",
+      "d3": "CI/CD pipelines, automated builds, tests, and deployment automation",
+      "d4": "Translating business needs into clear technical requirements",
+      "d5": "Code audits and technical due diligence",
+      "d6": "Available for one-off engagements or ongoing advisory"
+    },
+    "ai": {
+      "title": "AI Integration",
+      "desc": "Practical AI features added to your existing product or workflow. No hype, no promises that don't deliver. Just automation and integrations that save your team real time.",
+      "d1": "ChatGPT, Claude, or open-source models integrated into your app",
+      "d2": "Document processing, data extraction, and classification",
+      "d3": "Chatbots and assistants built on top of proven LLM APIs",
+      "d4": "Workflow automation to cut manual, repetitive work",
+      "d5": "Scoped honestly: you get what actually works, not a science project"
+    }
+  },
+  "portfolio": {
+    "label": "Selected Work",
+    "title": "Portfolio",
+    "nda": "Most work is under NDA. Descriptions cover the problem solved and tech used, client names withheld.",
+    "p1title": "Government-Scale Android Platform",
+    "p1desc": "Android application deployed across a national government agency, serving tens of thousands of users. Built for real-time field coordination, live location tracking, interactive maps, and strict security requirements.",
+    "p2title": "Secure Payments Android App",
+    "p2desc": "Android application for secure digital payment simulation. NFC communication with physical smart cards, cryptographic key generation using Android Secure Element, and blockchain integration for transaction processing.",
+    "p3title": "Restaurant Website",
+    "p3desc": "Complete web solution for a local restaurant. Reservation management, menu CMS so staff can update content without technical knowledge, and managed hosting.",
+    "p4title": "AI Document Processor",
+    "p4desc": "Automated document processing pipeline integrated into an existing business workflow. LLM-powered data extraction, classification, and processing, significantly reducing manual processing time."
+  },
+  "about": {
+    "label": "Who I am",
+    "title": "About",
+    "role": "Senior Software Engineer",
+    "tagline": "Solutions that ship. Clear communication. Delivered on time.",
+    "bio1": "I hold a Master's degree in Computer Science and have spent my career building high quality software. Projects for government agencies where data privacy is critical, high-security systems, and applications trusted by hundreds of thousands of users.",
+    "bio2": "My work spans mobile app development, web solutions for businesses, and architecture consulting. Whether you need a mobile app, a website for your restaurant or shop, or a second opinion on your system design, I build and advise with the same standard.",
+    "bio3": "I only take on projects where I am confident I can deliver a quality solution. When I commit to something, I see it through. On time, with clear communication the whole way.",
+    "location": "Split, Croatia",
+    "remote": "Remote · Worldwide",
+    "email": "E-mail",
+    "linkedin": "LinkedIn"
+  },
+  "contact": {
+    "label": "Get in touch",
+    "title": "Let's Work Together",
+    "sub": "Have a project in mind or want to explore what's possible? Send a message and I'll get back to you within 24 hours.",
+    "consultation": "First consultation is complimentary.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "phone": "Phone",
+    "optional": "Optional",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "subjectPlaceholder": "What's this about?",
+    "phonePlaceholder": "+1 234 567 890",
+    "messagePlaceholder": "Tell me about your project...",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you within 24 hours.",
+    "error": "Something went wrong. Please try again.",
+    "errorFailed": "Failed to send message. Please try again."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "recaptcha": "This site is protected by reCAPTCHA and the Google",
+    "recaptchaAnd": "and",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "recaptchaEnd": "apply."
+  },
+  "cookies": {
+    "text": "We use optional cookies to improve your experience and analyse site usage. You can change your choice at any time.",
+    "accept": "Accept",
+    "decline": "Decline"
+  }
+}

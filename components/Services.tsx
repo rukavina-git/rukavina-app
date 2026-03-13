@@ -3,63 +3,17 @@
 import { useState } from 'react'
 import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Smartphone, Globe, Bot, Building2, Maximize2, X } from 'lucide-react'
+import { Smartphone, Globe, Bot, Building2, Maximize2, X, type LucideIcon } from 'lucide-react'
+import { useLang } from '@/contexts/LanguageContext'
 
-const services = [
-  {
-    Icon: Smartphone,
-    title: 'Mobile Development',
-    desc: 'Native Android and iOS apps, or cross-platform. Whichever fits your project, built to ship and built to last.',
-    details: [
-      'Native Android (Kotlin) or iOS (Swift), built to platform standards',
-      'Cross-platform (React Native) when speed to market is the priority',
-      'Biometrics, offline mode, maps, push notifications, camera and more',
-      'Payments, social login, real-time features, and multi-language support',
-      'Google Play and App Store submission and release management',
-    ],
-  },
-  {
-    Icon: Globe,
-    title: 'Web Solutions for Businesses',
-    desc: 'Modern websites for restaurants, shops, studios, and service businesses. Built to be found on Google, with a simple CMS so you can manage it yourself, or I stay on and handle it for you.',
-    details: [
-      'Custom built, fast, and SEO-ready so customers can find you',
-      'CMS included — update your menu, photos, and content yourself, no developer needed',
-      'Booking, reservations, contact forms and payment integrations',
-      'Domain, DNS, and hosting setup handled end to end',
-      'Flexible after launch: self-managed or ongoing support, your choice',
-    ],
-  },
-  {
-    Icon: Building2,
-    title: 'Architecture & Consulting',
-    desc: 'Technical guidance for teams and founders who need to get it right. From a first architecture decision to a full system review.',
-    details: [
-      'System design from scratch or architecture review of existing systems',
-      'Security design, cryptography, secure communication, and compliance',
-      'CI/CD pipelines, automated builds, tests, and deployment automation',
-      'Translating business needs into clear technical requirements',
-      'Code audits and technical due diligence',
-      'Available for one-off engagements or ongoing advisory',
-    ],
-  },
-  {
-    Icon: Bot,
-    title: 'AI Integration',
-    desc: 'Practical AI features added to your existing product or workflow. No hype, no promises that don\'t deliver. Just automation and integrations that save your team real time.',
-    details: [
-      'ChatGPT, Claude, or open-source models integrated into your app',
-      'Document processing, data extraction, and classification',
-      'Chatbots and assistants built on top of proven LLM APIs',
-      'Workflow automation to cut manual, repetitive work',
-      'Scoped honestly: you get what actually works, not a science project',
-    ],
-  },
-]
+type ServiceData = {
+  Icon: LucideIcon
+  title: string
+  desc: string
+  details: string[]
+}
 
-type Service = (typeof services)[0]
-
-function ServiceModal({ service, onClose }: { service: Service; onClose: () => void }) {
+function ServiceModal({ service, onClose }: { service: ServiceData; onClose: () => void }) {
   const { Icon, title, desc, details } = service
   return createPortal(
     <motion.div
@@ -185,7 +139,60 @@ function ServiceModal({ service, onClose }: { service: Service; onClose: () => v
 }
 
 export default function Services() {
-  const [activeService, setActiveService] = useState<Service | null>(null)
+  const { t } = useLang()
+  const [activeService, setActiveService] = useState<ServiceData | null>(null)
+
+  const services: ServiceData[] = [
+    {
+      Icon: Smartphone,
+      title: t.services.mobile.title,
+      desc: t.services.mobile.desc,
+      details: [
+        t.services.mobile.d1,
+        t.services.mobile.d2,
+        t.services.mobile.d3,
+        t.services.mobile.d4,
+        t.services.mobile.d5,
+      ],
+    },
+    {
+      Icon: Globe,
+      title: t.services.web.title,
+      desc: t.services.web.desc,
+      details: [
+        t.services.web.d1,
+        t.services.web.d2,
+        t.services.web.d3,
+        t.services.web.d4,
+        t.services.web.d5,
+      ],
+    },
+    {
+      Icon: Building2,
+      title: t.services.arch.title,
+      desc: t.services.arch.desc,
+      details: [
+        t.services.arch.d1,
+        t.services.arch.d2,
+        t.services.arch.d3,
+        t.services.arch.d4,
+        t.services.arch.d5,
+        t.services.arch.d6,
+      ],
+    },
+    {
+      Icon: Bot,
+      title: t.services.ai.title,
+      desc: t.services.ai.desc,
+      details: [
+        t.services.ai.d1,
+        t.services.ai.d2,
+        t.services.ai.d3,
+        t.services.ai.d4,
+        t.services.ai.d5,
+      ],
+    },
+  ]
 
   return (
     <section id="services" style={{ position: 'relative', zIndex: 1 }}>
@@ -208,7 +215,7 @@ export default function Services() {
               display: 'block',
             }}
           >
-            What I do
+            {t.services.label}
           </span>
           <h2
             style={{
@@ -218,7 +225,7 @@ export default function Services() {
               color: 'var(--text)',
             }}
           >
-            Services
+            {t.services.title}
           </h2>
         </motion.div>
 

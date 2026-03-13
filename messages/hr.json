@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "services": "Usluge",
+    "portfolio": "Portfolio",
+    "about": "O meni",
+    "contact": "Kontakt",
+    "cta": "Kontaktirajte me"
+  },
+  "hero": {
+    "badge": "Dostupan za projekte",
+    "headline1": "Donesite ideju.",
+    "headline2": "Odnesite proizvod.",
+    "sub": "Mobilne aplikacije, web rješenja i tehničko savjetovanje, isporučeno na vrijeme, s jasnom komunikacijom od početka do kraja.",
+    "cta1": "Kontaktirajte me",
+    "cta2": "Pogledajte radove",
+    "stat1val": "Isporuka na vrijeme",
+    "stat1label": "Predanost",
+    "stat2val": "100k+",
+    "stat2label": "Korisnika dosegnuto",
+    "stat3val": "10+",
+    "stat3label": "Projekata isporučeno"
+  },
+  "services": {
+    "label": "Što nudim",
+    "title": "Usluge",
+    "mobile": {
+      "title": "Razvoj mobilnih aplikacija",
+      "desc": "Native Android i iOS aplikacije, ili cross-platform. Što god odgovara vašem projektu, izrađeno za isporuku i dugoročnu upotrebu.",
+      "d1": "Native Android (Kotlin) ili iOS (Swift), izrađeno prema standardima platforme",
+      "d2": "Cross-platform (React Native) kada je brzina izlaska na tržište prioritet",
+      "d3": "Biometrija, offline način rada, mape, push obavijesti, kamera i ostalo",
+      "d4": "Plaćanja, prijava putem društvenih mreža, real-time funkcionalnosti i višejezična podrška",
+      "d5": "Objava na Google Play i App Store te upravljanje izdanjima"
+    },
+    "web": {
+      "title": "Web rješenja za poduzetnike",
+      "desc": "Moderne web stranice za restorane, trgovine, studije i uslužne djelatnosti. Izrađeno da vas pronađu na Googleu, s jednostavnim CMS-om za samostalno upravljanje, ili moju podršku za održavanje stranice.",
+      "d1": "Izrađeno po mjeri, brzo i SEO optimizirano kako bi vas kupci mogli pronaći",
+      "d2": "CMS uključen — ažurirajte izbornik, fotografije i sadržaj sami, bez programera",
+      "d3": "Rezervacije, kontakt forme i integracije plaćanja",
+      "d4": "Postavljanje domene, DNS-a i hostinga od početka do kraja",
+      "d5": "Fleksibilno nakon lansiranja: samostalno upravljanje ili kontinuirana podrška, vaš izbor"
+    },
+    "arch": {
+      "title": "Arhitektura i savjetovanje",
+      "desc": "Tehnička podrška za timove i poduzetnike kojima je važno napraviti stvari kako treba. Od prve arhitekturalne odluke do potpunog pregleda sustava.",
+      "d1": "Dizajn sustava od nule ili pregled arhitekture postojećih sustava",
+      "d2": "Sigurnosni dizajn, kriptografija, sigurna komunikacija i usklađenost",
+      "d3": "CI/CD pipeline, automatizirani buildovi, testovi i automatizacija deployanja",
+      "d4": "Prevođenje poslovnih potreba u jasne tehničke zahtjeve",
+      "d5": "Pregled koda i dubinska tehnička analiza",
+      "d6": "Dostupno za jednokratne projekte ili kontinuirano savjetovanje"
+    },
+    "ai": {
+      "title": "AI integracija",
+      "desc": "Praktične AI funkcionalnosti dodane u vaš postojeći proizvod ili radni proces. Bez hype-a, bez obećanja koja se ne ispunjavaju. Samo automatizacija i integracije koje vašem timu štede stvarno vrijeme.",
+      "d1": "ChatGPT, Claude ili open-source modeli integrirani u vašu aplikaciju",
+      "d2": "Obrada dokumenata, ekstrakcija podataka i klasifikacija",
+      "d3": "Chatbotovi i asistenti izgrađeni na provjerenim LLM API-jima",
+      "d4": "Automatizacija radnih procesa za smanjenje ručnog, repetitivnog rada",
+      "d5": "Realno definirano: dobivate ono što zaista funkcionira, ne znanstveni projekt"
+    }
+  },
+  "portfolio": {
+    "label": "Odabrani radovi",
+    "title": "Portfolio",
+    "nda": "Većina radova je pod NDA ugovorom. Opisi pokrivaju riješeni problem i korištene tehnologije, imena klijenata su izostavljena.",
+    "p1title": "Android platforma za potrebe države",
+    "p1desc": "Android aplikacija implementirana u nacionalnoj vladinoj agenciji, s desetcima tisuća korisnika. Izrađena za koordinaciju na terenu u stvarnom vremenu, praćenje lokacije uživo, interaktivne mape i stroge sigurnosne zahtjeve.",
+    "p2title": "Android aplikacija za sigurna plaćanja",
+    "p2desc": "Android aplikacija za simulaciju sigurnih digitalnih plaćanja. NFC komunikacija s fizičkim pametnim karticama, generiranje kriptografskih ključeva putem Android Secure Elementa i blockchain integracija za obradu transakcija.",
+    "p3title": "Web stranica restorana",
+    "p3desc": "Potpuno web rješenje za lokalni restoran. Omogućuje upravljanje rezervacijama, CMS za izbornik kako bi osoblje moglo ažurirati sadržaj bez tehničkog znanja.",
+    "p4title": "AI procesor dokumenata",
+    "p4desc": "Automatizirani pipeline za obradu dokumenata integriran u postojeći poslovni proces. LLM-powered ekstrakcija podataka, klasifikacija i obrada podataka, koja značajno smanjuje vrijeme ručne obrade."
+  },
+  "about": {
+    "label": "O meni",
+    "title": "O meni",
+    "role": "Senior Software Engineer",
+    "tagline": "Rješenja koja se isporučuju. Jasna komunikacija. Isporuka na vrijeme.",
+    "bio1": "Završio sam magisterij iz računarstva i karijeru sam izgradio razvijajući softver visoke kvalitete. Projekti za vladine agencije, gdje je privatnost podataka ključna, visokosigurnosni sustavi i aplikacije kojima vjeruju stotine tisuća korisnika.",
+    "bio2": "Moj rad obuhvaća razvoj mobilnih aplikacija s naglaskom na native development, web rješenja za poduzetnike i arhitekturalno savjetovanje. Bilo da trebate mobilnu aplikaciju, web stranicu za restoran ili trgovinu, ili drugo mišljenje o dizajnu sustava, gradim i savjetujem prema istom standardu.",
+    "bio3": "Prihvaćam isključivo projekte gdje sam siguran da mogu zaista isporučiti kvalitetno rješenje. Kada se na nešto obavežem, vidim to do kraja. Na vrijeme, s jasnom komunikacijom cijelo vrijeme.",
+    "location": "Split, Hrvatska",
+    "remote": "Remote · Cijeli svijet",
+    "email": "E-mail",
+    "linkedin": "LinkedIn"
+  },
+  "contact": {
+    "label": "Kontaktirajte me",
+    "title": "Radimo zajedno",
+    "sub": "Imate projekt na umu ili želite istražiti mogućnosti? Pošaljite poruku i javit ću se u roku od 24 sata.",
+    "consultation": "Prvi konzultacijski razgovor je besplatan.",
+    "name": "Ime",
+    "email": "Email",
+    "subject": "Tema",
+    "phone": "Telefon",
+    "optional": "Opcionalno",
+    "namePlaceholder": "Vaše ime",
+    "emailPlaceholder": "vaš@email.com",
+    "subjectPlaceholder": "O čemu se radi?",
+    "phonePlaceholder": "+385 91 234 5678",
+    "messagePlaceholder": "Opišite vaš projekt...",
+    "message": "Poruka",
+    "send": "Pošalji poruku",
+    "sending": "Slanje...",
+    "success": "Poruka poslana! Javit ću se u roku od 24 sata.",
+    "error": "Nešto je pošlo po krivu. Molim pokušajte ponovno.",
+    "errorFailed": "Slanje poruke nije uspjelo. Molim pokušajte ponovno."
+  },
+  "footer": {
+    "rights": "Sva prava pridržana.",
+    "recaptcha": "Ova stranica je zaštićena reCAPTCHA-om te se primjenjuju Googleova",
+    "recaptchaAnd": "i",
+    "privacy": "Pravila privatnosti",
+    "terms": "Uvjeti korištenja",
+    "recaptchaEnd": ""
+  },
+  "cookies": {
+    "text": "Koristimo neobvezne kolačiće kako bismo poboljšali vaše iskustvo i analizirali posjećenost stranice. Svoj odabir možete promijeniti u bilo kojem trenutku.",
+    "accept": "Prihvati",
+    "decline": "Odbij"
+  }
+}

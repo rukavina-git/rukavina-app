@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Mail, Linkedin } from 'lucide-react'
+import { useLang } from '@/contexts/LanguageContext'
 
 const skills = [
   'Android / Kotlin',
@@ -15,6 +16,8 @@ const skills = [
 ]
 
 export default function About() {
+  const { t } = useLang()
+
   return (
     <section id="about" style={{ position: 'relative', zIndex: 1 }}>
       <div style={{ padding: 'clamp(4rem, 8vw, 7rem) clamp(1rem, 3vw, 2rem)', maxWidth: 1280, margin: '0 auto' }}>
@@ -36,7 +39,7 @@ export default function About() {
               display: 'block',
             }}
           >
-            Who I am
+            {t.about.label}
           </span>
           <h2
             style={{
@@ -46,7 +49,7 @@ export default function About() {
               color: 'var(--text)',
             }}
           >
-            About
+            {t.about.title}
           </h2>
         </motion.div>
 
@@ -70,7 +73,7 @@ export default function About() {
                 letterSpacing: '-0.01em',
               }}
             >
-              Senior Software Engineer
+              {t.about.role}
             </div>
             <div
               style={{
@@ -82,27 +85,18 @@ export default function About() {
                 lineHeight: 1.6,
               }}
             >
-              Solutions that ship. Clear communication. Delivered on time.
+              {t.about.tagline}
             </div>
 
             <div>
               <p style={{ fontSize: 'clamp(0.875rem, 1vw, 1rem)', color: 'var(--muted)', lineHeight: 1.9, fontWeight: 300, marginBottom: '1.1rem' }}>
-                I hold a{' '}
-                <strong style={{ color: '#b8b8cc', fontWeight: 600 }}>Master&apos;s degree in Computer Science</strong>{' '}
-                and have spent my career building software where quality isn&apos;t optional. Government-scale platforms,
-                high-security systems, and applications trusted by hundreds of thousands of users.
+                {t.about.bio1}
               </p>
               <p style={{ fontSize: 'clamp(0.875rem, 1vw, 1rem)', color: 'var(--muted)', lineHeight: 1.9, fontWeight: 300, marginBottom: '1.1rem' }}>
-                My work spans{' '}
-                <strong style={{ color: '#b8b8cc', fontWeight: 600 }}>native Android development</strong>,{' '}
-                <strong style={{ color: '#b8b8cc', fontWeight: 600 }}>web solutions for businesses</strong>, and{' '}
-                <strong style={{ color: '#b8b8cc', fontWeight: 600 }}>architecture consulting</strong>. Whether you need a
-                production-grade mobile app, a website for your restaurant or shop, or a second opinion on your system
-                design, I build and advise with the same standard.
+                {t.about.bio2}
               </p>
               <p style={{ fontSize: 'clamp(0.875rem, 1vw, 1rem)', color: 'var(--muted)', lineHeight: 1.9, fontWeight: 300 }}>
-                I take on projects where I can genuinely deliver. When I commit to something, I see it through. On time,
-                with clear communication the whole way.
+                {t.about.bio3}
               </p>
             </div>
 
@@ -207,7 +201,7 @@ export default function About() {
                   marginTop: '0.25rem',
                 }}
               >
-                Senior Software Engineer
+                {t.about.role}
               </div>
             </div>
 
@@ -225,7 +219,7 @@ export default function About() {
               }}
             >
               <span style={{ color: 'var(--accent)' }}>◎</span>
-              Split, Croatia
+              {t.about.location}
             </div>
 
             <div
@@ -240,7 +234,7 @@ export default function About() {
               }}
             >
               <span style={{ color: 'var(--accent)' }}>✦</span>
-              Remote · Worldwide
+              {t.about.remote}
             </div>
 
             <div style={{ width: '100%', height: 1, background: 'rgba(255,255,255,0.07)' }} />
@@ -262,7 +256,7 @@ export default function About() {
               onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--muted)')}
             >
               <Mail size={13} style={{ color: 'var(--accent)', flexShrink: 0 }} />
-              E-mail
+              {t.about.email}
             </a>
 
             <a
@@ -284,7 +278,7 @@ export default function About() {
               onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--muted)')}
             >
               <Linkedin size={13} style={{ color: 'var(--accent)', flexShrink: 0 }} />
-              LinkedIn
+              {t.about.linkedin}
             </a>
           </motion.div>
         </div>

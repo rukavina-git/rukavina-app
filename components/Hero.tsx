@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLang } from '@/contexts/LanguageContext'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -16,13 +17,15 @@ const fadeUpLCP = (delay = 0) => ({
   transition: { duration: 0.6, delay, ease: 'easeOut' },
 })
 
-const stats = [
-  { val: 'On-time delivery', label: 'Commitment' },
-  { val: '100k+', label: 'Users reached' },
-  { val: '10+', label: 'Projects shipped' },
-]
-
 export default function Hero() {
+  const { t } = useLang()
+
+  const stats = [
+    { val: t.hero.stat1val, label: t.hero.stat1label },
+    { val: t.hero.stat2val, label: t.hero.stat2label },
+    { val: t.hero.stat3val, label: t.hero.stat3label },
+  ]
+
   return (
     <section
       id="home"
@@ -67,7 +70,7 @@ export default function Hero() {
                 flexShrink: 0,
               }}
             />
-            Available for work
+            {t.hero.badge}
           </div>
         </motion.div>
 
@@ -82,7 +85,7 @@ export default function Hero() {
             marginBottom: '1.5rem',
           }}
         >
-          <span style={{ color: 'var(--text)', display: 'block' }}>Bring your idea.</span>
+          <span style={{ color: 'var(--text)', display: 'block' }}>{t.hero.headline1}</span>
           <span
             style={{
               display: 'block',
@@ -92,7 +95,7 @@ export default function Hero() {
               backgroundClip: 'text',
             }}
           >
-            Leave with a product.
+            {t.hero.headline2}
           </span>
         </motion.h1>
 
@@ -108,7 +111,7 @@ export default function Hero() {
             margin: '0 auto 2.5rem',
           }}
         >
-          Mobile apps, web solutions, and technical consulting — delivered on time, with clear communication from start to finish.
+          {t.hero.sub}
         </motion.p>
 
         {/* CTAs */}
@@ -148,7 +151,7 @@ export default function Hero() {
               el.style.transform = 'translateY(0)'
             }}
           >
-            Get in Touch
+            {t.hero.cta1}
           </a>
           <a
             href="#portfolio"
@@ -174,7 +177,7 @@ export default function Hero() {
               el.style.borderColor = 'rgba(95,111,255,0.25)'
             }}
           >
-            See My Work
+            {t.hero.cta2}
           </a>
         </motion.div>
 
