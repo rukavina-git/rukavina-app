@@ -4,8 +4,8 @@ import { useState, useEffect, useRef } from 'react'
 import { ChevronDown } from 'lucide-react'
 
 const langOptions = [
-  { code: 'en' as const, flag: '🇬🇧', label: 'English' },
-  { code: 'hr' as const, flag: '🇭🇷', label: 'Hrvatski' },
+  { code: 'en' as const, flagSrc: '/flags/gb.png', flagAlt: 'English', label: 'English' },
+  { code: 'hr' as const, flagSrc: '/flags/hr.png', flagAlt: 'Hrvatski', label: 'Hrvatski' },
 ]
 
 const links = [
@@ -115,7 +115,7 @@ export default function Nav() {
             onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.color = 'var(--text)' }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.color = 'var(--muted)' }}
           >
-            <span>{current.flag}</span>
+            <img src={current.flagSrc} width={20} height={15} alt={current.flagAlt} style={{ display: 'block', borderRadius: 2, objectFit: 'cover' }} />
             <span>{current.code}</span>
             <ChevronDown size={11} style={{ opacity: 0.6, transition: 'transform 0.2s', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }} />
           </button>
@@ -169,7 +169,7 @@ export default function Nav() {
                       if (!active) (e.currentTarget as HTMLButtonElement).style.color = 'var(--muted)'
                     }}
                   >
-                    <span>{opt.flag}</span>
+                    <img src={opt.flagSrc} width={20} height={15} alt={opt.flagAlt} style={{ display: 'block', borderRadius: 2, objectFit: 'cover' }} />
                     <span>{opt.label}</span>
                   </button>
                 )
