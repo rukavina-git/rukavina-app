@@ -2,58 +2,58 @@
 
 import { useState, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Smartphone, Shield, Globe, Cpu } from 'lucide-react'
 
 const arrowStyle = {
   width: 44,
   height: 44,
   borderRadius: '50%',
   flexShrink: 0,
-  background: 'rgba(255,255,255,0.05)',
-  border: '1px solid rgba(255,255,255,0.1)',
+  background: 'rgba(255,255,255,0.08)',
+  border: '1px solid rgba(255,255,255,0.12)',
   alignItems: 'center' as const,
   justifyContent: 'center' as const,
   cursor: 'pointer',
-  color: 'var(--muted)',
+  color: 'var(--text)',
   transition: 'background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s',
 }
 
 const projects = [
   {
-    icon: '📱',
+    Icon: Smartphone,
     cat: 'Android · Mobile',
     badge: 'NDA',
     badgeType: 'nda' as const,
     title: 'Government-Scale Android Platform',
-    desc: 'Large-scale Android application serving hundreds of thousands of users across a national government agency. Modular, multi-team codebase with offline-first capabilities and strict security requirements.',
-    tags: ['Kotlin', 'Jetpack Compose', 'MVVM', 'Hilt', 'Room'],
+    desc: 'Android application deployed across a national government agency, serving tens of thousands of users. Built for real-time field coordination, live location tracking, interactive maps, and strict security requirements.',
+    tags: ['Kotlin', 'Jetpack Compose', 'MVVM', 'Hilt', 'Coroutines'],
   },
   {
-    icon: '🔧',
-    cat: 'Android · Mobile',
+    Icon: Shield,
+    cat: 'Android · Fintech',
     badge: 'NDA',
     badgeType: 'nda' as const,
-    title: 'Field Service Management App',
-    desc: 'Native Android app for a field service company managing technicians, job assignments, and real-time status updates. Offline mode built for areas with poor connectivity.',
-    tags: ['Kotlin', 'WorkManager', 'Google Maps SDK', 'SQLite'],
+    title: 'Secure Payments Android App',
+    desc: 'Android application for secure digital payment simulation. NFC communication with physical smart cards, cryptographic key generation using Android Secure Element, and blockchain integration for transaction processing.',
+    tags: ['Kotlin', 'NFC', 'Cryptography', 'gRPC', 'Blockchain'],
   },
   {
-    icon: '🤖',
-    cat: 'AI · Backend',
-    badge: 'NDA',
-    badgeType: 'nda' as const,
-    title: 'AI Document Processor',
-    desc: "LLM pipeline integrated into a B2B SaaS product to automate document classification and data extraction. Reduced manual processing time significantly for the client's operations team.",
-    tags: ['Python', 'OpenAI API', 'REST', 'Firebase'],
-  },
-  {
-    icon: '🌐',
+    Icon: Globe,
     cat: 'Web · CMS',
     badge: 'Client',
     badgeType: 'client' as const,
     title: 'Restaurant Web Presence',
-    desc: 'Complete web presence for a local restaurant — custom site, menu CMS, reservation integration, managed hosting. Built to be maintained without any technical expertise.',
+    desc: 'Complete web presence for a local restaurant. Custom site, menu CMS so staff can update content without technical knowledge, reservation integration, and managed hosting.',
     tags: ['Next.js', 'Tailwind CSS', 'Sanity CMS', 'Vercel'],
+  },
+  {
+    Icon: Cpu,
+    cat: 'AI · Automation',
+    badge: 'NDA',
+    badgeType: 'nda' as const,
+    title: 'AI Document Processor',
+    desc: 'Automated document processing pipeline integrated into an existing business workflow. LLM-powered extraction, classification, and structured output, reducing manual processing time significantly.',
+    tags: ['Python', 'OpenAI API', 'REST', 'Firebase'],
   },
 ]
 
@@ -160,16 +160,16 @@ export default function Portfolio() {
             style={arrowStyle}
             onMouseEnter={(e) => {
               const el = e.currentTarget
-              el.style.background = 'rgba(95,111,255,0.15)'
-              el.style.borderColor = 'rgba(95,111,255,0.35)'
-              el.style.color = '#c0c8ff'
+              el.style.background = 'var(--accent)'
+              el.style.borderColor = 'var(--accent)'
+              el.style.color = '#fff'
               el.style.transform = 'scale(1.06)'
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget
-              el.style.background = 'rgba(255,255,255,0.05)'
-              el.style.borderColor = 'rgba(255,255,255,0.1)'
-              el.style.color = 'var(--muted)'
+              el.style.background = 'rgba(255,255,255,0.08)'
+              el.style.borderColor = 'rgba(255,255,255,0.12)'
+              el.style.color = 'var(--text)'
               el.style.transform = 'scale(1)'
             }}
           >
@@ -178,7 +178,7 @@ export default function Portfolio() {
 
         <div
           className="portfolio-slider-box"
-          style={{ flex: 1, overflow: 'hidden', borderRadius: '1.5rem', height: 'clamp(300px, 40vw, 485px)', cursor: 'grab', userSelect: 'none' }}
+          style={{ flex: 1, overflow: 'visible', borderRadius: '1.5rem', minHeight: 'clamp(300px, 40vw, 485px)', cursor: 'grab', userSelect: 'none' }}
           onMouseDown={(e) => onDragStart(e.clientX)}
           onMouseUp={(e) => onDragEnd(e.clientX)}
           onMouseLeave={(e) => { if (isDragging.current) onDragEnd(e.clientX) }}
@@ -195,7 +195,7 @@ export default function Portfolio() {
               exit="exit"
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               className="portfolio-slide-motion"
-              style={{ height: '100%' }}
+              style={{ height: 'auto', minHeight: '100%' }}
             >
               <div
                 className="portfolio-slide"
@@ -207,44 +207,44 @@ export default function Portfolio() {
                   gridTemplateColumns: '1fr 1fr',
                   overflow: 'hidden',
                   height: '100%',
+                  alignItems: 'stretch',
                 }}
               >
                 {/* Visual half */}
                 <div
                   className="slide-visual"
                   style={{
-                    background: 'rgba(255,255,255,0.02)',
-                    borderRight: '1px solid rgba(255,255,255,0.07)',
+                    background: 'rgba(255,255,255,0.03)',
+                    backdropFilter: 'blur(12px)',
+                    WebkitBackdropFilter: 'blur(12px)',
+                    borderRight: '1px solid rgba(255,255,255,0.06)',
                     display: 'flex',
+                    flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    flexDirection: 'column',
                     gap: '1rem',
-                    padding: '3rem',
+                    padding: '2rem',
                     position: 'relative',
                     overflow: 'hidden',
                   }}
                 >
-                  <div
+                  <p.Icon
+                    size={64}
                     style={{
-                      position: 'absolute',
-                      width: 280,
-                      height: 280,
-                      borderRadius: '50%',
-                      background: 'radial-gradient(circle, rgba(95,111,255,0.1), transparent 65%)',
-                      top: '50%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
+                      color: 'var(--accent)',
+                      filter: 'drop-shadow(0 0 24px rgba(95,111,255,0.4))',
+                      position: 'relative',
+                      zIndex: 1,
+                      flexShrink: 0,
                     }}
                   />
-                  <div style={{ fontSize: '4rem', opacity: 0.45, position: 'relative', zIndex: 1 }}>{p.icon}</div>
                   <div
                     style={{
                       fontFamily: 'var(--font-fira-code)',
                       fontSize: '0.62rem',
                       letterSpacing: '0.2em',
                       textTransform: 'uppercase',
-                      color: 'var(--faint)',
+                      color: 'var(--muted)',
                       position: 'relative',
                       zIndex: 1,
                     }}
@@ -254,51 +254,53 @@ export default function Portfolio() {
                 </div>
 
                 {/* Content half */}
-                <div className="slide-content" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                  <div
-                    style={{
-                      display: 'inline-block',
-                      marginBottom: '1.2rem',
-                      fontFamily: 'var(--font-fira-code)',
-                      fontSize: '0.6rem',
-                      letterSpacing: '0.12em',
-                      textTransform: 'uppercase',
-                      padding: '0.25rem 0.7rem',
-                      borderRadius: '0.3rem',
-                      width: 'fit-content',
-                      ...(p.badgeType === 'nda'
-                        ? { color: '#f87171', background: 'rgba(248,113,113,0.1)', border: '1px solid rgba(248,113,113,0.25)' }
-                        : { color: '#60a5fa', background: 'rgba(96,165,250,0.1)', border: '1px solid rgba(96,165,250,0.25)' }),
-                    }}
-                  >
-                    {p.badge}
+                <div className="slide-content" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <div>
+                    {/* Badge row */}
+                    <div style={{ marginBottom: '1.2rem' }}>
+                      <div
+                        style={{
+                          fontFamily: 'var(--font-fira-code)',
+                          fontSize: '0.6rem',
+                          letterSpacing: '0.12em',
+                          textTransform: 'uppercase',
+                          padding: '0.25rem 0.7rem',
+                          borderRadius: '0.3rem',
+                          width: 'fit-content',
+                          ...(p.badgeType === 'nda'
+                            ? { color: '#f87171', background: 'rgba(248,113,113,0.1)', border: '1px solid rgba(248,113,113,0.25)' }
+                            : { color: '#60a5fa', background: 'rgba(96,165,250,0.1)', border: '1px solid rgba(96,165,250,0.25)' }),
+                        }}
+                      >
+                        {p.badge}
+                      </div>
+                    </div>
+                    <div
+                      className="slide-title"
+                      style={{
+                        fontSize: '1.35rem',
+                        fontWeight: 800,
+                        color: 'var(--text)',
+                        letterSpacing: '-0.02em',
+                        lineHeight: 1.25,
+                        marginBottom: '0.9rem',
+                      }}
+                    >
+                      {p.title}
+                    </div>
+                    <div
+                      className="slide-desc"
+                      style={{
+                        fontSize: '0.9rem',
+                        color: 'var(--muted)',
+                        lineHeight: 1.8,
+                        fontWeight: 300,
+                      }}
+                    >
+                      {p.desc}
+                    </div>
                   </div>
-                  <div
-                    className="slide-title"
-                    style={{
-                      fontSize: '1.35rem',
-                      fontWeight: 800,
-                      color: 'var(--text)',
-                      letterSpacing: '-0.02em',
-                      lineHeight: 1.25,
-                      marginBottom: '0.9rem',
-                    }}
-                  >
-                    {p.title}
-                  </div>
-                  <div
-                    className="slide-desc"
-                    style={{
-                      fontSize: '0.9rem',
-                      color: 'var(--muted)',
-                      lineHeight: 1.8,
-                      fontWeight: 300,
-                      marginBottom: '1.4rem',
-                    }}
-                  >
-                    {p.desc}
-                  </div>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', paddingTop: '1.25rem' }}>
                     {p.tags.map((t) => (
                       <span
                         key={t}
@@ -329,16 +331,16 @@ export default function Portfolio() {
             style={arrowStyle}
             onMouseEnter={(e) => {
               const el = e.currentTarget
-              el.style.background = 'rgba(95,111,255,0.15)'
-              el.style.borderColor = 'rgba(95,111,255,0.35)'
-              el.style.color = '#c0c8ff'
+              el.style.background = 'var(--accent)'
+              el.style.borderColor = 'var(--accent)'
+              el.style.color = '#fff'
               el.style.transform = 'scale(1.06)'
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget
-              el.style.background = 'rgba(255,255,255,0.05)'
-              el.style.borderColor = 'rgba(255,255,255,0.1)'
-              el.style.color = 'var(--muted)'
+              el.style.background = 'rgba(255,255,255,0.08)'
+              el.style.borderColor = 'rgba(255,255,255,0.12)'
+              el.style.color = 'var(--text)'
               el.style.transform = 'scale(1)'
             }}
           >
