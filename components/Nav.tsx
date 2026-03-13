@@ -16,8 +16,20 @@ const links = [
 ]
 
 function detectDefaultLang(): 'en' | 'hr' {
-  const nav = typeof navigator !== 'undefined' ? navigator.language : ''
-  return /^(hr|bs|sr)/i.test(nav) ? 'hr' : 'en'
+  if (typeof navigator === 'undefined') return 'en'
+
+  const langs = [
+    navigator.language,
+    ...(navigator.languages || []),
+  ].map(l => l.toLowerCase())
+
+  const hrMatch = langs.some(l => /^(hr|bs|sr)/.test(l))
+  if (hrMatch) return 'hr'
+
+  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
+  if (['Europe/Zagreb', 'Europe/Sarajevo', 'Europe/Belgrade'].includes(tz)) return 'hr'
+
+  return 'en'
 }
 
 export default function Nav() {
