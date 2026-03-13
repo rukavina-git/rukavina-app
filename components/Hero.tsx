@@ -75,7 +75,7 @@ export default function Hero() {
         <motion.h1
           {...fadeUpLCP(0.2)}
           style={{
-            fontSize: 'clamp(2.5rem, 5vw, 5rem)',
+            fontSize: 'clamp(2.5rem, 4vw, 4rem)',
             fontWeight: 800,
             letterSpacing: '-0.03em',
             lineHeight: 1.1,
@@ -100,7 +100,7 @@ export default function Hero() {
         <motion.p
           {...fadeUp(0.3)}
           style={{
-            fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)',
+            fontSize: 'clamp(0.95rem, 1.2vw, 1.1rem)',
             color: 'var(--muted)',
             fontWeight: 300,
             lineHeight: 1.75,

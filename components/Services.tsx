@@ -189,7 +189,7 @@ export default function Services() {
 
   return (
     <section id="services" style={{ position: 'relative', zIndex: 1 }}>
-      <div style={{ padding: 'clamp(4rem, 7vw, 7rem) clamp(1rem, 3vw, 2rem)', maxWidth: 1000, margin: '0 auto' }}>
+      <div style={{ padding: 'clamp(4rem, 8vw, 7rem) clamp(1rem, 3vw, 2rem)', maxWidth: 1280, margin: '0 auto' }}>
         <motion.div
           style={{ textAlign: 'center', marginBottom: '4rem' }}
           initial={{ opacity: 0, y: 20 }}
@@ -212,7 +212,7 @@ export default function Services() {
           </span>
           <h2
             style={{
-              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontSize: 'clamp(1.75rem, 2.5vw, 2.5rem)',
               fontWeight: 800,
               letterSpacing: '-0.02em',
               color: 'var(--text)',
@@ -314,7 +314,7 @@ export default function Services() {
 
                 <div
                   style={{
-                    fontSize: '1rem',
+                    fontSize: 'clamp(1rem, 1.3vw, 1.25rem)',
                     fontWeight: 700,
                     color: 'var(--text)',
                     marginBottom: '0.5rem',
@@ -323,7 +323,7 @@ export default function Services() {
                 >
                   {title}
                 </div>
-                <div style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.75, fontWeight: 300 }}>
+                <div style={{ fontSize: 'clamp(0.875rem, 1vw, 1rem)', color: 'var(--muted)', lineHeight: 1.75, fontWeight: 300 }}>
                   {desc}
                 </div>
               </motion.div>

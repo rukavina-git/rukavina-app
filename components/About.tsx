@@ -17,7 +17,7 @@ const skills = [
 export default function About() {
   return (
     <section id="about" style={{ position: 'relative', zIndex: 1 }}>
-      <div style={{ padding: 'clamp(4rem, 7vw, 7rem) clamp(1rem, 3vw, 2rem)', maxWidth: 1000, margin: '0 auto' }}>
+      <div style={{ padding: 'clamp(4rem, 8vw, 7rem) clamp(1rem, 3vw, 2rem)', maxWidth: 1280, margin: '0 auto' }}>
         <motion.div
           style={{ textAlign: 'center', marginBottom: '4rem' }}
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function About() {
           </span>
           <h2
             style={{
-              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontSize: 'clamp(1.75rem, 2.5vw, 2.5rem)',
               fontWeight: 800,
               letterSpacing: '-0.02em',
               color: 'var(--text)',
@@ -86,13 +86,13 @@ export default function About() {
             </div>
 
             <div>
-              <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.9, fontWeight: 300, marginBottom: '1.1rem' }}>
+              <p style={{ fontSize: 'clamp(0.875rem, 1vw, 1rem)', color: 'var(--muted)', lineHeight: 1.9, fontWeight: 300, marginBottom: '1.1rem' }}>
                 I hold a{' '}
                 <strong style={{ color: '#b8b8cc', fontWeight: 600 }}>Master&apos;s degree in Computer Science</strong>{' '}
                 and have spent my career building software where quality isn&apos;t optional. Government-scale platforms,
                 high-security systems, and applications trusted by hundreds of thousands of users.
               </p>
-              <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.9, fontWeight: 300, marginBottom: '1.1rem' }}>
+              <p style={{ fontSize: 'clamp(0.875rem, 1vw, 1rem)', color: 'var(--muted)', lineHeight: 1.9, fontWeight: 300, marginBottom: '1.1rem' }}>
                 My work spans{' '}
                 <strong style={{ color: '#b8b8cc', fontWeight: 600 }}>native Android development</strong>,{' '}
                 <strong style={{ color: '#b8b8cc', fontWeight: 600 }}>web solutions for businesses</strong>, and{' '}
@@ -100,7 +100,7 @@ export default function About() {
                 production-grade mobile app, a website for your restaurant or shop, or a second opinion on your system
                 design, I build and advise with the same standard.
               </p>
-              <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.9, fontWeight: 300 }}>
+              <p style={{ fontSize: 'clamp(0.875rem, 1vw, 1rem)', color: 'var(--muted)', lineHeight: 1.9, fontWeight: 300 }}>
                 I take on projects where I can genuinely deliver. When I commit to something, I see it through. On time,
                 with clear communication the whole way.
               </p>

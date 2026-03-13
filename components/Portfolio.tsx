@@ -105,7 +105,7 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" style={{ position: 'relative', zIndex: 1 }}>
-      <div style={{ padding: 'clamp(4rem, 7vw, 7rem) clamp(1rem, 3vw, 2rem)', maxWidth: 1000, margin: '0 auto' }}>
+      <div style={{ padding: 'clamp(4rem, 8vw, 7rem) clamp(1rem, 3vw, 2rem)', maxWidth: 1280, margin: '0 auto' }}>
         <motion.div
           style={{ textAlign: 'center', marginBottom: '4rem' }}
           initial={{ opacity: 0, y: 20 }}
@@ -128,7 +128,7 @@ export default function Portfolio() {
           </span>
           <h2
             style={{
-              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontSize: 'clamp(1.75rem, 2.5vw, 2.5rem)',
               fontWeight: 800,
               letterSpacing: '-0.02em',
               color: 'var(--text)',
@@ -178,7 +178,7 @@ export default function Portfolio() {
 
         <div
           className="portfolio-slider-box"
-          style={{ flex: 1, overflow: 'visible', borderRadius: '1.5rem', minHeight: 'clamp(300px, 40vw, 485px)', cursor: 'grab', userSelect: 'none' }}
+          style={{ flex: 1, overflow: 'visible', borderRadius: '1.5rem', height: 'clamp(300px, 35vw, 480px)', cursor: 'grab', userSelect: 'none' }}
           onMouseDown={(e) => onDragStart(e.clientX)}
           onMouseUp={(e) => onDragEnd(e.clientX)}
           onMouseLeave={(e) => { if (isDragging.current) onDragEnd(e.clientX) }}
@@ -195,7 +195,7 @@ export default function Portfolio() {
               exit="exit"
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               className="portfolio-slide-motion"
-              style={{ height: 'auto', minHeight: '100%' }}
+              style={{ height: '100%' }}
             >
               <div
                 className="portfolio-slide"
@@ -278,7 +278,7 @@ export default function Portfolio() {
                     <div
                       className="slide-title"
                       style={{
-                        fontSize: '1.35rem',
+                        fontSize: 'clamp(1rem, 1.3vw, 1.25rem)',
                         fontWeight: 800,
                         color: 'var(--text)',
                         letterSpacing: '-0.02em',
@@ -291,7 +291,7 @@ export default function Portfolio() {
                     <div
                       className="slide-desc"
                       style={{
-                        fontSize: '0.9rem',
+                        fontSize: 'clamp(0.875rem, 1vw, 1rem)',
                         color: 'var(--muted)',
                         lineHeight: 1.8,
                         fontWeight: 300,
