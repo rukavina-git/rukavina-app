@@ -240,7 +240,7 @@ export default function About() {
             <div style={{ width: '100%', height: 1, background: 'rgba(255,255,255,0.07)' }} />
 
             <a
-              href="mailto:ivan@rukavina.app"
+              href="mailto:ivankarlo.rukavina@gmail.com"
               style={{
                 display: 'flex',
                 alignItems: 'center',
