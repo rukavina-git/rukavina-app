@@ -79,7 +79,7 @@ export default function Footer() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a
-            href="mailto:ivankarlo.rukavina@gmail.com"
+            href="mailto:ivankarlo@rukavina.app"
             style={{
               display: 'flex',
               alignItems: 'center',

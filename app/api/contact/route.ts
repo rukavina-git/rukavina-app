@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY)
     const { error } = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'ivankarlo.rukavina@gmail.com',
+      to: 'ivankarlo@rukavina.app',
       subject: `[rukavina.app] ${subject}`,
       text: [
         'New contact form submission from rukavina.app',

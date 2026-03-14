@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 import { useLang } from '@/contexts/LanguageContext'
 
-const EMAIL = 'ivankarlo.rukavina@gmail.com'
+const EMAIL = 'ivankarlo@rukavina.app'
 
 const emailLink = (
   <a
