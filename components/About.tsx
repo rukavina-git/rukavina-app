@@ -166,26 +166,21 @@ export default function About() {
             />
 
             {/* Avatar */}
-            <div
+            <img
+              src="/img/profile_picture.jpg"
+              alt="Ivan Karlo Rukavina"
               style={{
                 width: 140,
                 height: 140,
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, rgba(95,111,255,0.2), rgba(167,139,250,0.1))',
                 border: '1px solid rgba(95,111,255,0.3)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '1.8rem',
-                fontWeight: 800,
-                color: '#9090cc',
-                letterSpacing: '0.05em',
+                objectFit: 'cover',
+                objectPosition: 'center 15%',
                 position: 'relative',
                 zIndex: 1,
+                display: 'block',
               }}
-            >
-              IKR
-            </div>
+            />
 
             <div>
               <div style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.01em' }}>

@@ -21,30 +21,31 @@ const firaCode = Fira_Code({
 })
 
 export const metadata: Metadata = {
-  title: 'Ivan Karlo Rukavina — Senior Software Engineer',
-  description:
-    'Freelance senior software engineer specializing in Android development, web solutions, and architecture consulting. Based in Split, Croatia. Working globally.',
   metadataBase: new URL('https://rukavina.app'),
-  alternates: { canonical: '/' },
-  // TODO: when launching, remove this robots block entirely (Next.js defaults to indexable)
-  robots: {
-    index: false,
-    follow: false,
-  },
-  icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
-  },
+  title: 'Ivan Karlo Rukavina — Senior Software Engineer',
+  description: 'Senior Software Engineer specializing in native Android development, web solutions for businesses, and architecture consulting. Based in Split, Croatia. Available for freelance work.',
+  keywords: ['Android developer', 'Kotlin', 'mobile app development', 'web solutions', 'software architect', 'freelance', 'Split', 'Croatia'],
+  authors: [{ name: 'Ivan Karlo Rukavina' }],
   openGraph: {
-    title: 'Ivan Karlo Rukavina — Senior Software Engineer',
-    description:
-      'Freelance senior software engineer specializing in Android development, web solutions, and architecture consulting. Based in Split, Croatia. Working globally.',
-    url: 'https://rukavina.app',
-    siteName: 'rukavina.app',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
-    locale: 'en_US',
     type: 'website',
+    url: 'https://rukavina.app',
+    title: 'Ivan Karlo Rukavina — Senior Software Engineer',
+    description: 'Native Android apps, web solutions, and architecture consulting. Based in Split, Croatia.',
+    siteName: 'Ivan Karlo Rukavina',
+    images: [{ url: 'img/og-image.png', width: 1200, height: 630, alt: 'Ivan Karlo Rukavina — Senior Software Engineer' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ivan Karlo Rukavina — Senior Software Engineer',
+    description: 'Native Android apps, web solutions, and architecture consulting.',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://rukavina.app',
   },
 }
 
