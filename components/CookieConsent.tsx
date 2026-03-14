@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLang } from '@/contexts/LanguageContext'
@@ -84,7 +85,13 @@ export default function CookieConsent() {
               margin: 0,
             }}
           >
-            {t.cookies.text}
+            {t.cookies.text}{' '}
+            <Link
+              href="/privacy"
+              style={{ color: 'var(--muted)', textDecoration: 'underline' }}
+            >
+              {t.privacy.link}
+            </Link>
           </p>
           <div style={{ display: 'flex', gap: '0.6rem', flexShrink: 0 }}>
             <button

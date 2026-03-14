@@ -121,5 +121,8 @@
     "text": "Koristimo neobvezne kolačiće kako bismo poboljšali vaše iskustvo i analizirali posjećenost stranice. Svoj odabir možete promijeniti u bilo kojem trenutku.",
     "accept": "Prihvati",
     "decline": "Odbij"
+  },
+  "privacy": {
+    "link": "Pravila privatnosti"
   }
 }

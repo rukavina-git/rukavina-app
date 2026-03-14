@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Mail } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
 
@@ -26,9 +27,20 @@ export default function Footer() {
               fontSize: '0.65rem',
               color: 'var(--muted)',
               letterSpacing: '0.06em',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.75rem',
             }}
           >
-            © 2026 Ivan Karlo Rukavina. {t.footer.rights}
+            <span>© 2026 Ivan Karlo Rukavina. {t.footer.rights}</span>
+            <Link
+              href="/privacy"
+              style={{ color: 'var(--muted)', textDecoration: 'underline', textUnderlineOffset: '2px', opacity: 0.7 }}
+              onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.color = 'var(--text)' }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.7'; e.currentTarget.style.color = 'var(--muted)' }}
+            >
+              {t.privacy.link}
+            </Link>
           </div>
           <div
             style={{
