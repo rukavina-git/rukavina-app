@@ -22,21 +22,21 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rukavina.app'),
-  title: 'Ivan Karlo Rukavina — Senior Software Engineer',
+  title: 'Freelance Software Engineer — Mobile Apps, Web & Consulting',
   description: 'Senior Software Engineer specializing in native Android development, web solutions for businesses, and architecture consulting. Based in Split, Croatia. Available for freelance work.',
   keywords: ['Android developer', 'Kotlin', 'mobile app development', 'web solutions', 'software architect', 'freelance', 'Split', 'Croatia'],
   authors: [{ name: 'Ivan Karlo Rukavina' }],
   openGraph: {
     type: 'website',
     url: 'https://rukavina.app',
-    title: 'Ivan Karlo Rukavina — Senior Software Engineer',
+    title: 'Freelance Software Engineer — Mobile Apps, Web & Consulting',
     description: 'Native Android apps, web solutions, and architecture consulting. Based in Split, Croatia.',
     siteName: 'Ivan Karlo Rukavina',
     images: [{ url: 'img/og-image.png', width: 1200, height: 630, alt: 'Ivan Karlo Rukavina — Senior Software Engineer' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ivan Karlo Rukavina — Senior Software Engineer',
+    title: 'Freelance Software Engineer — Mobile Apps, Web & Consulting',
     description: 'Native Android apps, web solutions, and architecture consulting.',
     images: ['/og-image.png'],
   },
