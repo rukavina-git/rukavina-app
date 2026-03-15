@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Mail, Linkedin } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
@@ -166,12 +167,13 @@ export default function About() {
             />
 
             {/* Avatar */}
-            <img
+            <Image
               src="/img/profile_picture.jpg"
               alt="Ivan Karlo Rukavina"
+              width={140}
+              height={140}
+              priority
               style={{
-                width: 140,
-                height: 140,
                 borderRadius: '50%',
                 border: '1px solid rgba(95,111,255,0.3)',
                 objectFit: 'cover',
@@ -255,7 +257,7 @@ export default function About() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/ivan-karlo-rukavina"
+              href="https://linkedin.com/in/rukavina"
               target="_blank"
               rel="noopener noreferrer"
               style={{

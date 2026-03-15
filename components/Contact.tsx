@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Send } from 'lucide-react'
 import { useLang } from '@/contexts/LanguageContext'
@@ -59,10 +59,21 @@ export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
 
+  const recaptchaLoaded = useRef(false)
+
+  const loadRecaptcha = () => {
+    if (recaptchaLoaded.current || !process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) return
+    recaptchaLoaded.current = true
+    const script = document.createElement('script')
+    script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`
+    document.head.appendChild(script)
+  }
+
   const set = (k: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }))
 
   const onFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    loadRecaptcha()
     e.currentTarget.style.borderColor = 'rgba(95,111,255,0.4)'
     e.currentTarget.style.background = 'rgba(95,111,255,0.04)'
   }
@@ -80,9 +91,17 @@ export default function Contact() {
       const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
       let recaptchaToken = ''
 
-      if (siteKey && typeof window !== 'undefined' && window.grecaptcha) {
-        await new Promise<void>((resolve) => window.grecaptcha.ready(resolve))
-        recaptchaToken = await window.grecaptcha.execute(siteKey, { action: 'contact' })
+      if (siteKey) {
+        recaptchaToken = await new Promise<string>((resolve) => {
+          const wait = () => {
+            if (typeof window !== 'undefined' && window.grecaptcha) {
+              window.grecaptcha.ready(() => window.grecaptcha.execute(siteKey, { action: 'contact' }).then(resolve))
+            } else {
+              setTimeout(wait, 100)
+            }
+          }
+          wait()
+        })
       }
 
       const res = await fetch('/api/contact', {

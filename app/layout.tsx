@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Outfit, Fira_Code } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 import Background from '@/components/Background'
 import CookieConsent from '@/components/CookieConsent'
@@ -61,12 +60,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <CookieConsent />
         </LanguageProvider>
-{process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
-          <Script
-            src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
-            strategy="lazyOnload"
-          />
-        )}
       </body>
     </html>
   )
