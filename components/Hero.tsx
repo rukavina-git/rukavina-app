@@ -131,7 +131,7 @@ export default function Hero() {
               fontSize: '0.9rem',
               fontWeight: 600,
               color: '#fff',
-              background: 'var(--accent)',
+              background: '#4F5FEF',
               borderRadius: '0.75rem',
               padding: '0.85rem 1.8rem',
               boxShadow: '0 0 24px rgba(95,111,255,0.3)',
@@ -140,13 +140,13 @@ export default function Hero() {
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLAnchorElement
-              el.style.background = '#4a5aee'
+              el.style.background = '#3D4EDD'
               el.style.boxShadow = '0 0 36px rgba(95,111,255,0.45)'
               el.style.transform = 'translateY(-1px)'
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLAnchorElement
-              el.style.background = 'var(--accent)'
+              el.style.background = '#4F5FEF'
               el.style.boxShadow = '0 0 24px rgba(95,111,255,0.3)'
               el.style.transform = 'translateY(0)'
             }}

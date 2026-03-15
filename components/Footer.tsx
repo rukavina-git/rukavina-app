@@ -46,7 +46,7 @@ export default function Footer() {
             style={{
               fontFamily: 'var(--font-fira-code)',
               fontSize: '0.55rem',
-              color: 'var(--subtle)',
+              color: '#9898BB',
               letterSpacing: '0.04em',
               lineHeight: 1.5,
             }}
@@ -56,7 +56,7 @@ export default function Footer() {
               href="https://policies.google.com/privacy"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: 'var(--subtle)', textDecoration: 'none' }}
+              style={{ color: '#9898BB', textDecoration: 'none' }}
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
             >
@@ -67,7 +67,7 @@ export default function Footer() {
               href="https://policies.google.com/terms"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: 'var(--subtle)', textDecoration: 'none' }}
+              style={{ color: '#9898BB', textDecoration: 'none' }}
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
             >

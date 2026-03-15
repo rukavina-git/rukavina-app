@@ -100,7 +100,7 @@ export default function CookieConsent() {
                 fontSize: '0.875rem',
                 fontWeight: 600,
                 color: '#fff',
-                background: 'var(--accent)',
+                background: '#4F5FEF',
                 border: 'none',
                 borderRadius: '0.6rem',
                 padding: '0.65rem 1.6rem',
@@ -108,8 +108,8 @@ export default function CookieConsent() {
                 transition: 'background 0.2s',
                 whiteSpace: 'nowrap',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--accent-hover)')}
-              onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--accent)')}
+              onMouseEnter={(e) => (e.currentTarget.style.background = '#3D4EDD')}
+              onMouseLeave={(e) => (e.currentTarget.style.background = '#4F5FEF')}
             >
               {t.cookies.accept}
             </button>

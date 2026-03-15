@@ -176,7 +176,7 @@ export default function Nav() {
           fontSize: '0.82rem',
           fontWeight: 600,
           color: '#fff',
-          background: 'var(--accent)',
+          background: '#4F5FEF',
           borderRadius: '2rem',
           padding: '0.45rem 1.1rem',
           transition: 'background 0.2s, box-shadow 0.2s',
@@ -184,12 +184,12 @@ export default function Nav() {
         }}
         onMouseEnter={(e) => {
           const el = e.currentTarget as HTMLAnchorElement
-          el.style.background = '#4a5aee'
+          el.style.background = '#3D4EDD'
           el.style.boxShadow = '0 0 24px rgba(95,111,255,0.4)'
         }}
         onMouseLeave={(e) => {
           const el = e.currentTarget as HTMLAnchorElement
-          el.style.background = 'var(--accent)'
+          el.style.background = '#4F5FEF'
           el.style.boxShadow = '0 0 16px rgba(95,111,255,0.25)'
         }}
       >
