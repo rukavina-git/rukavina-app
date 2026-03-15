@@ -56,6 +56,7 @@ export default function Footer() {
               href="https://policies.google.com/privacy"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Google Privacy Policy"
               style={{ color: '#9898BB', textDecoration: 'none' }}
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
@@ -67,6 +68,7 @@ export default function Footer() {
               href="https://policies.google.com/terms"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Google Terms of Service"
               style={{ color: '#9898BB', textDecoration: 'none' }}
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
