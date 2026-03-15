@@ -29,15 +29,16 @@ export default function Footer() {
               letterSpacing: '0.06em',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.75rem',
+              gap: '0.5rem',
             }}
           >
             <span>© 2026 Ivan Karlo Rukavina. {t.footer.rights}</span>
+            <span style={{ opacity: 0.4 }}>·</span>
             <Link
               href="/privacy"
               style={{ color: 'var(--text)', textDecoration: 'underline', textUnderlineOffset: '2px', opacity: 0.7 }}
-              onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.color = 'var(--text)' }}
-              onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.7'; e.currentTarget.style.color = 'var(--text)' }}
+              onMouseEnter={(e) => { e.currentTarget.style.opacity = '1' }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.7' }}
             >
               {t.privacy.link}
             </Link>
@@ -45,37 +46,39 @@ export default function Footer() {
           <div
             style={{
               fontFamily: 'var(--font-fira-code)',
-              fontSize: '0.55rem',
-              color: '#9898BB',
+              fontSize: '0.65rem',
+              color: 'var(--muted)',
               letterSpacing: '0.04em',
-              lineHeight: 1.5,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
             }}
           >
-            {t.footer.recaptcha}{' '}
+            <span>{t.footer.recaptcha}</span>
+            <span style={{ opacity: 0.4 }}>·</span>
             <a
               href="https://policies.google.com/privacy"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Google Privacy Policy"
-              style={{ color: '#9898BB', textDecoration: 'none' }}
+              style={{ color: 'var(--muted)', textDecoration: 'none' }}
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
             >
               {t.footer.privacy}
             </a>
-            {' '}{t.footer.recaptchaAnd}{' '}
+            <span style={{ opacity: 0.4 }}>·</span>
             <a
               href="https://policies.google.com/terms"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Google Terms of Service"
-              style={{ color: '#9898BB', textDecoration: 'none' }}
+              style={{ color: 'var(--muted)', textDecoration: 'none' }}
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
             >
               {t.footer.terms}
             </a>
-            {t.footer.recaptchaEnd ? <>{' '}{t.footer.recaptchaEnd}</> : null}
           </div>
         </div>
 

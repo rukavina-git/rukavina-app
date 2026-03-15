@@ -111,11 +111,9 @@
   },
   "footer": {
     "rights": "Sva prava pridržana.",
-    "recaptcha": "Ova stranica je zaštićena reCAPTCHA-om te se primjenjuju Googleova",
-    "recaptchaAnd": "i",
-    "privacy": "Pravila privatnosti",
-    "terms": "Uvjeti korištenja",
-    "recaptchaEnd": ""
+    "recaptcha": "Zaštićeno reCAPTCHA-om",
+    "privacy": "Google Pravila privatnosti",
+    "terms": "Uvjeti korištenja"
   },
   "cookies": {
     "text": "Koristimo neobvezne kolačiće kako bismo poboljšali vaše iskustvo i analizirali posjećenost stranice. Svoj odabir možete promijeniti u bilo kojem trenutku.",

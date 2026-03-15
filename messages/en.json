@@ -111,11 +111,9 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "recaptcha": "This site is protected by reCAPTCHA and the Google",
-    "recaptchaAnd": "and",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "recaptchaEnd": "apply."
+    "recaptcha": "Protected by reCAPTCHA",
+    "privacy": "Google Privacy Policy",
+    "terms": "Terms of Service"
   },
   "cookies": {
     "text": "We use optional cookies to improve your experience and analyse site usage. You can change your choice at any time.",
