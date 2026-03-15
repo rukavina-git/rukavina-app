@@ -170,6 +170,7 @@ export default function Portfolio() {
           <button
             className="hidden md:flex"
             onClick={prev}
+            aria-label="Previous project"
             style={arrowStyle}
             onMouseEnter={(e) => {
               const el = e.currentTarget
@@ -341,6 +342,7 @@ export default function Portfolio() {
           <button
             className="hidden md:flex"
             onClick={next}
+            aria-label="Next project"
             style={arrowStyle}
             onMouseEnter={(e) => {
               const el = e.currentTarget
@@ -367,23 +369,36 @@ export default function Portfolio() {
             <button
               key={i}
               onClick={() => goTo(i)}
+              aria-label={`Go to project ${i + 1}`}
               style={{
-                width: i === index ? 22 : 6,
-                height: 6,
-                borderRadius: i === index ? 3 : '50%',
-                background: i === index ? 'var(--accent)' : 'rgba(255,255,255,0.12)',
+                width: 44,
+                height: 44,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: 0,
+                background: 'transparent',
                 border: 'none',
                 cursor: 'pointer',
-                padding: 0,
-                transition: 'all 0.3s',
               }}
               onMouseEnter={(e) => {
-                if (i !== index) (e.currentTarget as HTMLButtonElement).style.background = 'rgba(95,111,255,0.4)'
+                if (i !== index) (e.currentTarget.firstElementChild as HTMLElement).style.background = 'rgba(95,111,255,0.4)'
               }}
               onMouseLeave={(e) => {
-                if (i !== index) (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.12)'
+                if (i !== index) (e.currentTarget.firstElementChild as HTMLElement).style.background = 'rgba(255,255,255,0.12)'
               }}
-            />
+            >
+              <span
+                style={{
+                  width: i === index ? 22 : 6,
+                  height: 6,
+                  borderRadius: i === index ? 3 : '50%',
+                  background: i === index ? 'var(--accent)' : 'rgba(255,255,255,0.12)',
+                  display: 'block',
+                  transition: 'all 0.3s',
+                }}
+              />
+            </button>
           ))}
         </div>
       </div>

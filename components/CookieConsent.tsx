@@ -88,7 +88,7 @@ export default function CookieConsent() {
             {t.cookies.text}{' '}
             <Link
               href="/privacy"
-              style={{ color: 'var(--muted)', textDecoration: 'underline' }}
+              style={{ color: 'var(--text)', textDecoration: 'underline' }}
             >
               {t.privacy.link}
             </Link>

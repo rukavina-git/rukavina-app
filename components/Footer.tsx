@@ -35,9 +35,9 @@ export default function Footer() {
             <span>© 2026 Ivan Karlo Rukavina. {t.footer.rights}</span>
             <Link
               href="/privacy"
-              style={{ color: 'var(--muted)', textDecoration: 'underline', textUnderlineOffset: '2px', opacity: 0.7 }}
+              style={{ color: 'var(--text)', textDecoration: 'underline', textUnderlineOffset: '2px', opacity: 0.7 }}
               onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.color = 'var(--text)' }}
-              onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.7'; e.currentTarget.style.color = 'var(--muted)' }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.7'; e.currentTarget.style.color = 'var(--text)' }}
             >
               {t.privacy.link}
             </Link>
@@ -46,7 +46,7 @@ export default function Footer() {
             style={{
               fontFamily: 'var(--font-fira-code)',
               fontSize: '0.55rem',
-              color: 'var(--faint)',
+              color: 'var(--subtle)',
               letterSpacing: '0.04em',
               lineHeight: 1.5,
             }}
@@ -56,7 +56,7 @@ export default function Footer() {
               href="https://policies.google.com/privacy"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: 'var(--faint)', textDecoration: 'none' }}
+              style={{ color: 'var(--subtle)', textDecoration: 'none' }}
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
             >
@@ -67,7 +67,7 @@ export default function Footer() {
               href="https://policies.google.com/terms"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: 'var(--faint)', textDecoration: 'none' }}
+              style={{ color: 'var(--subtle)', textDecoration: 'none' }}
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
             >
