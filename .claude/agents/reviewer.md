@@ -24,7 +24,7 @@ Check, in this order:
    sizes, fonts subset and preloaded deliberately, no layout shift from late content.
 7. **SEO.** Unique title and description per page and locale, `hreflang` alternates, canonical URL,
    sitemap entry.
-8. **Design drift.** Tokens from `DESIGN.md` rather than ad-hoc values; none of the v1 anti-patterns
+8. **Design drift.** Tokens from `DESIGN.md` rather than ad-hoc values; none of the template anti-patterns
    listed in `CLAUDE.md`.
 
 Report as a short list grouped by **Blocking**, **Should fix**, **Nit**. Each item: file and line, what is
