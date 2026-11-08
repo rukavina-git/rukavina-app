@@ -1,6 +1,6 @@
 # rukavina.app
 
-Personal services and portfolio site for Ivan Karlo Rukavina, a senior software engineer offering freelance
+Personal services and portfolio site for Ivan Karlo Rukavina (always the full name), a senior software engineer offering freelance
 work, team augmentation and consulting.
 
 ## Goal
@@ -36,11 +36,14 @@ npm run check     # astro check (types, content schemas)
 ## Content rules
 
 - Never add a claim, metric, client or testimonial that Karlo has not confirmed. Ask instead.
-- Confirmed claims: 100k+ users reached, 10+ projects shipped, Master's in Computer Science, reply within
+- Confirmed claims: 50,000+ users reached (one government app; keep wording general), 10+ projects shipped, Master's in Computer Science, reply within
   24 hours, free first consultation, based in Split, Croatia, working remotely.
 - NDA work (government projects and others) is described by problem, scale and technology only: no client
   names, no screenshots, no identifying details.
-- Public projects: GymBuddy, Adriava.
+- Public projects: GymBuddy, Adriava. An AI project and one more are planned; add them only when they exist.
+- No CV on the site, ever. No prices until Karlo decides on them.
+- Tone: a senior professional a company would bring in and talk to. Not a sales site: no urgency, no hard
+  selling, no marketing superlatives.
 - Every user-facing string exists in both `en` and `hr` in the same change. Missing Croatian copy is marked
   with a `TODO(hr)` comment, never left out.
 - Plain, specific language. No hype words, no filler.
