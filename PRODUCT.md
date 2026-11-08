@@ -52,7 +52,7 @@ AI, or join an existing team and work inside its process.
 - No prices for now; undecided whether they will be shown later.
 - No CV on the site, ever.
 - No blog at launch. A testimonials section appears once three real testimonials exist.
-- Undecided: whether the current employer is named on the site.
+- The current employer is not named on the site (fine on GitHub).
 
 ## Brand Commitments
 
