@@ -45,3 +45,5 @@ Answered by Karlo: no price yet (revisit later); no AI project yet, one is plann
 ## Decision
 
 Karlo: Accepted with changes. The first offer is named "Mobile development" (not "Android"). No prices at launch; whether and how to show a price is revisited later. Tone: a professional you would bring into a company and talk to, not a sales site. No AI project exists yet; one is planned, and AI stays a capability until then.
+
+Amended by Karlo on 2026-11-08: AI integration is offered as a full service, not only a capability. The portfolio gets an AI entry only once the project exists.

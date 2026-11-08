@@ -40,7 +40,10 @@ npm run check     # astro check (types, content schemas)
   24 hours, free first consultation, based in Split, Croatia, working remotely.
 - NDA work (government projects and others) is described by problem, scale and technology only: no client
   names, no screenshots, no identifying details.
-- Public projects: GymBuddy, Adriava. An AI project and one more are planned; add them only when they exist.
+- Public projects: GymBuddy, Adriava. An AI project and one more are planned; add them to the portfolio
+  only when they exist.
+- Services: Mobile development, AI integration, Architecture and code review, and a separate page for
+  businesses. Never "Android" as a service name.
 - No CV on the site, ever. No prices until Karlo decides on them.
 - Tone: a senior professional a company would bring in and talk to. Not a sales site: no urgency, no hard
   selling, no marketing superlatives.
