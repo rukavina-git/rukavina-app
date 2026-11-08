@@ -1,6 +1,6 @@
 # 0004: Extras at launch
 
-- Status: proposed
+- Status: accepted
 - Date: 2026-11-08
 
 ## Question
@@ -34,4 +34,4 @@ Option 2, unanimous. A one-page CV/profile PDF in both languages, built from the
 
 ## Decision
 
-Karlo: _pending_
+Karlo: Changed. No CV on the site: a CV must not be publicly visible. No blog. Testimonials: collect three, and add a testimonials section once they exist.

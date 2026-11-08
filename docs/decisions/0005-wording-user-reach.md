@@ -1,11 +1,11 @@
-# 0005: Wording of the 100k+ users claim
+# 0005: Wording of the user-reach claim
 
-- Status: proposed
+- Status: accepted
 - Date: 2026-11-08
 
 ## Question
 
-How is the 100k+ users claim presented when it can't be linked or proven because of NDA?
+How is the user-reach claim (asked as "100k+"; corrected to 50,000+ by Karlo) presented when it can't be linked or proven because of NDA?
 
 ## Options
 
@@ -18,7 +18,7 @@ How is the 100k+ users claim presented when it can't be linked or proven because
 
 - Confirmed true; cannot be proven (NDA).
 - CLAUDE.md bans the centered hero plus stats row pattern.
-- Unknown: whether 100k+ is one app or several combined.
+- At council time: unknown whether the figure was one app or several. Karlo later confirmed one app.
 
 ## Council
 
@@ -33,12 +33,12 @@ How is the 100k+ users claim presented when it can't be linked or proven because
 
 Option 2, three of four seats, with the skeptic's guard rails:
 
-- One sentence in body type on the first screen, never a large numeral. For example: "Apps I've built have reached over 100,000 users, mostly government platforms under NDA."
+- One sentence in body type on the first screen, never a large numeral. For example: "Apps I've built have reached over 50,000 users, mostly government platforms under NDA."
 - The same scale repeated as a detail inside the relevant case study.
 - "NDA" is said once per context, not on every card.
 
-Needs from Karlo: is 100k+ one app or several combined (the wording depends on it), and which per-project scale words ("national", "field teams") are safe to use.
+Answered by Karlo: one app; keep the wording general; "government" is safe to say.
 
 ## Decision
 
-Karlo: _pending_
+Karlo: Accepted with a corrected figure: the real number is 50,000+ users, from one app. Keep the wording vague rather than naming one app, e.g. "Apps I've built have reached over 50,000 users, mostly on government platforms." "Government" is safe to say.

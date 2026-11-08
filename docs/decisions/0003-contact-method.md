@@ -1,6 +1,6 @@
 # 0003: Contact method
 
-- Status: proposed
+- Status: accepted
 - Date: 2026-11-08
 
 ## Question
@@ -39,4 +39,4 @@ Option 3, unanimous; three of four say no booking link at launch.
 
 ## Decision
 
-Karlo: _pending_
+Karlo: Accepted as recommended.

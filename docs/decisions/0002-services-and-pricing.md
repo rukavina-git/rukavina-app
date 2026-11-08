@@ -1,6 +1,6 @@
 # 0002: Services and pricing
 
-- Status: proposed
+- Status: accepted
 - Date: 2026-11-08
 
 ## Question
@@ -32,7 +32,7 @@ Which services are listed, how are they named, and are prices shown?
 
 Option 2, three of four seats.
 
-1. **Android and mobile development**: contract or team augmentation, Kotlin first, iOS and cross-platform.
+1. **Mobile development**: contract or team augmentation, Kotlin first, iOS and cross-platform.
 2. **Architecture and code review**: system reviews, security, CI/CD, audits, due diligence.
 3. **Apps and websites for businesses**: its own page, no jargon, one "projects start from €X" line.
 
@@ -40,8 +40,8 @@ AI integration is listed as a capability under 1 and 2, not as a headline servic
 
 Strongest argument against: the designer's point that hiding rates everywhere looks generic. Showing the price on the business page addresses that where it matters most.
 
-Needs from Karlo: the "from" figure, and whether there is real AI work to point to.
+Answered by Karlo: no price yet (revisit later); no AI project yet, one is planned.
 
 ## Decision
 
-Karlo: _pending_
+Karlo: Accepted with changes. The first offer is named "Mobile development" (not "Android"). No prices at launch; whether and how to show a price is revisited later. Tone: a professional you would bring into a company and talk to, not a sales site. No AI project exists yet; one is planned, and AI stays a capability until then.

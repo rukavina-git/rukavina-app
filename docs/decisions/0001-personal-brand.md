@@ -1,6 +1,6 @@
 # 0001: Personal brand
 
-- Status: proposed
+- Status: accepted
 - Date: 2026-11-08
 
 ## Question
@@ -34,4 +34,4 @@ Option 2, unanimous. Wordmark "Karlo Rukavina", full name in About, metadata and
 
 ## Decision
 
-Karlo: _pending_
+Karlo: Personal brand, accepted, using the full name "Ivan Karlo Rukavina" as the display name everywhere (not the short form).
