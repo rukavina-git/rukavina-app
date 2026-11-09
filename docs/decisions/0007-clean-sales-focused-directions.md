@@ -1,6 +1,6 @@
 # 0007: Which four clean, contact-focused directions to mock
 
-- Status: proposed
+- Status: accepted (council overridden)
 - Date: 2026-11-09
 
 ## Question
@@ -49,4 +49,4 @@ Open risk: with motion pared back, the set may feel static against "feel alive".
 
 ## Decision
 
-Karlo: 
+Karlo (2026-11-09): Work on Q (scroll stage) as the base; the others move to an "Ideas" page in Figma. He likes Q's line that marks each section. Motion means something like P's map animated as a short loop of about five steps, nothing crazy. Show real work rather than an API diagram. No email next to the "Get in touch" button (redundant); the email belongs with his contact details.
