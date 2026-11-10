@@ -1,6 +1,6 @@
 # 0008: Council review of homepage mock Q2 (scroll story)
 
-- Status: proposed
+- Status: accepted
 - Date: 2026-11-10
 
 ## Question
@@ -35,4 +35,4 @@ Note: three seats flagged "mostly on government platforms" as overstated. That w
 
 ## Decision
 
-Karlo: 
+Karlo (2026-11-10): Accepted. The fixes were applied as Q3, which moves to the Decided page as the homepage direction. Facts given: engagement starts with a free first meeting (with the client or hiring manager); available now; LinkedIn and GitHub links next to the email; AI stays in the headline, with a fictional AI project in the mock until the real one exists (tracked in docs/launch-checklist.md); the government platform leads Work with a generic illustrative image. "Working together" copy approved.
