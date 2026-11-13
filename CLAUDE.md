@@ -1,7 +1,7 @@
 # rukavina.app
 
-Personal services and portfolio site for Ivan Karlo Rukavina (always the full name), a senior software engineer offering freelance
-work, team augmentation and consulting.
+Personal services and portfolio site for Ivan Karlo Rukavina (always the full name), a senior software engineer available for
+contract work inside teams, full-time roles, and building products end to end.
 
 ## Goal
 
@@ -10,12 +10,12 @@ the work, and makes contact. Everything on the site serves that path.
 
 Audiences, in priority order:
 
-1. Engineering managers hiring contractors
-2. Agencies that need extra senior hands
-3. Startup founders and CTOs
-4. Non-technical business owners who need an app or a website
+1. Teams that need an extra senior engineer as a contractor
+2. Hiring managers filling a full-time role
+3. People who need an app built end to end
 
-The first three share one voice. The fourth gets its own path, written without jargon.
+One homepage, one voice for all three. Project cards lead with a plain sentence; tech goes on a separate
+small line, so non-technical readers are not lost.
 
 ## Stack
 
@@ -36,11 +36,15 @@ npm run check     # astro check (types, content schemas)
 ## Content rules
 
 - Never add a claim, metric, client or testimonial that Karlo has not confirmed. Ask instead.
-- Confirmed claims: 50,000+ users reached (one government app; keep wording general), 10+ projects shipped, Master's in Computer Science, reply within
-  24 hours, free first consultation, based in Split, Croatia, working remotely.
-- NDA work (government projects and others) is described by problem, scale and technology only: no client
-  names, no screenshots, no identifying details.
-- Public projects: GymBuddy, Adriava. An AI project and one more are planned; add them only when they exist.
+- Confirmed claims: 100,000+ downloads on Android (one government app; Karlo works on its Android client),
+  Master's in Computer Science, reply within 24 hours, free first consultation, based in Croatia, working
+  remotely (CET). No project counts, years of experience, monthly users or coverage percentages.
+- NDA work is shown only under the labels "Government platform" and "Payments app", plus scale and
+  technology (e.g. NFC, Java Card, gRPC, blockchain, Android Secure Element). Never the app or client name,
+  and nothing about the app's purpose beyond those labels. No real screenshots. Karlo is fine with the
+  work being traceable as long as it is not named.
+- Public projects: GymBuddy, Adria VA. The "Document assistant" AI project in the mocks is fictional by
+  Karlo's choice and must be replaced or removed before launch (see `docs/launch-checklist.md`).
 - No CV on the site, ever. No prices until Karlo decides on them.
 - Tone: a senior professional a company would bring in and talk to. Not a sales site: no urgency, no hard
   selling, no marketing superlatives.

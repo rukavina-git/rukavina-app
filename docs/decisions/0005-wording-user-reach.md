@@ -1,6 +1,6 @@
 # 0005: Wording of the user-reach claim
 
-- Status: accepted
+- Status: accepted; figure superseded 2026-11-13 (see note at end)
 - Date: 2026-11-08
 
 ## Question
@@ -42,3 +42,10 @@ Answered by Karlo: one app; keep the wording general; "government" is safe to sa
 ## Decision
 
 Karlo: Accepted with a corrected figure: the real number is 50,000+ users, from one app. Keep the wording vague rather than naming one app, e.g. "Apps I've built have reached over 50,000 users, mostly on government platforms." "Government" is safe to say.
+
+
+## Note 2026-11-13
+
+Karlo corrected the figure in the design thread: the government app has 100,000+ downloads on Android
+(public Play Store figure). Monthly users are internal and not used. Site wording: "An app with
+100,000+ downloads on Android." under the "Government platform" label. No other user figure is used.

@@ -29,8 +29,8 @@ const OFFER = 'Senior software engineer. Mobile development, AI integration and 
 const WORK = [
   { name:'GymBuddy', sw:'Android, iOS, Kotlin backend', sp:'PUBLIC · ANDROID · IOS · KOTLIN', st:'Android · iOS · Kotlin', d:'Offline-first workout tracker. Native Android and iOS clients and a Kotlin backend, all generated from one OpenAPI contract that CI enforces.' },
   { name:'Adria VA', sw:'Website, HR / EN', sp:'PUBLIC · WEB · HR / EN', st:'Web · HR / EN', d:"Business website for a virtual assistance and bookkeeping service. Bilingual, with a contact form that lands in the owner's inbox." },
-  { name:'Emergency platform', stName:'Government emergency platform', sw:'Government, under NDA', sp:'GOVERNMENT · NDA', st:'Under NDA', d:'Android app used by more than 50,000 people, with live location, maps, login and registration, built to strict security requirements.' },
-  { name:'Smart-card payments', sw:'Banking, under NDA', sp:'BANKING · NDA', st:'Under NDA', d:'Payments for a European banking tender: NFC communication with smart cards and keys stored in the Android Secure Element.' },
+  { name:'Government platform', stName:'Government platform', sw:'Government, under NDA', sp:'GOVERNMENT · NDA', st:'Under NDA', d:'An app with 100,000+ downloads on Android.' },
+  { name:'Payments app', sw:'Payments, under NDA', sp:'PAYMENTS · NDA', st:'Under NDA', d:'A digital payments app where security comes first.' },
 ];
 async function placeSection(title, note) {
   const page = figma.root.children.find(p => p.name === 'Mocks'); await figma.setCurrentPageAsync(page);
@@ -110,7 +110,7 @@ const SP_PALS = [
   { name:'Intaglio blue', ground:'#edf0f5', tint:'#dde3ee', ink:'#19335f', line:'#7d93b8', mrz:'#19335f', mrzFg:'#e8edf6', mute:'#4c5f80', sw:['#edf0f5','#7d93b8','#19335f'] },
   { name:'Burgundy', ground:'#f3eeee', tint:'#eadfe0', ink:'#5e1b27', line:'#b88c93', mrz:'#5e1b27', mrzFg:'#f6eced', mute:'#7d4e56', sw:['#f3eeee','#b88c93','#5e1b27'] },
 ];
-const SP_WORK_K = ['PUBLIC · ANDROID · IOS · KOTLIN','PUBLIC · WEB · HR / EN','GOVERNMENT · NDA','BANKING · NDA'];
+const SP_WORK_K = ['PUBLIC · ANDROID · IOS · KOTLIN','PUBLIC · WEB · HR / EN','GOVERNMENT · NDA','PAYMENTS · NDA'];
 function gcd(a, b) { return b ? gcd(b, a % b) : a; }
 function rosettePath(Rr, r, d, cx, cy, R) {
   const k = R / (Rr - r + d), end = Math.PI * 2 * r / gcd(Rr, r); let s = '';
@@ -214,7 +214,7 @@ function buildStandard(p, letter) {
   WORK.forEach((w, i) => {
     const it = add(list, AL('VERTICAL', { name:w.name, itemSpacing:4, paddingTop: i === 0 ? 0 : 18, paddingBottom:18 }), true); border(it, p.line, 0, 1);
     const h = add(it, AL('HORIZONTAL', { primaryAxisAlignItems:'SPACE_BETWEEN', counterAxisAlignItems:'CENTER' }), true);
-    h.appendChild(T(i === 2 ? 'Government emergency platform' : w.name, { ...G, s:'SemiBold', size:18, color:p.fg, ls:-0.01 }));
+    h.appendChild(T(i === 2 ? 'Government platform' : w.name, { ...G, s:'SemiBold', size:18, color:p.fg, ls:-0.01 }));
     h.appendChild(T(ST_META[i], { ...GM, size:13, color:p.accent }));
     it.appendChild(T(w.d, { ...G, s:'Regular', size:15, color:p.mute, lh:1.5, w:620 }));
   });
