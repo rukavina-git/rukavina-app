@@ -20,7 +20,7 @@ Open: the mock nav has "About", but the page has no About section yet.
 | Key | en | hr |
 | --- | --- | --- |
 | hero.title | Senior software engineer. Software built properly. | Senior softverski inženjer. Softver napravljen kako treba. |
-| hero.p1 | I've worked on large products people depend on, including government apps and payments software. I know what it takes to keep them healthy long after launch. | Radio sam na velikim proizvodima o kojima ljudi ovise, uključujući državne aplikacije i softver za plaćanja. Znam što je potrebno da ostanu u dobrom stanju dugo nakon lansiranja. |
+| hero.p1 | I've worked on large products people depend on, including a government app and payments software. I know what it takes to keep them healthy long after launch. | Radio sam na velikim proizvodima o kojima ljudi ovise, uključujući državnu aplikaciju i softver za plaćanja. Znam što je potrebno da ostanu u dobrom stanju dugo nakon lansiranja. |
 | hero.p2 | I join your team as a contractor or full-time, or take a product from idea to release on my own: mobile, backend, AI features and the architecture holding it together. | Pridružujem se vašem timu kao vanjski suradnik ili u stalnom radnom odnosu, ili samostalno vodim proizvod od ideje do objave: mobilna aplikacija, backend, AI funkcionalnosti i arhitektura koja sve to drži na okupu. |
 | hero.more | See shipped work | Pogledajte projekte |
 | hero.caption.gov | Government platform · NDA | Državna platforma · NDA |
