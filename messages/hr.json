@@ -1,0 +1,186 @@
+{
+  "Nav": {
+    "services": "Usluge",
+    "work": "Radovi",
+    "about": "O meni",
+    "contact": "Kontakt",
+    "cta": "Počnimo",
+    "toggleEn": "EN",
+    "toggleHr": "HR"
+  },
+  "Hero": {
+    "line1": "Your next product,",
+    "line2": "built to last.",
+    "sub": "Senior software engineer specialising in web and mobile development and systems architecture. I take projects from brief to deployed product.",
+    "ctaPrimary": "Pokreni projekt",
+    "ctaSecondary": "Pogledaj radove"
+  },
+  "ServicesSection": {
+    "label": "Što radim",
+    "title": "Usluge",
+    "sub": "Pokriven je cijeli životni ciklus — od arhitekturnih odluka do gotovog proizvoda u rukama korisnika.",
+    "cta": "Sve usluge",
+    "01": {
+      "name": "Mobilni razvoj",
+      "desc": "Native Android aplikacije u Kotlinu — arhitektura, implementacija, objava na Play Storeu. Opsežno iskustvo uključujući sigurnosne aplikacije vladinih standarda s biometrijom, šifriranom pohranom i složenim SDK integracijama."
+    },
+    "02": {
+      "name": "Web rješenja",
+      "desc": "Prilagođeni web sajtovi i aplikacije za tvrtke. Ne predlošci — pravi kod, solidne performanse i dizajn izgrađen oko onoga što vaši korisnici i pretraživači stvarno trebaju."
+    },
+    "03": {
+      "name": "Arhitektura i savjetovanje",
+      "desc": "Dizajn sustava, odluke o tehnološkom stogu, revizije koda, vođenje timova. Bilo da počinjete od nule ili razrješujete nešto što je prebrzo raslo — pomažem vam donijeti pravu odluku ranije."
+    },
+    "04": {
+      "name": "AI integracija",
+      "desc": "Praktične AI funkcionalnosti za postojeće proizvode — on-device ML, LLM integracije, pametna automatizacija. Bez hype-a — samo stvari koje će vaši korisnici stvarno primijetiti i koristiti."
+    }
+  },
+  "HowItWorks": {
+    "label": "Proces",
+    "title": "Kako funkcionira",
+    "sub": "Bez dvosmislenosti, bez iznenađenja. Evo kako izgleda suradnja.",
+    "01": {
+      "name": "Upoznavanje",
+      "desc": "Kratak razgovor o tome što gradite i što trebate. Bez obaveze, bez prodajnog govora — samo iskrena razmjena mišljenja."
+    },
+    "02": {
+      "name": "Prijedlog",
+      "desc": "Jasan pisani prijedlog: što ću izgraditi, koliko dugo će trajati, kako izgleda uspjeh. Sve dogovoreno unaprijed."
+    },
+    "03": {
+      "name": "Izgradnja i isporuka",
+      "desc": "Gradim, ažuriram vas u svakoj fazi i predam nešto što funkcionira — s dokumentacijom i čistim predajom. Vi ste vlasnici koda."
+    }
+  },
+  "WorkSection": {
+    "label": "Odabrani radovi",
+    "title": "Portfolio",
+    "sub": "Projekti o kojima mogu govoriti. Neki od mojih najboljih radova su pod NDA-om.",
+    "cta": "Svi radovi",
+    "limitedInfo": "Ograničene javne informacije",
+    "viewSite": "Pogledaj live →",
+    "filterAll": "Svi",
+    "filterAndroid": "Android",
+    "filterWeb": "Web"
+  },
+  "AboutSection": {
+    "label": "Tko sam",
+    "title": "O meni",
+    "p1": "Senior sam softverski inženjer i sistemski arhitekt sa sjedištem u Splitu, Hrvatska, s godinama iskustva u izgradnji softvera koji radi pod stvarnim pritiskom — rokovi, sigurnosni zahtjevi i zahtjevni korisnici.",
+    "p1Strong": "senior softverski inženjer i sistemski arhitekt",
+    "p2": "Većina moje karijere bila je u Android razvoju, ali razmišljam u sustavima. Projektirao sam arhitekture za aplikacije koje obrađuju osjetljive vladine podatke, izgradio web rješenja za lokalna poduzeća od nule i proveo značajno vrijeme pomažući inženjerskim timovima donijeti bolje odluke prije nego što postanu skupe.",
+    "p2Strong": "Android razvoju",
+    "p3": "Pod rukavina.app preuzimam freelance posao gdje mogu prijeći od kratkog razgovora do razvijenog proizvoda — bez overhead-a velikih agencija. Radite s inženjerom, a ne s account managerom.",
+    "p3Strong": "rukavina.app",
+    "p4": "Dostupan sam za projektni rad i konzultantske angažmane. Radim remote bez problema i iskren sam u pogledu rokova.",
+    "p4Strong": "projektni rad i konzultantske angažmane",
+    "techLabel": "Tehnologije",
+    "moreCta": "Više o meni",
+    "teaserQuote": "Senior softverski inženjer iz Splita. Dizajniram, gradim i isporučujem — web, Android ili što god problem zahtijeva.",
+    "card": {
+      "initials": "KR",
+      "name": "Ivan Karlo Rukavina",
+      "title": "Senior softverski inženjer",
+      "locationLabel": "Lokacija",
+      "location": "Split, Hrvatska",
+      "timezoneLabel": "Vremenska zona",
+      "timezone": "CET / CEST",
+      "languagesLabel": "Jezici",
+      "languages": "Hrvatski, Engleski",
+      "linkedin": "↗ LinkedIn"
+    }
+  },
+  "HomeCTA": {
+    "title": "Spremi za pokretanje projekta?",
+    "sub": "Javite se i vidimo odgovara li.",
+    "cta": "Počnimo"
+  },
+  "FAQ": {
+    "label": "Česta pitanja",
+    "title": "FAQ",
+    "01": {
+      "q": "Jeste li trenutno dostupni za nove projekte?",
+      "a": "Da, trenutno sam dostupan. Preuzimam ograničen broj projekata istovremeno kako bih svakom posvetio odgovarajuću pažnju. Ako imate nešto u planu, vrijedi kontaktirati ranije."
+    },
+    "02": {
+      "q": "Kako projekt tipično počinje?",
+      "a": "Kratki email ili poruka o tome što trebate dovoljna je za početak. Zatim ćemo imati kratak razgovor — poziv ili asinhrono, kako god preferirate — i pripremit ću jasan pisani prijedlog s opsegom i rokovima prije nego počne ikakav rad."
+    },
+    "03": {
+      "q": "Na kojim projektima radite?",
+      "a": "Web aplikacije, poslovne web stranice, native Android aplikacije, arhitekturno savjetovanje i AI integracije. Bilo što od fokusiranog projekta od 2 tjedna do dugoročnog tehničkog partnerstva. Selektivan sam — reći ću vam iskreno ako nije pravi odabir."
+    },
+    "04": {
+      "q": "Koliko dugo traje tipičan projekt?",
+      "a": "Ovisi o opsegu. Poslovni web sajt tipično traje 2–4 tjedna. Mobilna aplikacija od nule obično 2–5 mjeseci. Konzultantski angažmani variraju. Dajem realne procjene unaprijed i upozoravam rano ako se nešto promijeni."
+    },
+    "05": {
+      "q": "Kako se rukujete komunikacijom tijekom projekta?",
+      "a": "Asinhrono po defaultu — redovita pisana ažuriranja i brzi odgovori na poruke. Ako preferirate zakazane pozive, fleksibilan sam. CET/CEST vremenska zona, engleski i hrvatski."
+    },
+    "06": {
+      "q": "Radite li s klijentima izvan Hrvatske?",
+      "a": "Da, potpuno remote. Većina mojih klijenata je iz EU. Remote rad za mene nije zaobilazno rješenje — to je način na koji radim godinama."
+    }
+  },
+  "Contact": {
+    "label": "Stupite u kontakt",
+    "title": "Radimo zajedno",
+    "headline": "Počnite s razgovorom, ne ugovorom.",
+    "sub": "Ispunite obrazac i odgovorit ću u roku od 24 sata. Nije potrebna obaveza — samo direktan razgovor o tome mogu li pomoći i što bi to zahtijevalo.",
+    "form": {
+      "nameLabel": "Ime",
+      "namePlaceholder": "Vaše ime",
+      "emailLabel": "Email",
+      "emailPlaceholder": "vas@email.com",
+      "serviceLabel": "Što vam treba?",
+      "servicePlaceholder": "Odaberite uslugu",
+      "serviceMobile": "Mobilni razvoj",
+      "serviceWeb": "Web razvoj",
+      "serviceArch": "Arhitekturno savjetovanje",
+      "serviceAI": "AI integracija",
+      "serviceOther": "Ostalo",
+      "messageLabel": "Ispričajte mi o svom projektu",
+      "messagePlaceholder": "Što gradite? Koji problem pokušavate riješiti?",
+      "submit": "Pošalji poruku →",
+      "sending": "Šaljem...",
+      "success": "Poruka poslana! Javit ću se u roku od 24 sata.",
+      "error": "Nešto je pošlo po krivu. Pokušajte ponovo ili mi pišite direktno."
+    },
+    "details": {
+      "emailLabel": "Email",
+      "emailValue": "hello@rukavina.app",
+      "locationLabel": "Lokacija",
+      "locationValue": "Split, Hrvatska",
+      "responseLabel": "Vrijeme odgovora",
+      "responseValue": "U roku od 24 sata"
+    }
+  },
+  "Footer": {
+    "copyright": "© 2026 Ivan Karlo Rukavina",
+    "linkedin": "LinkedIn",
+    "privacy": "Pravila privatnosti"
+  },
+  "ServicesPage": {
+    "metaTitle": "Usluge — rukavina.app",
+    "label": "Što radim",
+    "title": "Usluge",
+    "sub": "Što gradim i kako radim.",
+    "cta": "Pokreni projekt"
+  },
+  "WorkPage": {
+    "metaTitle": "Radovi — rukavina.app",
+    "label": "Odabrani radovi",
+    "title": "Portfolio",
+    "sub": "Projekti o kojima mogu govoriti. Neki od mojih najboljih radova su pod NDA-om."
+  },
+  "AboutPage": {
+    "metaTitle": "O meni — rukavina.app",
+    "linkedinLabel": "↗ Pogledaj na LinkedInu"
+  },
+  "ContactPage": {
+    "metaTitle": "Kontakt — rukavina.app"
+  }
+}

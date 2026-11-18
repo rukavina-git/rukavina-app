@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #F5F2EB;
+  --color-bg-alt: #EDEAE2;
+  --color-card: #FFFFFF;
+  --color-dark: #1B2B35;
+  --color-text: #1A1915;
+  --color-muted: #7A736B;
+  --color-accent: #1B3A4B;
+  --color-warm: #C4523C;
+  --color-border: #D8D3C8;
+
+  --font-sans: var(--font-hanken), 'Hanken Grotesk', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F2EB;
+  color: #1A1915;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Hero line reveal container */
+.hl-line {
+  display: block;
+  overflow: hidden;
+}
+.hl-line > span {
+  display: block;
+}
+
+/* Cursor blink */
+.cursor-blink {
+  color: #C4523C;
+  opacity: 0;
+  animation: cappr 0.05s 1.35s both, blink 1.1s 1.4s step-end infinite;
+}
+@keyframes cappr {
+  to { opacity: 1; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Hero mesh blob animations — alternate so each drifts between two states */
+@keyframes blob-a {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-44px, 52px) scale(1.08); }
+}
+@keyframes blob-b {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(48px, -38px) scale(1.06); }
+}
+@keyframes blob-c {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-28px, -32px) scale(1.05); }
+}
+@keyframes blob-d {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(22px, 28px) scale(1.09); }
+}
+
+/* Available dot pulse */
+@keyframes pdot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.4); }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
