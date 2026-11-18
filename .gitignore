@@ -1,0 +1,16 @@
+node_modules
+.next
+/out/
+/build/
+.vercel
+.env*
+!.env.example
+*.pem
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+.DS_Store
+.claude/settings.local.json
+references
+# local design reviews, mocks and screenshots; images the site uses go in public/
+design/
