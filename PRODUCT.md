@@ -58,6 +58,8 @@ trade-offs clearly to whoever has to decide.
 - No CV on the site, ever.
 - No blog at launch. A testimonials section appears once three real testimonials exist.
 - The current employer is not named on the site (fine on GitHub).
+- Describe team work as "agile teams, working closely with the product owner, designers, QA and other
+  teams". Never "the backend team": it reads as if Karlo does not do backend (Karlo does; see Gym Tracker).
 - Never mention remote, hybrid, on-site or relocation anywhere on the site. Location is "based in
   Split, Croatia" only; working arrangements come up in conversation.
 - Never highlight basics (unit tests, "backend calls", login, registration, biometrics, using React or
@@ -96,7 +98,9 @@ Confirmed by Karlo on 2026-11-19 unless noted.
   does or for whom.
 - Payments app for a European banking tender (NDA): NFC with smart cards (Java Card), keys stored in the
   Android Secure Element, gRPC, blockchain. Problem, scale and tech only.
-- Confirmed facts: 10+ projects shipped, Master's in Computer Science, based in Split, Croatia.
+- Confirmed facts: Master's in Computer Science (show it plainly, e.g. in the About facts beside the
+  photo), based in Split, Croatia, languages Croatian (native) and English (fluent, spoken and written). Never state a project count ("10+
+  projects" says nothing); the projects speak for themselves.
 - AI project: not started. Until one exists the site may show a clearly marked "work in progress" slot,
   with no invented details.
 - Absent, never to be fabricated: testimonials, client logos, prices, metrics beyond those listed.
