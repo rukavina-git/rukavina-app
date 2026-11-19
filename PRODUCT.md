@@ -16,27 +16,31 @@ and `src/lib/data/`; no CMS.
 
 Visitors deciding whether to bring Ivan Karlo Rukavina in, in priority order:
 
-1. Engineering managers hiring a contractor: checking seniority, stack fit and evidence of shipped work,
-   usually after a referral, a LinkedIn profile or a GitHub repo.
-2. Agencies that need extra senior hands for a client project.
+1. Hiring managers filling a permanent senior role: checking seniority, judgment, how he works inside
+   a team, and evidence of shipped work, usually after a referral, a LinkedIn profile or a GitHub repo.
+2. Engineering managers, tech leads and agencies adding a contractor or consultant to their team.
 3. Startup founders and CTOs who need a product built or a technical decision made well.
 4. Non-technical business owners who need an app or a website and want to know, in plain language, what
    they would get.
 
 The first three share one voice. The fourth has its own page, written without jargon.
+(Karlo, 2026-11-19: the site should make him read as someone a company wants as a future senior
+employee, or wants to add to its team as a freelancer or consultant.)
 
 ## Product Purpose
 
 A personal services and portfolio site. A qualified visitor understands who Karlo is and what he offers
 within five seconds, trusts the quality of the work, and gets in touch. Success is a relevant enquiry
-from an engineering manager, agency or founder.
+from a hiring manager, engineering manager, agency or founder.
 
 ## Positioning
 
 A senior engineer who has shipped security-heavy mobile systems for government and banking clients (an
 emergency platform for 50,000+ users with live location and maps; NFC smart-card payments with keys in
 the Android Secure Element), and who can own a product end to end, from architecture to mobile, web and
-AI, or join an existing team and work inside its process.
+AI, or join an existing team and work inside its process. His strongest trait is working in complex
+teams: alongside product owners, UI/UX, QA, backend and DevOps teams, in an agile process, explaining
+trade-offs clearly to whoever has to decide.
 
 ## Operating Context
 
@@ -47,13 +51,18 @@ AI, or join an existing team and work inside its process.
 
 ## Capabilities and Constraints
 
-- Services: Mobile development (native Android and iOS, or cross-platform), AI integration, Architecture
-  and code review, and a separate page for businesses (websites and apps). "Android" is never a service
-  name.
+- Services: Web and mobile development, AI integration, Architecture and code review, and a separate
+  page for businesses (websites and apps). "Android" is never a service name; say "web and mobile",
+  not only "mobile".
 - No prices for now; undecided whether they will be shown later.
 - No CV on the site, ever.
 - No blog at launch. A testimonials section appears once three real testimonials exist.
 - The current employer is not named on the site (fine on GitHub).
+- Never mention remote, hybrid, on-site or relocation anywhere on the site. Location is "based in
+  Split, Croatia" only; working arrangements come up in conversation.
+- Never highlight basics (unit tests, "backend calls", login, registration, biometrics, using React or
+  Next.js). Lead with ownership, judgment and responsibility. Never call something "hard" or
+  "challenging" unless Karlo has said it was.
 
 ## Brand Commitments
 
@@ -66,19 +75,30 @@ AI, or join an existing team and work inside its process.
 
 ## Evidence on Hand
 
-- GymBuddy (public, [repo](https://github.com/rukavina-git/GymBuddy)): offline-first workout tracker.
-  Native Android (Kotlin, Compose, Room) and iOS (Swift, SwiftUI) clients and a Kotlin/Spring Boot
-  backend, all built from one hand-authored OpenAPI contract that CI enforces. Treated as live.
-- Adria VA (public, [adriava.rukavina.app](https://adriava.rukavina.app)): business website for a
-  virtual assistance and bookkeeping service. Next.js, bilingual HR/EN, contact form. Treated as live.
-- Government emergency platform (NDA): 50,000+ users, live location and maps, login and registration.
-  Problem, scale and tech only.
-- Payments for a European banking tender (NDA): NFC with smart cards, keys stored in the Android Secure
-  Element. Problem, scale and tech only.
-- Confirmed facts: 10+ projects shipped, Master's in Computer Science, based in Split, Croatia, works
-  remotely.
-- Planned, not yet existing: an AI integration project and one further public project. Do not show them
-  until they exist.
+Confirmed by Karlo on 2026-11-19 unless noted.
+
+- Gym Tracker (public; repo and Android package are still named GymBuddy, [repo](https://github.com/rukavina-git/GymBuddy)).
+  Always "Gym Tracker" on the site, never "GymBuddy". A private workout tracker with no
+  ads and no bloat; he built it because no app did only what he wanted, simply. Offline-first. Android
+  app (Kotlin, Compose, Room) and a Kotlin/Spring Boot backend, built from one hand-authored OpenAPI
+  contract that CI enforces; architecture decisions recorded as ADRs in the repo. On Google Play by the
+  time the site launches: treat as live. iOS is planned, not built: never mention it.
+- Adria VA (public, [adriava.rukavina.app](https://adriava.rukavina.app)): website for a virtual
+  assistance and bookkeeping business. The site itself is simple; the strength to show is discovery:
+  refining a vague brief and getting out of the client what they actually needed. Do not sell the tech.
+- Government platform (NDA): a well-defined project Karlo joined after it had started (not owned by Karlo
+  from the first idea). Once on it, Karlo owned the process and the responsibility for his work from the
+  product owner's defined ticket to production: refinement, estimates, proposed changes and architecture,
+  implementation, store releases, and work on the CI/CD pipeline. Live location (geotracking) and maps.
+  Worked with the product owner, UI/UX, QA, backend and DevOps teams in an agile process. "Tens of
+  thousands of users" (Karlo: close to 100,000 across his apps; the site keeps "tens of thousands").
+  Login, registration and biometrics are basic: do not highlight them. Show skills, never what the app
+  does or for whom.
+- Payments app for a European banking tender (NDA): NFC with smart cards (Java Card), keys stored in the
+  Android Secure Element, gRPC, blockchain. Problem, scale and tech only.
+- Confirmed facts: 10+ projects shipped, Master's in Computer Science, based in Split, Croatia.
+- AI project: not started. Until one exists the site may show a clearly marked "work in progress" slot,
+  with no invented details.
 - Absent, never to be fabricated: testimonials, client logos, prices, metrics beyond those listed.
 
 ## Product Principles
