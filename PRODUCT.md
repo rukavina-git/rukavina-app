@@ -99,9 +99,11 @@ Confirmed by Karlo on 2026-11-19 unless noted.
   secure"; never name the document types, the scanning or the vendor.
   Login, registration and biometrics are basic: do not highlight them. Show skills, never what the app
   does or for whom.
-- Payments app (NDA): NFC card payments with custom Java Cards, keys stored in the Android Secure
+- Payments app (NDA): a digital currency paid by tapping the phone (NOT credit-card payments; never say
+  "digital euro", it points to the client). Money/keys on custom Java Cards and the Android Secure
   Element, gRPC; transactions recorded on a blockchain all parties can see (instead of a database).
-  Team of about ten. Karlo built the Android side of the card communication: sending APDU commands over
+  Payments also worked phone to phone and by QR code scan.
+  Small team. Never state team sizes as numbers: use small, medium or large team. Karlo built the Android side of the card communication: sending APDU commands over
   NFC, with retries, failure handling, testing and debugging. He did NOT write the card applets/APDU
   programming and did NOT work on the blockchain part: never claim either. Never mention the tender,
   the client or that it was a demo. Problem, scale and tech only.
