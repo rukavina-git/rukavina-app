@@ -1,8 +1,9 @@
 # Messages
 
-`en.json` and `hr.json` must have the same keys. JSON has no comments, so Croatian strings that
-are still English placeholders are listed here until Karlo translates them.
+`en.json` and `hr.json` must have the same keys. Claude writes the Croatian; Karlo proofreads it.
+JSON has no comments, so unreviewed Croatian is listed here until Karlo has checked it.
 
-## TODO(hr)
+## Unreviewed (hr)
 
-- (none tracked yet; audit hr.json against en.json in the first plan step)
+- `Header.*` (skip, nav, work, services, about, contact, language)
+- `Footer.location`

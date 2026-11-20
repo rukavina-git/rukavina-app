@@ -1,23 +1,61 @@
 @import "tailwindcss";
 
+/* Tokens from Figma "Round 8 · C refined" (frames 331:656, 331:859). */
 @theme {
-  --color-bg: #F5F2EB;
-  --color-bg-alt: #EDEAE2;
-  --color-card: #FFFFFF;
-  --color-dark: #1B2B35;
-  --color-text: #1A1915;
-  --color-muted: #7A736B;
-  --color-accent: #1B3A4B;
-  --color-warm: #C4523C;
-  --color-border: #D8D3C8;
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-bg: #f7f5f0;
+  --color-bg-alt: #ecebe4;
+  --color-surface: #ffffff;
+  --color-surface-warm: #f1eee7;
+  --color-ink: #161616;
+  --color-ink-soft: #2e2d2a;
+  --color-muted: #6b6862;
+  /* Decorative only (separators); fails contrast for text. */
+  --color-faint: #a9a59c;
+  --color-border: #dcd7cc;
+  --color-border-strong: #cfcabe;
+  --color-accent: #1d4e5f;
+  --color-accent-soft: #d6e1e2;
 
+  --font-*: initial;
   --font-sans: var(--font-hanken), 'Hanken Grotesk', sans-serif;
+
+  --text-display: 4.5rem;
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.04em;
+  --text-h2: 2.75rem;
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.03em;
+  --text-h3: 1.875rem;
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: -0.02em;
+  --text-h4: 1.375rem;
+  --text-h4--line-height: 1.3;
+  --text-h4--letter-spacing: -0.02em;
+  --text-lead: 1.25rem;
+  --text-lead--line-height: 1.55;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.5;
+  --text-ui: 0.9375rem;
+  --text-ui--line-height: 1.33;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.3;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.3;
+
+  --spacing-gutter: 1.25rem;
+  --spacing-gutter-lg: 4rem;
+  --spacing-section: 7rem;
+  --container-page: 90rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* Horizontal page padding: 20px on phones, 64px from md (Figma). */
+@utility px-page {
+  padding-inline: var(--spacing-gutter);
+  @media (width >= 48rem) {
+    padding-inline: var(--spacing-gutter-lg);
+  }
 }
 
 html {
@@ -25,67 +63,38 @@ html {
 }
 
 body {
-  background-color: #F5F2EB;
-  color: #1A1915;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.6;
-  overflow-x: hidden;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-/* Hero line reveal container */
-.hl-line {
-  display: block;
-  overflow: hidden;
+/* Keep anchored sections clear of the sticky header. */
+main [id] {
+  scroll-margin-top: 4.5rem;
 }
-.hl-line > span {
-  display: block;
-}
-
-/* Cursor blink */
-.cursor-blink {
-  color: #C4523C;
-  opacity: 0;
-  animation: cappr 0.05s 1.35s both, blink 1.1s 1.4s step-end infinite;
-}
-@keyframes cappr {
-  to { opacity: 1; }
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+@media (min-width: 48rem) {
+  main [id] {
+    scroll-margin-top: 5.25rem;
+  }
 }
 
-/* Hero mesh blob animations — alternate so each drifts between two states */
-@keyframes blob-a {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(-44px, 52px) scale(1.08); }
-}
-@keyframes blob-b {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(48px, -38px) scale(1.06); }
-}
-@keyframes blob-c {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(-28px, -32px) scale(1.05); }
-}
-@keyframes blob-d {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(22px, 28px) scale(1.09); }
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
-/* Available dot pulse */
-@keyframes pdot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.4); }
-}
-
-/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }

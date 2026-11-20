@@ -1,30 +1,40 @@
 import { useTranslations } from 'next-intl'
-import { Link } from '@/lib/i18n/navigation'
+import { site } from '@/lib/site'
+
+const link = 'hover:text-ink hover:underline hover:underline-offset-4'
+
+function Dot() {
+  return (
+    <span aria-hidden="true" className="px-1.5">
+      ·
+    </span>
+  )
+}
 
 export default function Footer() {
   const t = useTranslations('Footer')
 
   return (
-    <footer className="bg-dark text-white/45 px-[5%] py-[26px] flex flex-wrap items-center justify-between gap-4 text-[13px]">
-      <span className="text-[15px] text-white font-bold">
-        rukavina.app
-      </span>
-      <span>{t('copyright')}</span>
-      <div className="flex gap-5">
-        <a
-          href="https://www.linkedin.com/in/rukavina/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white/35 no-underline transition-colors duration-300 hover:text-white"
-        >
-          {t('linkedin')}
-        </a>
-        <Link
-          href="/privacy"
-          className="text-white/35 no-underline transition-colors duration-300 hover:text-white"
-        >
-          {t('privacy')}
-        </Link>
+    <footer className="border-t border-border">
+      <div className="px-page mx-auto flex max-w-page flex-col gap-3 pt-7 pb-9 text-small text-muted md:flex-row md:items-start md:justify-between">
+        <p>
+          {site.name}
+          <Dot />
+          {t('location')}
+        </p>
+        <p>
+          <a href={`mailto:${site.email}`} className={link}>
+            {site.email}
+          </a>
+          <Dot />
+          <a href={site.linkedin} className={link} target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <Dot />
+          <a href={site.github} className={link} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </p>
       </div>
     </footer>
   )
