@@ -202,7 +202,7 @@
     "intro": "This site is run by {name}. Personal data is collected through the contact form and, like on any website, in the hosting provider's server logs.",
     "form": {
       "title": "Contact form",
-      "text": "When you send the form, your name, email address and message are sent to me by email through Resend, an email delivery service. I use them only to reply to you, and keep them only as long as our conversation needs. Your IP address is used to limit repeated sends."
+      "text": "When you send the form, your name, email address and message reach me as an email, delivered through Resend, an email delivery service. Your IP address is used to limit repeated sends."
     },
     "recaptcha": {
       "title": "Spam protection",
@@ -213,8 +213,8 @@
       "text": "The site is hosted on Vercel, which logs requests (such as IP address and browser) to run and protect the service. There are no analytics, no advertising and no cookies set by this site itself."
     },
     "rights": {
-      "title": "Your data",
-      "text": "To see, correct or delete what you sent me, email <email></email>."
+      "title": "Questions",
+      "text": "Questions about this page or what you sent me: <email></email>."
     }
   }
 }

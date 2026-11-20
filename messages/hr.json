@@ -202,7 +202,7 @@
     "intro": "Ovu stranicu vodi {name}. Stranica prikuplja osobne podatke putem obrasca za kontakt te, kao i svaka web stranica, u zapisima poslužitelja pružatelja hostinga.",
     "form": {
       "title": "Obrazac za kontakt",
-      "text": "Kad pošaljete obrazac, vaše ime, e-mail adresa i poruka šalju mi se e-mailom putem usluge Resend za dostavu e-mailova. Koristim ih samo da vam odgovorim i čuvam ih samo dok to naš razgovor zahtijeva. Vaša IP adresa koristi se za ograničavanje ponovljenih slanja."
+      "text": "Kad pošaljete obrazac, vaše ime, e-mail adresa i poruka stižu mi kao e-mail, putem usluge Resend za dostavu e-mailova. Vaša IP adresa koristi se za ograničavanje ponovljenih slanja."
     },
     "recaptcha": {
       "title": "Zaštita od spama",
@@ -213,8 +213,8 @@
       "text": "Stranica je smještena na Vercelu, koji bilježi zahtjeve (poput IP adrese i preglednika) radi rada i zaštite usluge. Nema analitike, oglasa ni kolačića koje postavlja sama stranica."
     },
     "rights": {
-      "title": "Vaši podaci",
-      "text": "Ako želite vidjeti, ispraviti ili izbrisati ono što ste mi poslali, pišite na <email></email>."
+      "title": "Pitanja",
+      "text": "Pitanja o ovoj stranici ili onome što ste mi poslali: <email></email>."
     }
   }
 }

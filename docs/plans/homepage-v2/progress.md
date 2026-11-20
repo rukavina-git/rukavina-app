@@ -98,7 +98,7 @@
 - 07 hr NITs open: "produkt" vs "proizvod" in HowIWork.communication; gym-tracker partShort is a
   full sentence while the others are fragments; "aplikaciju" twice in gym-tracker.part;
   "AI projekt" kept as a short label.
-- 08 open for Karlo (step 9): privacy facts (retention "as long as our conversation needs",
-  no analytics) and whether to add the GDPR legal basis and the right to complain to AZOP.
+- Privacy (Karlo, 2026-11-20): no retention or deletion promises; messages are just email.
+  The page says what the form sends and where it goes, plus a contact line.
 - 08 NITs open: 404 inherits the home title/canonical (404 status keeps it out of search);
   footer privacy link under 44px; hr "Ovu stranicu vodi…" wording.
