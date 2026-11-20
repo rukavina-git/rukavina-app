@@ -93,3 +93,6 @@ Refined by Karlo the same day (C refined v3 in Figma): picture left, text right 
 column headings, no group labels, no expanding rows; team or solo work shows through the "My part"
 wording, not labels. "Two ways to start" dropped for one contact ask. New About section with a profile
 photo, holding the team-work strengths. Order: hero, Work, About, What I take on, Let's talk.
+
+Changed by Karlo (2026-11-20, after launch): What I take on moves up to follow Work, matching the
+header nav. Order: hero, Work, What I take on, About, How I work, Let's talk.

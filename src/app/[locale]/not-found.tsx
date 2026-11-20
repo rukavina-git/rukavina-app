@@ -1,4 +1,12 @@
+import type { Metadata } from 'next'
 import { useLocale, useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
+
+// Own title instead of the homepage's (Next adds noindex to 404s itself).
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('NotFound')
+  return { title: t('title') }
+}
 
 export default function NotFound() {
   const t = useTranslations('NotFound')

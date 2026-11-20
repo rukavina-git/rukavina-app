@@ -117,15 +117,15 @@
     "items": {
       "development": {
         "title": "Razvoj web i mobilnih aplikacija",
-        "text": "Android i web aplikacije, od prve verzije do objave."
+        "text": "Android i web aplikacije, od prve verzije do objave u trgovinama i ažuriranja nakon toga. Struktura i odluke iza nje su zapisane, pa vaš tim može nastaviti graditi na njoj."
       },
       "ai": {
         "title": "Integracija umjetne inteligencije",
-        "text": "Funkcije umjetne inteligencije dodane postojećim proizvodima i povezane sa stvarnim tijekovima rada."
+        "text": "Funkcije umjetne inteligencije dodane postojećem proizvodu ondje gdje ljudima štede stvaran posao, izrađene s jednakom brigom o privatnosti, greškama i troškovima kao i ostatak sustava."
       },
       "review": {
         "title": "Arhitektura i pregled koda",
-        "text": "Jasan pogled na vaš sustav ili kod, s konkretnim sljedećim koracima."
+        "text": "Jasan pogled na vaš sustav ili kod: što je dobro postavljeno, što će sljedeće stvarati probleme i što prvo popraviti, sve zapisano, pa vaš tim zna kako dalje."
       }
     }
   },

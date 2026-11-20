@@ -100,6 +100,33 @@ main [id] {
   border-radius: 2px;
 }
 
+/* Tap area of at least 44px for small text links, without changing the layout around them. */
+@utility tap-target {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -0.25rem;
+    right: -0.25rem;
+    height: max(100%, 44px);
+    transform: translateY(-50%);
+  }
+}
+
+/* Same, growing upward only: for a link with controls directly below it (hero caption). */
+@utility tap-target-up {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -0.25rem;
+    right: -0.25rem;
+    height: max(100%, 44px);
+  }
+}
+
 /* Cookie notice: rises from the bottom edge once, from its own height. */
 @keyframes notice-rise {
   from {
