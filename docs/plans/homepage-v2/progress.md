@@ -3,7 +3,7 @@
 - [x] 1. Foundation (merge 416d6f2, then the `feat: homepage v2 foundation` commit)
 - [x] 2. Hero (e5cb0a8)
 - [x] 3. Work (2b2e554)
-- [x] 4. How I work + What I take on (HASH4)
+- [x] 4. How I work + What I take on (1d3db15)
 - [ ] 5. About
 - [ ] 6. Contact
 - [ ] 7. Croatian
