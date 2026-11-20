@@ -16,7 +16,13 @@
       "Bash(git log *)",
       "Bash(git show *)",
       "Bash(git branch)",
-      "Bash(git push origin develop)"
+      "Bash(git push origin develop)",
+      "Bash(git fetch)",
+      "Bash(git fetch *)",
+      "Bash(gh pr view *)",
+      "Bash(gh pr list *)",
+      "Bash(gh pr checks *)",
+      "Bash(gh pr diff *)"
     ],
     "deny": [
       "Read(**/.env)",

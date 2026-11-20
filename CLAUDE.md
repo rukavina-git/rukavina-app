@@ -62,7 +62,8 @@ Accepted decisions are in `docs/decisions/`. They outrank everything else except
 ## Rules
 - Keep summaries short. I often read on my phone.
 - Never commit to main. Work on `develop` or `feature/*` off develop; main only via PR once the build is green.
-  Pushing develop or a feature branch is fine. Never push main, never deploy to production.
+  Pushing develop or a feature branch is fine. Never push main or deploy from the CLI. Merging a PR into
+  main deploys production: the guard hook asks Karlo to approve each `gh pr merge`.
 - Conventional commits (`feat:`, `fix:`, `chore:`, `docs:`), small and focused.
 - Commits end with a Co-Authored-By line for Claude. No Claude-Session line, and no "Generated with
   Claude Code" footer in PRs.
