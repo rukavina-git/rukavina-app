@@ -127,5 +127,24 @@
         "text": "Jasan pogled na vaš sustav ili kod, s konkretnim sljedećim koracima."
       }
     }
+  },
+  "About": {
+    "title": "O meni",
+    "p1": "Ja sam Ivan Karlo Rukavina, senior softverski inženjer. Većinu karijere proveo sam u agilnim timovima, u bliskoj suradnji s vlasnicima proizvoda, dizajnerima, QA-om i drugim razvojnim timovima, preuzimajući odgovornost za svoj rad od zadatka do produkcije. Uz to izrađujem vlastite proizvode od početka do kraja.",
+    "p2": "Stalo mi je do softvera na kojem se i godinu dana nakon lansiranja lako radi: jasna struktura, zapisane odluke i ne više složenosti nego što problem traži. Gym Tracker nastao je iz iste ideje: aplikacija koja radi samo ono što treba, bez oglasa i suvišnog.",
+    "facts": {
+      "education": {
+        "label": "Obrazovanje",
+        "value": "Magistar računarstva"
+      },
+      "location": {
+        "label": "Lokacija",
+        "value": "Split, Hrvatska"
+      },
+      "languages": {
+        "label": "Jezici",
+        "value": "hrvatski (materinski), engleski (tečno)"
+      }
+    }
   }
 }

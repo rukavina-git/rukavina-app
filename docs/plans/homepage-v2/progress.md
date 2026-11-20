@@ -4,7 +4,7 @@
 - [x] 2. Hero (e5cb0a8)
 - [x] 3. Work (2b2e554)
 - [x] 4. How I work + What I take on (1d3db15)
-- [ ] 5. About
+- [x] 5. About (HASH5)
 - [ ] 6. Contact
 - [ ] 7. Croatian
 - [ ] 8. Launch basics
@@ -33,6 +33,10 @@
 - 04: no mobile Figma frames; phones stack heading, title and text (32px heading).
 - 04: page.tsx no longer maps `sections`; it lists the sections in order with empty shells for
   about and contact.
+- 05: Figma hobbies paragraph (olive and orange trees, D&D, tennis) left out: not in Evidence
+  on Hand. Add as `About.p3` once Karlo confirms.
+- 05: photo is `public/profile/` (not `public/about/`, redirect clash); resized from
+  `design/profile-original.jpg`, no GPS or camera EXIF.
 
 ## Gotchas
 
@@ -63,3 +67,8 @@
   (procjene iza kojih stojim; Zapisana arhitektura; "AI" vs "umjetna inteligencija").
 - 04 code NITs open: `sections`/`SectionId` in `site.ts` unused; TitledList keys on title text.
 - Shared `Band` (warm band, heading left) and `TitledList` live in `src/components/ui/`.
+- 05 reviewer, open for Karlo: "Most of my career has been spent in agile teams" (Figma copy) is
+  broader than Evidence on Hand. hr: "bez oglasa i suvišnog", "Magistar računarstva" vs
+  "magistar inženjer računarstva", "Lokacija" vs "Živim u".
+- External links (Work, About, Footer) open a new tab with no screen-reader hint; fix site-wide
+  if wanted.

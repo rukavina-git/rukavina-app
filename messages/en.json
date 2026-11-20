@@ -127,5 +127,24 @@
         "text": "A clear look at your system or codebase, with concrete next steps."
       }
     }
+  },
+  "About": {
+    "title": "About",
+    "p1": "I'm Ivan Karlo Rukavina, a senior software engineer. Most of my career has been spent in agile teams, working closely with product owners, designers, QA and other engineering teams, and taking responsibility for my work from the ticket to production. Alongside that, I build my own products end to end.",
+    "p2": "What I care about is software that is still easy to work on a year after launch: a clear structure, decisions written down, and no more complexity than the problem needs. Gym Tracker came from the same idea: an app that does only what it should, without ads or bloat.",
+    "facts": {
+      "education": {
+        "label": "Education",
+        "value": "Master's in Computer Science"
+      },
+      "location": {
+        "label": "Based in",
+        "value": "Split, Croatia"
+      },
+      "languages": {
+        "label": "Languages",
+        "value": "Croatian (native), English (fluent)"
+      }
+    }
   }
 }
