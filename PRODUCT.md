@@ -94,13 +94,23 @@ Confirmed by Karlo on 2026-11-19 unless noted.
   implementation, store releases, and work on the CI/CD pipeline. Live location (geotracking) and maps.
   Worked with the product owner, UI/UX, QA, backend and DevOps teams in an agile process. "Tens of
   thousands of users" (Karlo: close to 100,000 across his apps; the site keeps "tens of thousands").
+  People confirm their identity with official documents (photo scan of eID/passports), so privacy and
+  data security came first. Say only "official identity documents" and "personal data kept private and
+  secure"; never name the document types, the scanning or the vendor.
   Login, registration and biometrics are basic: do not highlight them. Show skills, never what the app
   does or for whom.
-- Payments app for a European banking tender (NDA): NFC with smart cards (Java Card), keys stored in the
-  Android Secure Element, gRPC, blockchain. Problem, scale and tech only.
+- Payments app (NDA): NFC card payments with custom Java Cards, keys stored in the Android Secure
+  Element, gRPC; transactions recorded on a blockchain all parties can see (instead of a database).
+  Team of about ten. Karlo built the Android side of the card communication: sending APDU commands over
+  NFC, with retries, failure handling, testing and debugging. He did NOT write the card applets/APDU
+  programming and did NOT work on the blockchain part: never claim either. Never mention the tender,
+  the client or that it was a demo. Problem, scale and tech only.
 - Confirmed facts: Master's in Computer Science (show it plainly, e.g. in the About facts beside the
   photo), based in Split, Croatia, languages Croatian (native) and English (fluent, spoken and written). Never state a project count ("10+
   projects" says nothing); the projects speak for themselves.
+- Launch set (decided 2026-11-20): five projects: Gym Tracker, Adria VA, Government platform (NDA),
+  Payments app (NDA), AI project (work in progress). Adria VA will be redesigned; Gym Tracker gets new
+  screenshots after release (December). NDA projects never get photos, only illustrations.
 - AI project: not started. Until one exists the site may show a clearly marked "work in progress" slot,
   with no invented details.
 - Absent, never to be fabricated: testimonials, client logos, prices, metrics beyond those listed.

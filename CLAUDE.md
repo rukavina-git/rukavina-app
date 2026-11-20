@@ -38,9 +38,9 @@ Accepted decisions are in `docs/decisions/`. They outrank everything else except
   for businesses. Never "Android" as a service name.
 - No CV, no prices, no blog. Testimonials only once three real ones exist.
 - Tone: a senior professional a company would bring in. Plain and specific: no hype, no urgency.
-- Every user-facing string goes through next-intl, in `en` and `hr` in the same change. Missing
-  Croatian copy: use the English text and add the key to the `TODO(hr)` list in `messages/README.md`.
-  Never invent Croatian.
+- Every user-facing string goes through next-intl, in `en` and `hr` in the same change. Claude
+  writes the Croatian; Karlo (native) proofreads it. Mark new Croatian as unreviewed in
+  `messages/README.md` until he has checked it.
 
 ## Design
 - Base direction: Q (scroll stage), decision 0007. Figma is the source for layout.
