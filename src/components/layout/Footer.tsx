@@ -1,7 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl'
 import { site } from '@/lib/site'
 
-const link = 'hover:text-ink hover:underline hover:underline-offset-4'
+const link = 'tap-target hover:text-ink hover:underline hover:underline-offset-4'
 
 function Dot() {
   return (
@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border">
-      <div className="px-page mx-auto flex max-w-page flex-col gap-3 pt-7 pb-9 text-small text-muted md:flex-row md:items-start md:justify-between">
+      <div className="px-page mx-auto flex max-w-page flex-col gap-7 pt-7 pb-9 text-small text-muted md:flex-row md:items-start md:justify-between">
         <p>
           {site.name}
           <Dot />
