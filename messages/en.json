@@ -199,22 +199,22 @@
   "Privacy": {
     "metaTitle": "Privacy",
     "title": "Privacy",
-    "intro": "This site is run by {name}. Personal data is collected through the contact form and, like on any website, in the hosting provider's server logs.",
+    "intro": "This site is run by {name}, Split, Croatia. The only personal data I receive is what you send through the contact form.",
     "form": {
       "title": "Contact form",
-      "text": "When you send the form, your name, email address and message reach me as an email, delivered through Resend, an email delivery service. Your IP address is used to limit repeated sends."
+      "text": "Your name, email address and message reach me as an email, delivered through Resend. I use them to reply and to keep our correspondence, because answering your enquiry is a legitimate interest (GDPR Art. 6(1)(f)), or because you asked about working together (Art. 6(1)(b)). I keep the email as long as it's useful for that correspondence."
     },
     "recaptcha": {
       "title": "Spam protection",
-      "text": "The form uses Google reCAPTCHA to keep spam out. It loads only when you start using the form; Google then receives data about your visit, including your IP address, may set its own cookies, and processes the data under its <google>Privacy Policy</google>."
+      "text": "The form uses Google reCAPTCHA. It loads only when you start using the form; Google then receives data about your visit, including your IP address, may set its own cookies, and processes the data under its <google>Privacy Policy</google>. Your IP address is also used to limit repeated sends and isn't stored."
     },
     "nothingElse": {
-      "title": "Hosting and nothing else",
-      "text": "The site is hosted on Vercel, which logs requests (such as IP address and browser) to run and protect the service. There are no analytics, no advertising and no cookies set by this site itself."
+      "title": "Hosting",
+      "text": "The site is hosted on Vercel, which logs requests (such as IP address and browser) to run and protect the service. Resend, Google and Vercel may process data outside the EU. There are no analytics, no advertising and no cookies set by this site itself."
     },
     "rights": {
-      "title": "Questions",
-      "text": "Questions about this page or what you sent me: <email></email>."
+      "title": "Your rights",
+      "text": "Under the GDPR you can ask for access to your data, its correction or deletion, or object to its use, by emailing <email></email>. You can also complain to the Croatian data protection authority, <azop>AZOP</azop>."
     }
   }
 }

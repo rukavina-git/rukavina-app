@@ -45,6 +45,17 @@ function Privacy() {
     </a>
   )
 
+  const azop = (chunks: React.ReactNode) => (
+    <a
+      href="https://azop.hr"
+      className="text-accent underline underline-offset-4 hover:text-ink"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {chunks}
+    </a>
+  )
+
   return (
     <article className="px-page mx-auto max-w-page py-16 md:py-24">
       <h1 className="text-[2.5rem] leading-[1.1] font-semibold tracking-[-0.035em] text-ink md:text-[3.5rem]">
@@ -56,7 +67,7 @@ function Privacy() {
           <section key={key}>
             <h2 className="text-h4 font-semibold text-ink">{t(`${key}.title`)}</h2>
             <p className="mt-2 text-body leading-[1.55] text-ink-soft">
-              {t.rich(`${key}.text`, { email, google })}
+              {t.rich(`${key}.text`, { email, google, azop })}
             </p>
           </section>
         ))}

@@ -98,7 +98,9 @@
 - 07 hr NITs open: "produkt" vs "proizvod" in HowIWork.communication; gym-tracker partShort is a
   full sentence while the others are fragments; "aplikaciju" twice in gym-tracker.part;
   "AI projekt" kept as a short label.
-- Privacy (Karlo, 2026-11-20): no retention or deletion promises; messages are just email.
-  The page says what the form sends and where it goes, plus a contact line.
+- Privacy (Karlo, 2026-11-20, after a compliance check): "the only personal data I receive is
+  what you send through the form"; GDPR Art. 13 minimum added (legal basis, retention criterion,
+  rights, AZOP, processors outside the EU). Stating the rights is not a promise to delete:
+  erasure has exceptions. reCAPTCHA cookies without consent remain a low, accepted risk.
 - 08 NITs open: 404 inherits the home title/canonical (404 status keeps it out of search);
   footer privacy link under 44px; hr "Ovu stranicu vodi…" wording.
