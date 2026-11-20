@@ -8,8 +8,8 @@
 - [x] 6. Contact (e16cc0e)
 - [x] 7. Croatian (a7b5adc)
 - [x] 8. Launch basics (7eae16e)
-- [ ] 9. (me) Proofread and device check
-- [ ] 10. Release PR
+- [ ] 9. (me) Device check. Croatian proofread deferred: hr is off for v1 (2026-11-20)
+- [x] 10. Release PR (#5, merged 2026-11-20; live at rukavina.app)
 
 ## Deviations
 
