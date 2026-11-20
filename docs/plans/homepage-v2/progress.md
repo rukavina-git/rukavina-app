@@ -7,7 +7,7 @@
 - [x] 5. About (600d4ce)
 - [x] 6. Contact (e16cc0e)
 - [x] 7. Croatian (a7b5adc)
-- [x] 8. Launch basics (HASH8)
+- [x] 8. Launch basics (7eae16e)
 - [ ] 9. (me) Proofread and device check
 - [ ] 10. Release PR
 
