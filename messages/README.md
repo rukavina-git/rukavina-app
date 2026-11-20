@@ -12,3 +12,4 @@ JSON has no comments, so unreviewed Croatian is listed here until Karlo has chec
 - `HowIWork.*`, `Services.*`
 - `About.*`
 - `Contact.*`
+- `Meta.*`, `NotFound.*`, `Privacy.*`, `Footer.privacy`

@@ -1,16 +1,19 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { routing } from '@/lib/i18n/routing'
 
 const labels = { en: 'English', hr: 'Hrvatski' } as const
 
-// Plain links so the current section hash carries over to the other locale.
+// Plain links so the current page and section hash carry over to the other locale.
 export default function LanguageSwitch() {
   const t = useTranslations('Header')
   const current = useLocale()
   const [hash, setHash] = useState('')
+  // Path after the locale, e.g. "/privacy"; empty on the homepage.
+  const rest = (usePathname() ?? '').replace(/^\/(en|hr)(?=\/|$)/, '')
 
   useEffect(() => {
     const update = () => setHash(window.location.hash)
@@ -31,7 +34,7 @@ export default function LanguageSwitch() {
               </span>
             )}
             <a
-              href={`/${locale}${hash}`}
+              href={`/${locale}${rest}${hash}`}
               hrefLang={locale}
               lang={locale}
               aria-label={labels[locale]}

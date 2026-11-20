@@ -7,6 +7,8 @@ import { Hanken_Grotesk } from 'next/font/google'
 import { routing, type Locale } from '@/lib/i18n/routing'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import { site } from '@/lib/site'
+import { languageAlternates, siteUrl } from '@/lib/seo'
 import '../globals.css'
 
 import type { AbstractIntlMessages } from 'next-intl'
@@ -24,10 +26,27 @@ const hanken = Hanken_Grotesk({
   display: 'swap',
 })
 
-export const metadata: Metadata = {
-  title: 'Ivan Karlo Rukavina — Software Engineer',
-  description:
-    'Senior software engineer specialising in web and mobile development and systems architecture. Based in Split, Croatia.',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Meta' })
+  return {
+    metadataBase: new URL(siteUrl),
+    title: { default: t('title'), template: `%s · ${site.name}` },
+    description: t('description'),
+    alternates: { canonical: `${siteUrl}/${locale}`, languages: languageAlternates() },
+    openGraph: {
+      type: 'website',
+      siteName: site.name,
+      locale: locale === 'hr' ? 'hr_HR' : 'en_US',
+      title: t('title'),
+      description: t('description'),
+      url: `${siteUrl}/${locale}`,
+    },
+  }
 }
 
 export function generateStaticParams() {

@@ -9,7 +9,8 @@
     "language": "Jezik"
   },
   "Footer": {
-    "location": "Hrvatska"
+    "location": "Hrvatska",
+    "privacy": "Privatnost"
   },
   "Hero": {
     "title": "Senior softverski inženjer. Softver napravljen kako treba.",
@@ -184,6 +185,36 @@
           "long": "Skratite poruku."
         }
       }
+    }
+  },
+  "Meta": {
+    "title": "Ivan Karlo Rukavina · Senior softverski inženjer",
+    "description": "Senior softverski inženjer iz Splita. Razvoj web i mobilnih aplikacija, integracija umjetne inteligencije te arhitektura i pregled koda: kao dio vašeg tima, izrada vašeg proizvoda ili pregled onoga što već imate."
+  },
+  "NotFound": {
+    "title": "Stranica nije pronađena",
+    "text": "Ova stranica ne postoji ili je premještena.",
+    "home": "Na početnu stranicu"
+  },
+  "Privacy": {
+    "metaTitle": "Privatnost",
+    "title": "Privatnost",
+    "intro": "Ovu stranicu vodi {name}. Stranica prikuplja osobne podatke putem obrasca za kontakt te, kao i svaka web stranica, u zapisima poslužitelja pružatelja hostinga.",
+    "form": {
+      "title": "Obrazac za kontakt",
+      "text": "Kad pošaljete obrazac, vaše ime, e-mail adresa i poruka šalju mi se e-mailom putem usluge Resend za dostavu e-mailova. Koristim ih samo da vam odgovorim i čuvam ih samo dok to naš razgovor zahtijeva. Vaša IP adresa koristi se za ograničavanje ponovljenih slanja."
+    },
+    "recaptcha": {
+      "title": "Zaštita od spama",
+      "text": "Obrazac koristi Google reCAPTCHA za zaštitu od spama. Učitava se tek kad počnete koristiti obrazac; Google tada prima podatke o vašem posjetu, uključujući IP adresu, može postaviti vlastite kolačiće i obrađuje podatke prema svojim <google>Pravilima o privatnosti</google>."
+    },
+    "nothingElse": {
+      "title": "Hosting i ništa drugo",
+      "text": "Stranica je smještena na Vercelu, koji bilježi zahtjeve (poput IP adrese i preglednika) radi rada i zaštite usluge. Nema analitike, oglasa ni kolačića koje postavlja sama stranica."
+    },
+    "rights": {
+      "title": "Vaši podaci",
+      "text": "Ako želite vidjeti, ispraviti ili izbrisati ono što ste mi poslali, pišite na <email></email>."
     }
   }
 }

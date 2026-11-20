@@ -13,6 +13,10 @@ const oldPages = [
 ] as const
 
 const nextConfig: NextConfig = {
+  // Fonts read from disk by the Open Graph image route.
+  outputFileTracingIncludes: {
+    '/[locale]/opengraph-image': ['./src/assets/fonts/**'],
+  },
   transpilePackages: ['three', '@react-three/fiber', '@react-three/drei'],
   async redirects() {
     return oldPages.flatMap(([path, section]) => [

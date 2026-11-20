@@ -9,7 +9,8 @@
     "language": "Language"
   },
   "Footer": {
-    "location": "Croatia"
+    "location": "Croatia",
+    "privacy": "Privacy"
   },
   "Hero": {
     "title": "Senior software engineer. Software built properly.",
@@ -184,6 +185,36 @@
           "long": "Please shorten your message."
         }
       }
+    }
+  },
+  "Meta": {
+    "title": "Ivan Karlo Rukavina · Senior software engineer",
+    "description": "Senior software engineer in Split, Croatia. Web and mobile development, AI integration, and architecture and code review: joining your team, building your product, or reviewing what you have."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "text": "This page doesn't exist, or it has moved.",
+    "home": "Go to the homepage"
+  },
+  "Privacy": {
+    "metaTitle": "Privacy",
+    "title": "Privacy",
+    "intro": "This site is run by {name}. Personal data is collected through the contact form and, like on any website, in the hosting provider's server logs.",
+    "form": {
+      "title": "Contact form",
+      "text": "When you send the form, your name, email address and message are sent to me by email through Resend, an email delivery service. I use them only to reply to you, and keep them only as long as our conversation needs. Your IP address is used to limit repeated sends."
+    },
+    "recaptcha": {
+      "title": "Spam protection",
+      "text": "The form uses Google reCAPTCHA to keep spam out. It loads only when you start using the form; Google then receives data about your visit, including your IP address, may set its own cookies, and processes the data under its <google>Privacy Policy</google>."
+    },
+    "nothingElse": {
+      "title": "Hosting and nothing else",
+      "text": "The site is hosted on Vercel, which logs requests (such as IP address and browser) to run and protect the service. There are no analytics, no advertising and no cookies set by this site itself."
+    },
+    "rights": {
+      "title": "Your data",
+      "text": "To see, correct or delete what you sent me, email <email></email>."
     }
   }
 }

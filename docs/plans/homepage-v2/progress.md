@@ -7,7 +7,7 @@
 - [x] 5. About (600d4ce)
 - [x] 6. Contact (e16cc0e)
 - [x] 7. Croatian (a7b5adc)
-- [ ] 8. Launch basics
+- [x] 8. Launch basics (HASH8)
 - [ ] 9. (me) Proofread and device check
 - [ ] 10. Release PR
 
@@ -49,6 +49,14 @@
   rukavina.app on the reCAPTCHA key's domain list).
 - 07: hr was written in steps 1–6; this step was the read-through and wording fixes. Degree in hr
   is the neutral "Magisterij iz računarstva" (exact diploma title not confirmed).
+- 08: privacy is its own page (`/[locale]/privacy`), linked from the footer.
+- 08: next-intl locale cookie turned off (`localeCookie: false`) so the site sets no cookies
+  of its own; `/` now picks the locale from Accept-Language only.
+- 08: language switch keeps the current page path (`/en/privacy` ↔ `/hr/privacy`).
+- 08: OG image fonts read from `src/assets/fonts/` via `process.cwd()` and shipped with
+  `outputFileTracingIncludes`; `new URL(…, import.meta.url)` failed under webpack.
+- 08: reviewer SHOULDs fixed: privacy note now names Vercel logs, IP for rate limit and
+  reCAPTCHA, Google's cookies; privacy page OG url/title; font source README.
 
 ## Gotchas
 
@@ -90,3 +98,7 @@
 - 07 hr NITs open: "produkt" vs "proizvod" in HowIWork.communication; gym-tracker partShort is a
   full sentence while the others are fragments; "aplikaciju" twice in gym-tracker.part;
   "AI projekt" kept as a short label.
+- 08 open for Karlo (step 9): privacy facts (retention "as long as our conversation needs",
+  no analytics) and whether to add the GDPR legal basis and the right to complain to AZOP.
+- 08 NITs open: 404 inherits the home title/canonical (404 status keeps it out of search);
+  footer privacy link under 44px; hr "Ovu stranicu vodi…" wording.

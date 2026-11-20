@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { site } from '@/lib/site'
 
 const link = 'hover:text-ink hover:underline hover:underline-offset-4'
@@ -13,6 +13,7 @@ function Dot() {
 
 export default function Footer() {
   const t = useTranslations('Footer')
+  const locale = useLocale()
 
   return (
     <footer className="border-t border-border">
@@ -21,6 +22,10 @@ export default function Footer() {
           {site.name}
           <Dot />
           {t('location')}
+          <Dot />
+          <a href={`/${locale}/privacy`} className={link}>
+            {t('privacy')}
+          </a>
         </p>
         <p>
           <a href={`mailto:${site.email}`} className={link}>
