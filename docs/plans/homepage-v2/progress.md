@@ -4,7 +4,7 @@
 - [x] 2. Hero (e5cb0a8)
 - [x] 3. Work (2b2e554)
 - [x] 4. How I work + What I take on (1d3db15)
-- [x] 5. About (HASH5)
+- [x] 5. About (600d4ce)
 - [ ] 6. Contact
 - [ ] 7. Croatian
 - [ ] 8. Launch basics
