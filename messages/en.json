@@ -117,15 +117,15 @@
     "items": {
       "development": {
         "title": "Web and mobile development",
-        "text": "Android apps and web apps, from the first build to release."
+        "text": "Android and web apps, from the first version to store release and the updates after it. The structure and the decisions behind it are written down, so your team can keep building on it."
       },
       "ai": {
         "title": "AI integration",
-        "text": "AI features added to existing products, wired into real workflows."
+        "text": "AI features added to an existing product where they save people real work, built with the same care for privacy, failure cases and cost as the rest of the system."
       },
       "review": {
         "title": "Architecture and code review",
-        "text": "A clear look at your system or codebase, with concrete next steps."
+        "text": "A clear look at your system or codebase: what holds up, what will cause problems next, and what to fix first, written down so your team can act on it."
       }
     }
   },

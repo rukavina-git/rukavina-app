@@ -6,7 +6,8 @@ import About from '@/components/sections/about/About'
 import Contact from '@/components/sections/contact/Contact'
 import Services from '@/components/sections/services/Services'
 
-// Homepage in section order (decision 0008).
+// Homepage in section order (decision 0008; Karlo 2026-11-20: What I take on moved up to follow
+// Work, matching the header nav. Light and warm bands alternate).
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   setRequestLocale(locale)
@@ -14,9 +15,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <>
       <Hero />
       <Work />
-      <HowIWork />
-      <About />
       <Services />
+      <About />
+      <HowIWork />
       <Contact />
     </>
   )

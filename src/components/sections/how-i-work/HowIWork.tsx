@@ -8,7 +8,7 @@ const items = ['refinement', 'architecture', 'release', 'communication'] as cons
 export default function HowIWork() {
   const t = useTranslations('HowIWork')
   return (
-    <Band id="how-i-work" title={t('title')} titleSize="h2" className="lg:pb-[120px]">
+    <Band id="how-i-work" title={t('title')} titleSize="h2">
       <TitledList
         items={items.map((key) => ({ title: t(`items.${key}.title`), text: t(`items.${key}.text`) }))}
       />

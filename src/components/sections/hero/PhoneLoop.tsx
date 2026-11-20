@@ -114,7 +114,7 @@ export default function PhoneLoop({ slides, labels }: Props) {
                 href={slide.href}
                 aria-hidden={!active}
                 inert={!active}
-                className={`inline-flex min-h-6 items-center text-center text-ui font-medium text-ink transition-opacity duration-500 [grid-area:1/1] hover:underline hover:underline-offset-4 ${
+                className={`tap-target-up inline-flex min-h-6 items-center text-center text-ui font-medium text-ink transition-opacity duration-500 [grid-area:1/1] hover:underline hover:underline-offset-4 ${
                   active ? 'opacity-100' : 'opacity-0'
                 }`}
               >

@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import { site } from '@/lib/site'
 import ContactForm from './ContactForm'
 
-const link = 'hover:underline hover:underline-offset-4'
+const link = 'tap-target hover:underline hover:underline-offset-4'
 
 // "Let's talk", Figma 331:828. Phones: text first, form below.
 export default function Contact() {
@@ -21,7 +21,7 @@ export default function Contact() {
           <p className="mt-5 max-w-[500px] text-body leading-[1.55] text-ink-soft md:text-[1.25rem]">
             {t('intro')}
           </p>
-          <p className="mt-8 text-base font-medium text-ink md:mt-11">
+          <p className="mt-8 flex flex-wrap items-center gap-y-5 text-base font-medium text-ink md:mt-11">
             <a href={`mailto:${site.email}`} className={link}>
               {site.email}
             </a>

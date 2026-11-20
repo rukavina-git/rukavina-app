@@ -116,3 +116,9 @@
   on it (2026-11-20). Form verified live: test message arrived. Don't raise it again.
 - Open (UX check of Karlo's list): text links under 44px tall (header, footer, contact line,
   hero caption) are the one real gap.
+- Post-launch review fixes (Karlo, 2026-11-20): section order is now Work, What I take on, About,
+  How I work, Let's talk (services moved up to match the header nav; light and warm bands
+  alternate). This replaces 0008's order. Service texts expanded to two sentences, no new claims.
+  `tap-target` utility gives standalone small links a 44px tap area. How I work's double bottom
+  padding removed. 404 has its own title (metadata on `not-found.tsx`; Next ignores it on the
+  catch-all page that calls `notFound()`).
