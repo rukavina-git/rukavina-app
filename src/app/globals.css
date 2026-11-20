@@ -17,6 +17,7 @@
   --color-border-strong: #cfcabe;
   --color-accent: #1d4e5f;
   --color-accent-soft: #d6e1e2;
+  --color-danger: #b3261e;
   /* Hero phone (331:672). */
   --color-device: #121212;
   --color-device-screen: #1b1c20;
@@ -110,4 +111,9 @@ main [id] {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* reCAPTCHA v3 badge hidden: Google's notice sits under the contact form's Send button. */
+.grecaptcha-badge {
+  visibility: hidden !important;
 }

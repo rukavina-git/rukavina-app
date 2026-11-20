@@ -5,7 +5,7 @@
 - [x] 3. Work (2b2e554)
 - [x] 4. How I work + What I take on (1d3db15)
 - [x] 5. About (600d4ce)
-- [ ] 6. Contact
+- [x] 6. Contact (HASH6)
 - [ ] 7. Croatian
 - [ ] 8. Launch basics
 - [ ] 9. (me) Proofread and device check
@@ -37,6 +37,16 @@
   on Hand. Add as `About.p3` once Karlo confirms.
 - 05: photo is `public/profile/` (not `public/about/`, redirect clash); resized from
   `design/profile-original.jpg`, no GPS or camera EXIF.
+- 06: button says "Send" (decision 0009), not Figma's "Send message".
+- 06: minimum fill time uses the client-sent time since first focus (not a signed server
+  timestamp); reCAPTCHA covers forged values. The form waits out the 3 s itself, so a fast
+  human isn't dropped.
+- 06: rate limit is in memory, per server instance (Vercel may run several).
+- 06: four reviewer SHOULDs fixed (they lost messages or hung): failed reCAPTCHA load hung on
+  "Sending…"; fast humans silently dropped; `null` JSON body gave 500; success state focus.
+- 06: `.env.example` not updated: reading `.env*` is denied. Karlo adds
+  `NEXT_PUBLIC_RECAPTCHA_SITE_KEY=` and `RECAPTCHA_SECRET_KEY=` (also in Vercel, with
+  rukavina.app on the reCAPTCHA key's domain list).
 
 ## Gotchas
 
@@ -72,3 +82,6 @@
   "magistar inženjer računarstva", "Lokacija" vs "Živim u".
 - External links (Work, About, Footer) open a new tab with no screen-reader hint; fix site-wide
   if wanted.
+- 06 NITs open: Resend `send` not in try/catch (throw → 500 not 502); global `:focus-visible`
+  border-radius squares the 10px input corners; contact links under 44px tall.
+- Danger colour token `--color-danger` (#b3261e) added for form errors.

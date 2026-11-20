@@ -146,5 +146,44 @@
         "value": "Croatian (native), English (fluent)"
       }
     }
+  },
+  "Contact": {
+    "title": "Let's talk",
+    "intro": "Tell me what you're working on and where you need help. I reply within 24 hours.",
+    "facts": "Based in Split, Croatia · CET · English and Croatian",
+    "form": {
+      "name": {
+        "label": "Name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@company.com"
+      },
+      "message": {
+        "label": "What are you working on?",
+        "placeholder": "Where you need help, and anything useful about the team or timeline."
+      },
+      "send": "Send",
+      "sending": "Sending…",
+      "error": "That didn't send. Please try again, or email me directly at <email></email>.",
+      "sentTitle": "Thanks, your message is on its way.",
+      "sentText": "I reply within 24 hours.",
+      "recaptcha": "This site is protected by reCAPTCHA and the Google <privacy>Privacy Policy</privacy> and <terms>Terms of Service</terms> apply.",
+      "errors": {
+        "name": {
+          "required": "Please enter your name.",
+          "long": "Please shorten your name."
+        },
+        "email": {
+          "required": "Please enter your email.",
+          "invalid": "Please enter a valid email address."
+        },
+        "message": {
+          "required": "Please tell me what you're working on.",
+          "short": "Please write at least {min} characters.",
+          "long": "Please shorten your message."
+        }
+      }
+    }
   }
 }

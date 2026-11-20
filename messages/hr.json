@@ -146,5 +146,44 @@
         "value": "hrvatski (materinski), engleski (tečno)"
       }
     }
+  },
+  "Contact": {
+    "title": "Razgovarajmo",
+    "intro": "Recite mi na čemu radite i gdje vam treba pomoć. Odgovaram u roku od 24 sata.",
+    "facts": "Split, Hrvatska · CET · engleski i hrvatski",
+    "form": {
+      "name": {
+        "label": "Ime"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "vi@tvrtka.hr"
+      },
+      "message": {
+        "label": "Na čemu radite?",
+        "placeholder": "Gdje vam treba pomoć i sve korisno o timu ili rokovima."
+      },
+      "send": "Pošalji",
+      "sending": "Šaljem…",
+      "error": "Poruka nije poslana. Pokušajte ponovno ili mi pišite izravno na <email></email>.",
+      "sentTitle": "Hvala, poruka je poslana.",
+      "sentText": "Odgovaram u roku od 24 sata.",
+      "recaptcha": "Ova stranica zaštićena je sustavom reCAPTCHA te se primjenjuju Googleova <privacy>Pravila o privatnosti</privacy> i <terms>Uvjeti pružanja usluge</terms>.",
+      "errors": {
+        "name": {
+          "required": "Upišite svoje ime.",
+          "long": "Skratite ime."
+        },
+        "email": {
+          "required": "Upišite svoju e-mail adresu.",
+          "invalid": "Upišite ispravnu e-mail adresu."
+        },
+        "message": {
+          "required": "Napišite na čemu radite.",
+          "short": "Napišite barem {min} znakova.",
+          "long": "Skratite poruku."
+        }
+      }
+    }
   }
 }

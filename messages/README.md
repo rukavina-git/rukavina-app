@@ -11,3 +11,4 @@ JSON has no comments, so unreviewed Croatian is listed here until Karlo has chec
 - `Work.*` (title, myPart, slot, tags.*, links.*, projects.*)
 - `HowIWork.*`, `Services.*`
 - `About.*`
+- `Contact.*`
