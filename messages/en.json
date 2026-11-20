@@ -37,5 +37,57 @@
         "alt": "Gym Tracker workout screen, logging sets of a barbell back squat"
       }
     }
+  },
+  "Work": {
+    "title": "Work",
+    "myPart": "My part",
+    "slot": "Image when it ships",
+    "tags": {
+      "nda": "NDA",
+      "wip": "Work in progress"
+    },
+    "links": {
+      "play": "Google Play",
+      "github": "Code on GitHub",
+      "site": "Visit site"
+    },
+    "projects": {
+      "government-platform": {
+        "name": "Government platform",
+        "summary": "A government platform used by tens of thousands of people, with live location tracking and maps. People confirm who they are with official identity documents, so keeping their personal data private and secure came first.",
+        "part": "I joined a well-defined project and owned my work from the product owner's ticket to production: refinement, estimates, architecture proposals, implementation and store releases, in an agile team working closely with the product owner, designers, QA and the other teams.",
+        "partShort": "Owned my work from the product owner's ticket to production, in an agile team working closely with the product owner, designers, QA and other teams.",
+        "stack": "Kotlin · Location and maps · CI/CD",
+        "alt": "Illustration: a phone over a map, with a live location route"
+      },
+      "payments-app": {
+        "name": "Payments app",
+        "summary": "A digital currency you pay with by tapping your phone: money held on custom Java Cards and the phone's secure hardware, with every transaction recorded on a blockchain that all parties can see.",
+        "part": "In a small team, I built the Android side of the card communication: sending APDU commands to the cards over NFC, with the retries, failure handling, testing and debugging that make it dependable.",
+        "partShort": "In a small team, built the Android side of the card communication: APDU commands over NFC, with retries and failure handling.",
+        "stack": "NFC · Java Card · APDU · Android Secure Element · gRPC",
+        "alt": "Illustration: a phone paying by tapping a card"
+      },
+      "gym-tracker": {
+        "name": "Gym Tracker",
+        "summary": "A private workout tracker with no ads and no bloat. I built it because no app did only what I wanted.",
+        "part": "I had the idea, designed it, built the Android app and the backend from one API contract that CI checks, and put it on Google Play. Every architecture decision is written down in the repo, so the reasoning behind the code is there to read.",
+        "partShort": "Had the idea, designed it, built the app and backend from one API contract, and put it on Google Play.",
+        "stack": "Kotlin · Jetpack Compose · Spring Boot",
+        "alt": "Gym Tracker screens: a workout plan and an active workout"
+      },
+      "adria-va": {
+        "name": "Adria VA",
+        "summary": "A website for a virtual assistance and bookkeeping business.",
+        "part": "Most of the work happened before any design: working out with the owner what their clients actually needed to see, and turning a broad idea into a clear list of what the site had to do. Then I designed and built it, in English and Croatian.",
+        "partShort": "Worked out with the owner what their clients needed to see, then designed and built the site in English and Croatian.",
+        "stack": "Next.js · Tailwind CSS",
+        "alt": "Adria VA homepage in a browser window"
+      },
+      "ai-project": {
+        "name": "AI project",
+        "summary": "Details when it ships."
+      }
+    }
   }
 }

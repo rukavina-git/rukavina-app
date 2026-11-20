@@ -37,5 +37,57 @@
         "alt": "Gym Tracker, zaslon treninga s unosom serija čučnja sa šipkom"
       }
     }
+  },
+  "Work": {
+    "title": "Radovi",
+    "myPart": "Moj dio",
+    "slot": "Slika kad bude gotovo",
+    "tags": {
+      "nda": "NDA",
+      "wip": "U izradi"
+    },
+    "links": {
+      "play": "Google Play",
+      "github": "Kod na GitHubu",
+      "site": "Posjetite stranicu"
+    },
+    "projects": {
+      "government-platform": {
+        "name": "Državna platforma",
+        "summary": "Državna platforma koju koriste desetci tisuća ljudi, s praćenjem lokacije uživo i kartama. Ljudi potvrđuju identitet službenim identifikacijskim dokumentima, pa je čuvanje njihovih osobnih podataka privatnima i sigurnima bilo na prvom mjestu.",
+        "part": "Pridružio sam se jasno definiranom projektu i preuzeo odgovornost za svoj rad od zadatka vlasnika proizvoda do produkcije: razrada, procjene, prijedlozi arhitekture, implementacija i objave u trgovinama aplikacija, u agilnom timu u bliskoj suradnji s vlasnikom proizvoda, dizajnerima, QA-om i ostalim timovima.",
+        "partShort": "Odgovoran za svoj rad od zadatka vlasnika proizvoda do produkcije, u agilnom timu u bliskoj suradnji s vlasnikom proizvoda, dizajnerima, QA-om i ostalim timovima.",
+        "stack": "Kotlin · Lokacija i karte · CI/CD",
+        "alt": "Ilustracija: mobitel iznad karte, s rutom lokacije uživo"
+      },
+      "payments-app": {
+        "name": "Aplikacija za plaćanje",
+        "summary": "Digitalna valuta kojom plaćate prislanjanjem mobitela: novac se čuva na prilagođenim Java Card karticama i u sigurnom hardveru mobitela, a svaka se transakcija bilježi na blockchainu koji vide sve strane.",
+        "part": "U malom timu izradio sam Android stranu komunikacije s karticama: slanje APDU naredbi karticama preko NFC-a, s ponovnim pokušajima, obradom pogrešaka, testiranjem i otklanjanjem grešaka koji je čine pouzdanom.",
+        "partShort": "U malom timu izradio Android stranu komunikacije s karticama: APDU naredbe preko NFC-a, s ponovnim pokušajima i obradom pogrešaka.",
+        "stack": "NFC · Java Card · APDU · Android Secure Element · gRPC",
+        "alt": "Ilustracija: mobitel plaća prislanjanjem kartice"
+      },
+      "gym-tracker": {
+        "name": "Gym Tracker",
+        "summary": "Privatna aplikacija za praćenje treninga, bez oglasa i bez suvišnog. Napravio sam je jer nijedna aplikacija nije radila samo ono što sam htio.",
+        "part": "Imao sam ideju, dizajnirao je, izradio Android aplikaciju i backend iz jednog API ugovora koji provjerava CI te je objavio na Google Playu. Svaka odluka o arhitekturi zapisana je u repozitoriju, pa se razlozi iza koda mogu pročitati.",
+        "partShort": "Imao ideju, dizajnirao je, izradio aplikaciju i backend iz jednog API ugovora te je objavio na Google Playu.",
+        "stack": "Kotlin · Jetpack Compose · Spring Boot",
+        "alt": "Zasloni aplikacije Gym Tracker: plan treninga i trening u tijeku"
+      },
+      "adria-va": {
+        "name": "Adria VA",
+        "summary": "Web stranica za tvrtku koja pruža usluge virtualne asistencije i knjigovodstva.",
+        "part": "Većina posla odrađena je prije ikakvog dizajna: zajedno s tvrtkom utvrdio sam što njezini klijenti zapravo trebaju vidjeti i široku ideju pretvorio u jasan popis onoga što stranica mora raditi. Zatim sam je dizajnirao i izradio, na engleskom i hrvatskom.",
+        "partShort": "Zajedno s tvrtkom utvrdio što njezini klijenti trebaju vidjeti, zatim dizajnirao i izradio stranicu na engleskom i hrvatskom.",
+        "stack": "Next.js · Tailwind CSS",
+        "alt": "Početna stranica Adria VA u prozoru preglednika"
+      },
+      "ai-project": {
+        "name": "AI projekt",
+        "summary": "Detalji kad bude gotovo."
+      }
+    }
   }
 }

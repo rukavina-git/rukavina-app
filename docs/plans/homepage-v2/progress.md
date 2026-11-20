@@ -2,7 +2,7 @@
 
 - [x] 1. Foundation (merge 416d6f2, then the `feat: homepage v2 foundation` commit)
 - [x] 2. Hero (e5cb0a8)
-- [ ] 3. Work
+- [x] 3. Work (HASH3)
 - [ ] 4. How I work + What I take on
 - [ ] 5. About
 - [ ] 6. Contact
@@ -22,6 +22,14 @@
   reduced motion), then Government → Payments → Gym Tracker.
 - 02: NDA captions are Claude's suggestions, not confirmed; "Android" for the Government
   platform isn't in Evidence on Hand (Kotlin is, via the Figma stack line).
+- 03: images live in `public/projects/`, not `public/work/`: the old-page redirect `/work/:slug`
+  caught `/work/*.png`.
+- 03: rows go side by side from lg (1024px), stacked below; 360 + 48 + 700 doesn't fit at md.
+- 03: phones show the short "my part" from the Figma mobile rows (`partShort`); the stack line is
+  the desktop one on all sizes; links stay on mobile (Figma mobile has none).
+- 03: hero NDA slides stay placeholders: the illustrations are landscape (360x225), the phone
+  screen is portrait.
+- 03: AI project muted text uses `text-muted`, not Figma's faint (#a9a59c fails AA).
 
 ## Gotchas
 
@@ -43,3 +51,7 @@
   `rm -rf .next` and restart.
 - Reviewer SHOULDs left open (02): caption link is 24px tall (under 44px); cue arrow hover nudge
   not gated by reduced motion (global rule shortens it to ~0).
+- 03 reviewer NITs left open: external links open a new tab with no screen-reader hint; the old
+  June `projects.ts` (deleted) had vendor names in git history (public repo; Karlo's call).
+- New public folders must not start with an old-page path (`work`, `services`, `about`,
+  `contact`): the redirects in `next.config.ts` catch them.

@@ -10,5 +10,5 @@ export const site = {
 export const sections = ['work', 'how-i-work', 'about', 'services', 'contact'] as const
 export type SectionId = (typeof sections)[number]
 
-// Anchor id of a project's row in the Work section (rows are built in step 3).
+// Anchor id of a project's row in the Work section.
 export const projectAnchor = (id: string) => `work-${id}`
