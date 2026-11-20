@@ -5,7 +5,7 @@
 - [x] 3. Work (2b2e554)
 - [x] 4. How I work + What I take on (1d3db15)
 - [x] 5. About (600d4ce)
-- [x] 6. Contact (HASH6)
+- [x] 6. Contact (e16cc0e)
 - [ ] 7. Croatian
 - [ ] 8. Launch basics
 - [ ] 9. (me) Proofread and device check
