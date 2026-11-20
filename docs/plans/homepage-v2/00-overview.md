@@ -1,7 +1,7 @@
 # Plan: homepage v2 (Figma "Round 8 · C refined")
 
-Build the approved homepage in code, one section per step. Launch target: 24 Nov 2026, 10:00 CET
-(the coming-soon countdown on main).
+Build the approved homepage in code, one section per step. No fixed deadline: quality first. The
+coming-soon countdown on main gets moved if needed (one line, `LAUNCH` in `src/app/page.tsx`).
 
 - Figma: https://www.figma.com/design/3nSFWQh2uzQKENfz5ZZpuh/Rukavina%20Site?node-id=331-655
   (desktop frame `331:656`, mobile frame `331:859`). Lock the file with `figma_navigate` first.
