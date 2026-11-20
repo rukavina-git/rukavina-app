@@ -110,6 +110,9 @@ Confirmed by Karlo on 2026-11-19 unless noted.
 - Confirmed facts: Master's in Computer Science (show it plainly, e.g. in the About facts beside the
   photo), based in Split, Croatia, languages Croatian (native) and English (fluent, spoken and written). Never state a project count ("10+
   projects" says nothing); the projects speak for themselves.
+- Contact links (confirmed 2026-11-20): email ivankarlo@rukavina.app,
+  [LinkedIn](https://www.linkedin.com/in/rukavina/), [GitHub](https://github.com/rukavina-git).
+  Kept in `src/lib/site.ts`.
 - Launch set (decided 2026-11-20): five projects: Gym Tracker, Adria VA, Government platform (NDA),
   Payments app (NDA), AI project (work in progress). Adria VA will be redesigned; Gym Tracker gets new
   screenshots after release (December). NDA projects never get photos, only illustrations.

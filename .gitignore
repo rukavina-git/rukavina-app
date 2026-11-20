@@ -14,3 +14,4 @@ npm-debug.log*
 references
 # local design reviews, mocks and screenshots; images the site uses go in public/
 design/
+.playwright-mcp/
