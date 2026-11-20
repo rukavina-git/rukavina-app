@@ -9,3 +9,4 @@ JSON has no comments, so unreviewed Croatian is listed here until Karlo has chec
 - `Footer.location`
 - `Hero.*` (title, intro1, intro2, cue, carousel, pause, play, show, slides.*)
 - `Work.*` (title, myPart, slot, tags.*, links.*, projects.*)
+- `HowIWork.*`, `Services.*`

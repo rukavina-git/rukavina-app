@@ -89,5 +89,43 @@
         "summary": "Details when it ships."
       }
     }
+  },
+  "HowIWork": {
+    "title": "How I work",
+    "items": {
+      "refinement": {
+        "title": "Refinement and estimates",
+        "text": "I help shape the work with the product owner before anyone writes code, and give estimates I can stand behind."
+      },
+      "architecture": {
+        "title": "Architecture, written down",
+        "text": "I propose the structure, explain the trade-offs to whoever decides, and record what we chose."
+      },
+      "release": {
+        "title": "Through to release",
+        "text": "Quality and security are checked along the way, not left for the end. CI/CD pipelines and store releases are part of the job."
+      },
+      "communication": {
+        "title": "Clear communication",
+        "text": "In large teams, I make sure product, design, QA and engineering are all working from the same picture."
+      }
+    }
+  },
+  "Services": {
+    "title": "What I take on",
+    "items": {
+      "development": {
+        "title": "Web and mobile development",
+        "text": "Android apps and web apps, from the first build to release."
+      },
+      "ai": {
+        "title": "AI integration",
+        "text": "AI features added to existing products, wired into real workflows."
+      },
+      "review": {
+        "title": "Architecture and code review",
+        "text": "A clear look at your system or codebase, with concrete next steps."
+      }
+    }
   }
 }

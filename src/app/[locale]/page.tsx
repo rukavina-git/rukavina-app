@@ -1,9 +1,10 @@
 import { setRequestLocale } from 'next-intl/server'
 import Hero from '@/components/sections/hero/Hero'
 import Work from '@/components/sections/work/Work'
-import { sections } from '@/lib/site'
+import HowIWork from '@/components/sections/how-i-work/HowIWork'
+import Services from '@/components/sections/services/Services'
 
-// Hero, then section shells; each later step of the homepage-v2 plan fills one in.
+// Homepage in section order (decision 0008). Empty shells are filled by later plan steps.
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   setRequestLocale(locale)
@@ -11,11 +12,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <>
       <Hero />
       <Work />
-      {sections
-        .filter((id) => id !== 'work')
-        .map((id) => (
-          <section key={id} id={id} />
-        ))}
+      <HowIWork />
+      <section id="about" />
+      <Services />
+      <section id="contact" />
     </>
   )
 }

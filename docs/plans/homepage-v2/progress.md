@@ -3,7 +3,7 @@
 - [x] 1. Foundation (merge 416d6f2, then the `feat: homepage v2 foundation` commit)
 - [x] 2. Hero (e5cb0a8)
 - [x] 3. Work (2b2e554)
-- [ ] 4. How I work + What I take on
+- [x] 4. How I work + What I take on (HASH4)
 - [ ] 5. About
 - [ ] 6. Contact
 - [ ] 7. Croatian
@@ -30,6 +30,9 @@
 - 03: hero NDA slides stay placeholders: the illustrations are landscape (360x225), the phone
   screen is portrait.
 - 03: AI project muted text uses `text-muted`, not Figma's faint (#a9a59c fails AA).
+- 04: no mobile Figma frames; phones stack heading, title and text (32px heading).
+- 04: page.tsx no longer maps `sections`; it lists the sections in order with empty shells for
+  about and contact.
 
 ## Gotchas
 
@@ -55,3 +58,8 @@
   June `projects.ts` (deleted) had vendor names in git history (public repo; Karlo's call).
 - New public folders must not start with an old-page path (`work`, `services`, `about`,
   `contact`): the redirects in `next.config.ts` catch them.
+- 04 reviewer, open for Karlo: "Android apps and web apps…" and "AI features added to existing
+  products…" are exact Figma copy but may read as Android-first / past AI work. hr wording NITs
+  (procjene iza kojih stojim; Zapisana arhitektura; "AI" vs "umjetna inteligencija").
+- 04 code NITs open: `sections`/`SectionId` in `site.ts` unused; TitledList keys on title text.
+- Shared `Band` (warm band, heading left) and `TitledList` live in `src/components/ui/`.

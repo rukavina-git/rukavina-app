@@ -89,5 +89,43 @@
         "summary": "Detalji kad bude gotovo."
       }
     }
+  },
+  "HowIWork": {
+    "title": "Kako radim",
+    "items": {
+      "refinement": {
+        "title": "Razrada i procjene",
+        "text": "S vlasnikom proizvoda oblikujem posao prije nego što itko napiše kod i dajem procjene iza kojih mogu stati."
+      },
+      "architecture": {
+        "title": "Arhitektura, zapisana",
+        "text": "Predlažem strukturu, objašnjavam kompromise onome tko odlučuje i zapisujem što smo odabrali."
+      },
+      "release": {
+        "title": "Sve do objave",
+        "text": "Kvaliteta i sigurnost provjeravaju se usput, a ne ostavljaju za kraj. CI/CD i objave u trgovinama aplikacija dio su posla."
+      },
+      "communication": {
+        "title": "Jasna komunikacija",
+        "text": "U velikim timovima pazim da produkt, dizajn, QA i razvoj rade s istom slikom."
+      }
+    }
+  },
+  "Services": {
+    "title": "Što preuzimam",
+    "items": {
+      "development": {
+        "title": "Razvoj weba i mobilnih aplikacija",
+        "text": "Android i web aplikacije, od prve verzije do objave."
+      },
+      "ai": {
+        "title": "Integracija umjetne inteligencije",
+        "text": "AI funkcije dodane postojećim proizvodima, povezane sa stvarnim tijekovima rada."
+      },
+      "review": {
+        "title": "Arhitektura i pregled koda",
+        "text": "Jasan pogled na vaš sustav ili kod, s konkretnim sljedećim koracima."
+      }
+    }
   }
 }
