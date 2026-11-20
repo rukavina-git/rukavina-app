@@ -112,7 +112,7 @@
   necessary-only sites; whether reCAPTCHA is strictly necessary is disputed (CNIL, Austrian court),
   and Karlo keeps it. Before adding analytics or any tracker, switch back to a real two-button
   consent (comment in `consent.ts`).
-- Open (Karlo): since 2026-04-02 Google is the processor for reCAPTCHA. Check the key runs under
-  Google Cloud with Google's data processing terms accepted.
+- reCAPTCHA data processing terms (Google is the processor since 2026-04-02): Karlo chose not to act
+  on it (2026-11-20). Form verified live: test message arrived. Don't raise it again.
 - Open (UX check of Karlo's list): text links under 44px tall (header, footer, contact line,
   hero caption) are the one real gap.
