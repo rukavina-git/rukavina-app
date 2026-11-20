@@ -2,44 +2,37 @@
 
 import { useSyncExternalStore } from 'react'
 
-// Consent for Google reCAPTCHA, the only third party that can set cookies on this site.
-// The choice is kept in localStorage (strictly necessary: it only remembers the answer).
+// Cookie notice. The site uses only necessary cookies (Google reCAPTCHA on the contact form),
+// so the notice informs and has no choice to make. Karlo, 2026-11-20 (option 1).
+// "Seen" is kept in localStorage: it only remembers that the notice was closed.
+//
+// BEFORE ADDING ANY NON-NECESSARY COOKIE OR TRACKER (analytics, pixels, embeds that track):
+// this notice is no longer enough. Switch to a real choice ("Only necessary" / "Accept all")
+// that blocks the tracker until consent, and update the copy and the privacy page.
+// The gated version exists in git: commit 53cdb19.
 
-export type Consent = 'granted' | 'denied' | null
+const KEY = 'rukavina-cookie-notice'
+const CHANGE = 'rukavina:cookie-notice'
 
-const KEY = 'rukavina-consent'
-const CHANGE = 'rukavina:consent'
-const OPEN = 'rukavina:consent-open'
+let memory = false
 
-function read(): Consent {
+function read(): boolean {
   try {
-    const value = window.localStorage.getItem(KEY)
-    return value === 'granted' || value === 'denied' ? value : null
+    return window.localStorage.getItem(KEY) === 'seen' || memory
   } catch {
-    return null
+    return memory
   }
 }
 
-export function setConsent(value: 'granted' | 'denied') {
-  // Withdrawn after reCAPTCHA already loaded: a script can't be unloaded, so start the page fresh.
-  const reload =
-    value === 'denied' &&
-    (read() ?? memory) === 'granted' &&
-    document.querySelector('script[src*="recaptcha/api.js"]') !== null
+export function dismissNotice() {
+  memory = true
   try {
-    window.localStorage.setItem(KEY, value)
+    window.localStorage.setItem(KEY, 'seen')
   } catch {
-    // Private mode or blocked storage: the choice holds for this page view only.
-    memory = value
-  }
-  if (reload) {
-    window.location.reload()
-    return
+    // Private mode or blocked storage: hidden for this page view only.
   }
   window.dispatchEvent(new Event(CHANGE))
 }
-
-let memory: Consent = null
 
 function subscribe(onChange: () => void) {
   window.addEventListener(CHANGE, onChange)
@@ -50,21 +43,7 @@ function subscribe(onChange: () => void) {
   }
 }
 
-// `undefined` on the server and before hydration, so nothing flashes.
-export function useConsent(): Consent | undefined {
-  return useSyncExternalStore(
-    subscribe,
-    () => read() ?? memory,
-    () => undefined,
-  )
-}
-
-// Reopen the banner (footer "Cookie settings").
-export function openConsent() {
-  window.dispatchEvent(new Event(OPEN))
-}
-
-export function onConsentOpen(handler: () => void) {
-  window.addEventListener(OPEN, handler)
-  return () => window.removeEventListener(OPEN, handler)
+// `undefined` on the server and before hydration, so the notice never flashes for returning visitors.
+export function useNoticeSeen(): boolean | undefined {
+  return useSyncExternalStore(subscribe, read, () => undefined)
 }

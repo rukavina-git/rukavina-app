@@ -10,8 +10,7 @@
   },
   "Footer": {
     "location": "Hrvatska",
-    "privacy": "Privatnost",
-    "cookies": "Postavke kolačića"
+    "privacy": "Privatnost"
   },
   "Hero": {
     "title": "Senior softverski inženjer. Softver napravljen kako treba.",
@@ -185,9 +184,7 @@
           "short": "Napišite barem {min} znakova.",
           "long": "Skratite poruku."
         }
-      },
-      "consentNeeded": "Za slanje obrasca potreban je Google reCAPTCHA, koji niste dopustili. Dopustite ga ili mi pišite na <email></email>.",
-      "consentAllow": "Dopusti reCAPTCHA"
+      }
     }
   },
   "Meta": {
@@ -209,7 +206,7 @@
     },
     "recaptcha": {
       "title": "Zaštita od spama",
-      "text": "Obrazac koristi Google reCAPTCHA. Učitava se samo ako to dopustite i tek kad počnete koristiti obrazac; Google tada prima podatke o vašem posjetu, uključujući IP adresu, može postaviti vlastite kolačiće i obrađuje podatke prema svojim <google>Pravilima o privatnosti</google>. Odabir možete promijeniti bilo kada pod „Postavke kolačića” na dnu stranice; spremljen je u vašem pregledniku. Kolačići koje je Google već postavio ostaju dok ih ne obrišete u pregledniku. Vaša IP adresa koristi se i za ograničavanje ponovljenih slanja te se ne pohranjuje."
+      "text": "Obrazac koristi Google reCAPTCHA za zaštitu od spama, što je nužno za siguran rad obrasca. Učitava se tek kad počnete koristiti obrazac; Google tada prima podatke o vašem posjetu, uključujući IP adresu, može postaviti vlastite kolačiće i obrađuje podatke prema svojim <google>Pravilima o privatnosti</google>. Vaša IP adresa koristi se i za ograničavanje ponovljenih slanja te se ne pohranjuje."
     },
     "nothingElse": {
       "title": "Hosting",
@@ -221,9 +218,8 @@
     }
   },
   "Consent": {
-    "title": "Kolačići na obrascu za kontakt",
-    "text": "Obrazac za kontakt koristi Google reCAPTCHA za zaštitu od spama, a Google pri učitavanju može postaviti kolačiće. Učitava se samo ako to dopustite. Ništa drugo na ovoj web-stranici ne koristi kolačiće. <privacy>Privatnost</privacy>",
-    "allow": "Dopusti",
-    "decline": "Odbij"
+    "label": "Obavijest o kolačićima",
+    "text": "Ova web-stranica koristi samo nužne kolačiće. Pojedinosti su na stranici <privacy>Privatnost</privacy>.",
+    "ok": "U redu"
   }
 }

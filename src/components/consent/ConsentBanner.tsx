@@ -1,79 +1,49 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { useLocale, useTranslations } from 'next-intl'
-import { onConsentOpen, setConsent, useConsent } from '@/lib/consent'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/i18n/navigation'
+import { dismissNotice, useNoticeSeen } from '@/lib/consent'
 
-// Shown on the first visit and from the footer's "Cookie settings". Not a modal: the page stays
-// usable. Allow and Decline have equal weight (no nudging).
+// Cookie notice on the first visit. A quiet bar along the bottom edge in the page's own light
+// surface, so it never covers the hero's text or actions. Not a modal; the page stays usable.
+// Informational only: the site sets no optional cookies.
 export default function ConsentBanner() {
   const t = useTranslations('Consent')
-  const locale = useLocale()
-  const consent = useConsent()
-  const [reopened, setReopened] = useState(false)
-  const heading = useRef<HTMLHeadingElement>(null)
-  // The footer button that reopened the banner; focus goes back to it after a choice.
-  const trigger = useRef<HTMLElement | null>(null)
+  const seen = useNoticeSeen()
 
-  useEffect(
-    () =>
-      onConsentOpen(() => {
-        trigger.current = document.activeElement as HTMLElement | null
-        setReopened(true)
-      }),
-    [],
-  )
+  if (seen !== false) return null
 
-  // Reopened: move focus into the banner, which covers the footer it was opened from.
-  useEffect(() => {
-    if (reopened) heading.current?.focus()
-  }, [reopened])
-
-  if (consent === undefined || (consent !== null && !reopened)) return null
-
-  const choose = (value: 'granted' | 'denied') => {
-    setConsent(value)
-    setReopened(false)
-    trigger.current?.focus()
-    trigger.current = null
+  function close() {
+    dismissNotice()
+    // The button unmounts; hand keyboard focus to the content instead of dropping it on <body>.
+    document.getElementById('main')?.focus({ preventScroll: true })
   }
-
-  const button =
-    'inline-flex min-h-11 cursor-pointer items-center justify-center rounded-[10px] border border-ink px-5 text-base font-semibold text-ink hover:bg-ink hover:text-white'
 
   return (
     <section
-      aria-labelledby="consent-title"
-      className="fixed inset-x-0 bottom-0 z-[55] border-t border-border bg-surface shadow-[0_-8px_24px_rgb(0_0_0/0.06)]"
+      aria-label={t('label')}
+      className="fixed inset-x-0 bottom-0 z-[55] border-t border-border-strong bg-surface shadow-[0_-8px_24px_rgb(22_22_22/0.06)] motion-safe:animate-[notice-rise_480ms_cubic-bezier(0.16,1,0.3,1)]"
     >
-      <div className="px-page mx-auto flex max-w-page flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between md:gap-10">
-        <div className="max-w-[760px]">
-          <h2
-            id="consent-title"
-            ref={heading}
-            tabIndex={-1}
-            className="text-base font-semibold text-ink focus:outline-none"
-          >
-            {t('title')}
-          </h2>
-          <p className="mt-1 text-ui text-ink-soft">
-            {t.rich('text', {
-              privacy: (chunks) => (
-                <a href={`/${locale}/privacy`} className="text-accent underline underline-offset-4 hover:text-ink">
-                  {chunks}
-                </a>
-              ),
-            })}
-          </p>
-        </div>
-        <div className="grid shrink-0 grid-cols-2 gap-3 md:flex">
-          <button type="button" className={button} onClick={() => choose('denied')}>
-            {t('decline')}
-          </button>
-          <button type="button" className={button} onClick={() => choose('granted')}>
-            {t('allow')}
-          </button>
-        </div>
+      <div className="px-page mx-auto flex max-w-page flex-col gap-3 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+        <p className="max-w-[72ch] text-small leading-[1.5] text-ink-soft">
+          {t.rich('text', {
+            privacy: (chunks) => (
+              <Link
+                href="/privacy"
+                className="font-medium whitespace-nowrap text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+              >
+                {chunks}
+              </Link>
+            ),
+          })}
+        </p>
+        <button
+          type="button"
+          onClick={close}
+          className="inline-flex min-h-11 w-full shrink-0 cursor-pointer items-center justify-center rounded-[10px] border border-muted bg-surface px-6 text-ui font-semibold text-ink transition-colors hover:border-ink hover:bg-bg sm:w-auto"
+        >
+          {t('ok')}
+        </button>
       </div>
     </section>
   )

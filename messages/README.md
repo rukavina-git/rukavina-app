@@ -13,4 +13,4 @@ JSON has no comments, so unreviewed Croatian is listed here until Karlo has chec
 - `About.*`
 - `Contact.*`
 - `Meta.*`, `NotFound.*`, `Privacy.*`, `Footer.privacy`
-- `Consent.*`, `Contact.form.consent*`, `Footer.cookies`
+- `Consent.*`

@@ -104,10 +104,15 @@
   erasure has exceptions. reCAPTCHA cookies without consent remain a low, accepted risk.
 - 08 NITs open: 404 inherits the home title/canonical (404 status keeps it out of search);
   footer privacy link under 44px; hr "Ovu stranicu vodi…" wording.
-- Consent banner (Karlo, 2026-11-20, outside the plan steps): bottom bar on first visit, Allow /
-  Decline equal weight, choice in localStorage (`src/lib/consent.ts`), footer "Cookie settings"
-  reopens it. reCAPTCHA loads only with consent; declined form shows a notice with an Allow
-  button and the email. Withdrawing after the script loaded reloads the page. Decision 0009's
-  "load on first focus" now also needs consent.
+- Cookie notice (Karlo, 2026-11-20, outside the plan steps): the Allow/Decline gate (53cdb19) was
+  replaced by an informational notice. reCAPTCHA is treated as necessary, so there is no choice to
+  make: a light bar along the bottom on first visit, one OK, plain text ("only necessary cookies",
+  link to the privacy page), dismissal kept in localStorage (`src/lib/consent.ts`). reCAPTCHA
+  again loads on first focus of the form (decision 0009). Compliance check: banner is standard for
+  necessary-only sites; whether reCAPTCHA is strictly necessary is disputed (CNIL, Austrian court),
+  and Karlo keeps it. Before adding analytics or any tracker, switch back to a real two-button
+  consent (comment in `consent.ts`).
+- Open (Karlo): since 2026-04-02 Google is the processor for reCAPTCHA. Check the key runs under
+  Google Cloud with Google's data processing terms accepted.
 - Open (UX check of Karlo's list): text links under 44px tall (header, footer, contact line,
   hero caption) are the one real gap.

@@ -10,8 +10,7 @@
   },
   "Footer": {
     "location": "Croatia",
-    "privacy": "Privacy",
-    "cookies": "Cookie settings"
+    "privacy": "Privacy"
   },
   "Hero": {
     "title": "Senior software engineer. Software built properly.",
@@ -185,9 +184,7 @@
           "short": "Please write at least {min} characters.",
           "long": "Please shorten your message."
         }
-      },
-      "consentNeeded": "Sending the form needs Google reCAPTCHA, which you haven't allowed. Allow it, or email me at <email></email>.",
-      "consentAllow": "Allow reCAPTCHA"
+      }
     }
   },
   "Meta": {
@@ -209,7 +206,7 @@
     },
     "recaptcha": {
       "title": "Spam protection",
-      "text": "The form uses Google reCAPTCHA. It loads only if you allow it, and only when you start using the form; Google then receives data about your visit, including your IP address, may set its own cookies, and processes the data under its <google>Privacy Policy</google>. You can change your choice any time under “Cookie settings” at the bottom of the page; it is saved in your browser. Cookies Google has already set stay until you clear them in your browser. Your IP address is also used to limit repeated sends and isn't stored."
+      "text": "The form uses Google reCAPTCHA to keep spam out, which is necessary for the form to work safely. It loads only when you start using the form; Google then receives data about your visit, including your IP address, may set its own cookies, and processes the data under its <google>Privacy Policy</google>. Your IP address is also used to limit repeated sends and isn't stored."
     },
     "nothingElse": {
       "title": "Hosting",
@@ -221,9 +218,8 @@
     }
   },
   "Consent": {
-    "title": "Cookies on the contact form",
-    "text": "The contact form uses Google reCAPTCHA to block spam, and Google may set cookies when it loads. It loads only if you allow it. Nothing else on this site uses cookies. <privacy>Privacy</privacy>",
-    "allow": "Allow",
-    "decline": "Decline"
+    "label": "Cookie notice",
+    "text": "This site uses only necessary cookies. Details are on the <privacy>privacy page</privacy>.",
+    "ok": "OK"
   }
 }
