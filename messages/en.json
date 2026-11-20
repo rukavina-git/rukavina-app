@@ -10,5 +10,32 @@
   },
   "Footer": {
     "location": "Croatia"
+  },
+  "Hero": {
+    "title": "Senior software engineer. Software built properly.",
+    "intro1": "I've worked on large products people depend on, including government apps and payments software. I know what it takes to keep them healthy long after launch.",
+    "intro2": "I can help with your product, whether that means joining your team, building it from the first idea to release, or reviewing what you already have and telling you plainly what to fix first.",
+    "cue": "See shipped work",
+    "carousel": "Projects",
+    "pause": "Pause slideshow",
+    "play": "Play slideshow",
+    "show": "Show project {index} of {total}: {name}",
+    "slides": {
+      "government-platform": {
+        "name": "Government platform",
+        "caption": "Government platform · Android · Kotlin",
+        "alt": "Government platform, illustration to come"
+      },
+      "payments-app": {
+        "name": "Payments app",
+        "caption": "Payments app · Android · NFC",
+        "alt": "Payments app, illustration to come"
+      },
+      "gym-tracker": {
+        "name": "Gym Tracker",
+        "caption": "Gym Tracker · Android · Kotlin, Compose",
+        "alt": "Gym Tracker workout screen, logging sets of a barbell back squat"
+      }
+    }
   }
 }

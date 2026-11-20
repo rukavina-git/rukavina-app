@@ -10,5 +10,32 @@
   },
   "Footer": {
     "location": "Hrvatska"
+  },
+  "Hero": {
+    "title": "Senior softverski inženjer. Softver napravljen kako treba.",
+    "intro1": "Radio sam na velikim proizvodima o kojima ljudi ovise, uključujući državne aplikacije i softver za plaćanje. Znam što je potrebno da ostanu u dobrom stanju dugo nakon lansiranja.",
+    "intro2": "Mogu pomoći s vašim proizvodom, bilo da se pridružim vašem timu, izgradim ga od prve ideje do objave ili pregledam ono što već imate i jasno vam kažem što prvo popraviti.",
+    "cue": "Pogledajte objavljene projekte",
+    "carousel": "Projekti",
+    "pause": "Zaustavi prikaz",
+    "play": "Pokreni prikaz",
+    "show": "Prikaži projekt {index} od {total}: {name}",
+    "slides": {
+      "government-platform": {
+        "name": "Državna platforma",
+        "caption": "Državna platforma · Android · Kotlin",
+        "alt": "Državna platforma, ilustracija slijedi"
+      },
+      "payments-app": {
+        "name": "Aplikacija za plaćanje",
+        "caption": "Aplikacija za plaćanje · Android · NFC",
+        "alt": "Aplikacija za plaćanje, ilustracija slijedi"
+      },
+      "gym-tracker": {
+        "name": "Gym Tracker",
+        "caption": "Gym Tracker · Android · Kotlin, Compose",
+        "alt": "Gym Tracker, zaslon treninga s unosom serija čučnja sa šipkom"
+      }
+    }
   }
 }

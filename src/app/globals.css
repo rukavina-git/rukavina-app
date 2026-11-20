@@ -17,6 +17,9 @@
   --color-border-strong: #cfcabe;
   --color-accent: #1d4e5f;
   --color-accent-soft: #d6e1e2;
+  /* Hero phone (331:672). */
+  --color-device: #121212;
+  --color-device-screen: #1b1c20;
 
   --font-*: initial;
   --font-sans: var(--font-hanken), 'Hanken Grotesk', sans-serif;
@@ -77,6 +80,16 @@ main [id] {
 @media (min-width: 48rem) {
   main [id] {
     scroll-margin-top: 5.25rem;
+  }
+}
+
+/* Hero phone: fill of the active slide bar. */
+@keyframes hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 
