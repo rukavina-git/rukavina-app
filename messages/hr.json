@@ -54,7 +54,7 @@
     "projects": {
       "government-platform": {
         "name": "Državna platforma",
-        "summary": "Državna platforma koju koriste desetci tisuća ljudi, s praćenjem lokacije uživo i kartama. Ljudi potvrđuju identitet službenim identifikacijskim dokumentima, pa je čuvanje njihovih osobnih podataka privatnima i sigurnima bilo na prvom mjestu.",
+        "summary": "Državna platforma koju koriste desetci tisuća ljudi, s praćenjem lokacije uživo i kartama. Ljudi potvrđuju identitet službenim identifikacijskim dokumentima, pa su privatnost i sigurnost njihovih osobnih podataka bile na prvom mjestu.",
         "part": "Pridružio sam se jasno definiranom projektu i preuzeo odgovornost za svoj rad od zadatka vlasnika proizvoda do produkcije: razrada, procjene, prijedlozi arhitekture, implementacija i objave u trgovinama aplikacija, u agilnom timu u bliskoj suradnji s vlasnikom proizvoda, dizajnerima, QA-om i ostalim timovima.",
         "partShort": "Odgovoran za svoj rad od zadatka vlasnika proizvoda do produkcije, u agilnom timu u bliskoj suradnji s vlasnikom proizvoda, dizajnerima, QA-om i ostalim timovima.",
         "stack": "Kotlin · Lokacija i karte · CI/CD",
@@ -63,16 +63,16 @@
       "payments-app": {
         "name": "Aplikacija za plaćanje",
         "summary": "Digitalna valuta kojom plaćate prislanjanjem mobitela: novac se čuva na prilagođenim Java Card karticama i u sigurnom hardveru mobitela, a svaka se transakcija bilježi na blockchainu koji vide sve strane.",
-        "part": "U malom timu izradio sam Android stranu komunikacije s karticama: slanje APDU naredbi karticama preko NFC-a, s ponovnim pokušajima, obradom pogrešaka, testiranjem i otklanjanjem grešaka koji je čine pouzdanom.",
+        "part": "U malom timu izradio sam Android stranu komunikacije s karticama: slanje APDU naredbi karticama preko NFC-a, s ponovnim pokušajima, obradom pogrešaka, testiranjem i otklanjanjem grešaka, kako bi bila pouzdana.",
         "partShort": "U malom timu izradio Android stranu komunikacije s karticama: APDU naredbe preko NFC-a, s ponovnim pokušajima i obradom pogrešaka.",
         "stack": "NFC · Java Card · APDU · Android Secure Element · gRPC",
         "alt": "Ilustracija: mobitel plaća prislanjanjem kartice"
       },
       "gym-tracker": {
         "name": "Gym Tracker",
-        "summary": "Privatna aplikacija za praćenje treninga, bez oglasa i bez suvišnog. Napravio sam je jer nijedna aplikacija nije radila samo ono što sam htio.",
-        "part": "Imao sam ideju, dizajnirao je, izradio Android aplikaciju i backend iz jednog API ugovora koji provjerava CI te je objavio na Google Playu. Svaka odluka o arhitekturi zapisana je u repozitoriju, pa se razlozi iza koda mogu pročitati.",
-        "partShort": "Imao ideju, dizajnirao je, izradio aplikaciju i backend iz jednog API ugovora te je objavio na Google Playu.",
+        "summary": "Privatna aplikacija za praćenje treninga, bez oglasa i nepotrebnih dodataka. Napravio sam je jer nijedna aplikacija nije radila samo ono što sam htio.",
+        "part": "Ideja i dizajn su moji. Izradio sam Android aplikaciju i backend iz jednog API ugovora koji provjerava CI te aplikaciju objavio na Google Playu. Svaka odluka o arhitekturi zapisana je u repozitoriju, pa se razlozi iza koda mogu pročitati.",
+        "partShort": "Ideja i dizajn su moji; izradio sam aplikaciju i backend iz jednog API ugovora te je objavio na Google Playu.",
         "stack": "Kotlin · Jetpack Compose · Spring Boot",
         "alt": "Zasloni aplikacije Gym Tracker: plan treninga i trening u tijeku"
       },
@@ -95,10 +95,10 @@
     "items": {
       "refinement": {
         "title": "Razrada i procjene",
-        "text": "S vlasnikom proizvoda oblikujem posao prije nego što itko napiše kod i dajem procjene iza kojih mogu stati."
+        "text": "S vlasnikom proizvoda oblikujem posao prije nego što itko napiše kod i dajem procjene iza kojih stojim."
       },
       "architecture": {
-        "title": "Arhitektura, zapisana",
+        "title": "Zapisana arhitektura",
         "text": "Predlažem strukturu, objašnjavam kompromise onome tko odlučuje i zapisujem što smo odabrali."
       },
       "release": {
@@ -107,7 +107,7 @@
       },
       "communication": {
         "title": "Jasna komunikacija",
-        "text": "U velikim timovima pazim da produkt, dizajn, QA i razvoj rade s istom slikom."
+        "text": "U velikim timovima pazim da produkt, dizajn, QA i razvoj imaju istu sliku."
       }
     }
   },
@@ -115,12 +115,12 @@
     "title": "Što preuzimam",
     "items": {
       "development": {
-        "title": "Razvoj weba i mobilnih aplikacija",
+        "title": "Razvoj web i mobilnih aplikacija",
         "text": "Android i web aplikacije, od prve verzije do objave."
       },
       "ai": {
         "title": "Integracija umjetne inteligencije",
-        "text": "AI funkcije dodane postojećim proizvodima, povezane sa stvarnim tijekovima rada."
+        "text": "Funkcije umjetne inteligencije dodane postojećim proizvodima i povezane sa stvarnim tijekovima rada."
       },
       "review": {
         "title": "Arhitektura i pregled koda",
@@ -131,11 +131,11 @@
   "About": {
     "title": "O meni",
     "p1": "Ja sam Ivan Karlo Rukavina, senior softverski inženjer. Većinu karijere proveo sam u agilnim timovima, u bliskoj suradnji s vlasnicima proizvoda, dizajnerima, QA-om i drugim razvojnim timovima, preuzimajući odgovornost za svoj rad od zadatka do produkcije. Uz to izrađujem vlastite proizvode od početka do kraja.",
-    "p2": "Stalo mi je do softvera na kojem se i godinu dana nakon lansiranja lako radi: jasna struktura, zapisane odluke i ne više složenosti nego što problem traži. Gym Tracker nastao je iz iste ideje: aplikacija koja radi samo ono što treba, bez oglasa i suvišnog.",
+    "p2": "Stalo mi je do softvera na kojem se i godinu dana nakon lansiranja lako radi: jasna struktura, zapisane odluke i nimalo više složenosti nego što problem traži. Gym Tracker nastao je iz iste ideje: aplikacija koja radi samo ono što treba, bez oglasa i nepotrebnih dodataka.",
     "facts": {
       "education": {
         "label": "Obrazovanje",
-        "value": "Magistar računarstva"
+        "value": "Magisterij iz računarstva"
       },
       "location": {
         "label": "Lokacija",

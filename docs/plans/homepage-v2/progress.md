@@ -6,7 +6,7 @@
 - [x] 4. How I work + What I take on (1d3db15)
 - [x] 5. About (600d4ce)
 - [x] 6. Contact (e16cc0e)
-- [ ] 7. Croatian
+- [x] 7. Croatian (HASH7)
 - [ ] 8. Launch basics
 - [ ] 9. (me) Proofread and device check
 - [ ] 10. Release PR
@@ -47,6 +47,8 @@
 - 06: `.env.example` not updated: reading `.env*` is denied. Karlo adds
   `NEXT_PUBLIC_RECAPTCHA_SITE_KEY=` and `RECAPTCHA_SECRET_KEY=` (also in Vercel, with
   rukavina.app on the reCAPTCHA key's domain list).
+- 07: hr was written in steps 1–6; this step was the read-through and wording fixes. Degree in hr
+  is the neutral "Magisterij iz računarstva" (exact diploma title not confirmed).
 
 ## Gotchas
 
@@ -85,3 +87,6 @@
 - 06 NITs open: Resend `send` not in try/catch (throw → 500 not 502); global `:focus-visible`
   border-radius squares the 10px input corners; contact links under 44px tall.
 - Danger colour token `--color-danger` (#b3261e) added for form errors.
+- 07 hr NITs open: "produkt" vs "proizvod" in HowIWork.communication; gym-tracker partShort is a
+  full sentence while the others are fragments; "aplikaciju" twice in gym-tracker.part;
+  "AI projekt" kept as a short label.
