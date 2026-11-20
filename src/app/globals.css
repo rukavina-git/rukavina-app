@@ -1,191 +1,129 @@
-:root {
-  --bg: #f7f5f0;
-  --alt: #ecebe4;
-  --ink: #161616;
-  --body: #2e2d2a;
-  --muted: #6b6862;
-  --accent: #1d4e5f;
-  --accent-dark: #163d4b;
-  --rule: #dcd7cc;
-  --font: var(--font-hanken), 'Hanken Grotesk', system-ui, sans-serif;
+@import "tailwindcss";
+
+/* Tokens from Figma "Round 8 · C refined" (frames 331:656, 331:859). */
+@theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-bg: #f7f5f0;
+  --color-bg-alt: #ecebe4;
+  --color-surface: #ffffff;
+  --color-surface-warm: #f1eee7;
+  --color-ink: #161616;
+  --color-ink-soft: #2e2d2a;
+  --color-muted: #6b6862;
+  /* Decorative only (separators); fails contrast for text. */
+  --color-faint: #a9a59c;
+  --color-border: #dcd7cc;
+  --color-border-strong: #cfcabe;
+  --color-accent: #1d4e5f;
+  --color-accent-soft: #d6e1e2;
+  --color-danger: #b3261e;
+  /* Hero phone (331:672). */
+  --color-device: #121212;
+  --color-device-screen: #1b1c20;
+
+  --font-*: initial;
+  --font-sans: var(--font-hanken), 'Hanken Grotesk', sans-serif;
+
+  --text-display: 4.5rem;
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.04em;
+  --text-h2: 2.75rem;
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.03em;
+  --text-h3: 1.875rem;
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: -0.02em;
+  --text-h4: 1.375rem;
+  --text-h4--line-height: 1.3;
+  --text-h4--letter-spacing: -0.02em;
+  --text-lead: 1.25rem;
+  --text-lead--line-height: 1.55;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.5;
+  --text-ui: 0.9375rem;
+  --text-ui--line-height: 1.33;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.3;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.3;
+
+  --spacing-gutter: 1.25rem;
+  --spacing-gutter-lg: 4rem;
+  --spacing-section: 7rem;
+  --container-page: 90rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* Horizontal page padding: 20px on phones, 64px from md (Figma). */
+@utility px-page {
+  padding-inline: var(--spacing-gutter);
+  @media (width >= 48rem) {
+    padding-inline: var(--spacing-gutter-lg);
+  }
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-body {
-  background: var(--bg);
-  color: var(--body);
-  font-family: var(--font);
-  font-size: 17px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+/* Keep anchored sections clear of the sticky header. */
+main [id] {
+  scroll-margin-top: 4.5rem;
+}
+@media (min-width: 48rem) {
+  main [id] {
+    scroll-margin-top: 5.25rem;
+  }
 }
 
-::selection {
-  background: var(--accent);
-  color: var(--bg);
-}
-
-a {
-  color: var(--accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-}
-
-a:hover {
-  color: var(--accent-dark);
+/* Hero phone: fill of the active slide bar. */
+@keyframes hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
-.page {
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  padding: 0 clamp(20px, 4.5vw, 64px);
+/* Cookie notice: rises from the bottom edge once, from its own height. */
+@keyframes notice-rise {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 22px 0;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-.name {
-  color: var(--ink);
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 0 18px;
-  border-radius: 8px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 500;
-  font-size: 15px;
-  text-decoration: none;
-  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button:hover {
-  background: var(--accent-dark);
-  color: #fff;
-}
-
-.main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: clamp(48px, 10vh, 120px) 0;
-  max-width: 1100px;
-}
-
-h1 {
-  margin: 0;
-  color: var(--ink);
-  font-weight: 600;
-  font-size: clamp(40px, 6.2vw, 80px);
-  line-height: 1.04;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
-}
-
-.lead {
-  margin: 28px 0 0;
-  max-width: 34rem;
-  font-size: clamp(18px, 1.6vw, 21px);
-  line-height: 1.55;
-}
-
-.launch {
-  margin-top: clamp(48px, 8vh, 88px);
-  padding-top: 24px;
-  border-top: 1px solid var(--ink);
-  max-width: 640px;
-}
-
-.launch h2 {
-  margin: 0 0 16px;
-  color: var(--muted);
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.countdown {
-  display: flex;
-  gap: clamp(20px, 4vw, 48px);
-}
-
-.unit {
-  display: flex;
-  flex-direction: column;
-}
-
-.value {
-  color: var(--ink);
-  font-weight: 600;
-  font-size: clamp(40px, 6vw, 64px);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  font-variant-numeric: tabular-nums;
-}
-
-.label {
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.countdown-done {
-  margin: 0;
-  color: var(--ink);
-  font-size: clamp(24px, 3vw, 32px);
-  font-weight: 600;
-}
-
-.links {
-  margin: 40px 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 28px;
-  font-weight: 500;
-}
-
-.footer {
-  padding: 24px 0;
-  border-top: 1px solid var(--rule);
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+/* reCAPTCHA v3 badge hidden: Google's notice sits under the contact form's Send button. */
+.grecaptcha-badge {
+  visibility: hidden !important;
 }

@@ -1,0 +1,225 @@
+{
+  "Header": {
+    "skip": "Preskoči na sadržaj",
+    "nav": "Glavna navigacija",
+    "work": "Radovi",
+    "services": "Usluge",
+    "about": "O meni",
+    "contact": "Javite se",
+    "language": "Jezik"
+  },
+  "Footer": {
+    "location": "Hrvatska",
+    "privacy": "Privatnost"
+  },
+  "Hero": {
+    "title": "Senior softverski inženjer. Softver napravljen kako treba.",
+    "intro1": "Radio sam na velikim proizvodima o kojima ljudi ovise, uključujući državne aplikacije i softver za plaćanje. Znam što je potrebno da ostanu u dobrom stanju dugo nakon lansiranja.",
+    "intro2": "Mogu pomoći s vašim proizvodom, bilo da se pridružim vašem timu, izgradim ga od prve ideje do objave ili pregledam ono što već imate i jasno vam kažem što prvo popraviti.",
+    "cue": "Pogledajte objavljene projekte",
+    "carousel": "Projekti",
+    "pause": "Zaustavi prikaz",
+    "play": "Pokreni prikaz",
+    "show": "Prikaži projekt {index} od {total}: {name}",
+    "slides": {
+      "government-platform": {
+        "name": "Državna platforma",
+        "caption": "Državna platforma · Android · Kotlin",
+        "alt": "Državna platforma, ilustracija slijedi"
+      },
+      "payments-app": {
+        "name": "Aplikacija za plaćanje",
+        "caption": "Aplikacija za plaćanje · Android · NFC",
+        "alt": "Aplikacija za plaćanje, ilustracija slijedi"
+      },
+      "gym-tracker": {
+        "name": "Gym Tracker",
+        "caption": "Gym Tracker · Android · Kotlin, Compose",
+        "alt": "Gym Tracker, zaslon treninga s unosom serija čučnja sa šipkom"
+      }
+    }
+  },
+  "Work": {
+    "title": "Radovi",
+    "myPart": "Moj dio",
+    "slot": "Slika kad bude gotovo",
+    "tags": {
+      "nda": "NDA",
+      "wip": "U izradi"
+    },
+    "links": {
+      "play": "Google Play",
+      "github": "Kod na GitHubu",
+      "site": "Posjetite stranicu"
+    },
+    "projects": {
+      "government-platform": {
+        "name": "Državna platforma",
+        "summary": "Državna platforma koju koriste desetci tisuća ljudi, s praćenjem lokacije uživo i kartama. Ljudi potvrđuju identitet službenim identifikacijskim dokumentima, pa su privatnost i sigurnost njihovih osobnih podataka bile na prvom mjestu.",
+        "part": "Pridružio sam se jasno definiranom projektu i preuzeo odgovornost za svoj rad od zadatka vlasnika proizvoda do produkcije: razrada, procjene, prijedlozi arhitekture, implementacija i objave u trgovinama aplikacija, u agilnom timu u bliskoj suradnji s vlasnikom proizvoda, dizajnerima, QA-om i ostalim timovima.",
+        "partShort": "Odgovoran za svoj rad od zadatka vlasnika proizvoda do produkcije, u agilnom timu u bliskoj suradnji s vlasnikom proizvoda, dizajnerima, QA-om i ostalim timovima.",
+        "stack": "Kotlin · Lokacija i karte · CI/CD",
+        "alt": "Ilustracija: mobitel iznad karte, s rutom lokacije uživo"
+      },
+      "payments-app": {
+        "name": "Aplikacija za plaćanje",
+        "summary": "Digitalna valuta kojom plaćate prislanjanjem mobitela: novac se čuva na prilagođenim Java Card karticama i u sigurnom hardveru mobitela, a svaka se transakcija bilježi na blockchainu koji vide sve strane.",
+        "part": "U malom timu izradio sam Android stranu komunikacije s karticama: slanje APDU naredbi karticama preko NFC-a, s ponovnim pokušajima, obradom pogrešaka, testiranjem i otklanjanjem grešaka, kako bi bila pouzdana.",
+        "partShort": "U malom timu izradio Android stranu komunikacije s karticama: APDU naredbe preko NFC-a, s ponovnim pokušajima i obradom pogrešaka.",
+        "stack": "NFC · Java Card · APDU · Android Secure Element · gRPC",
+        "alt": "Ilustracija: mobitel plaća prislanjanjem kartice"
+      },
+      "gym-tracker": {
+        "name": "Gym Tracker",
+        "summary": "Privatna aplikacija za praćenje treninga, bez oglasa i nepotrebnih dodataka. Napravio sam je jer nijedna aplikacija nije radila samo ono što sam htio.",
+        "part": "Ideja i dizajn su moji. Izradio sam Android aplikaciju i backend iz jednog API ugovora koji provjerava CI te aplikaciju objavio na Google Playu. Svaka odluka o arhitekturi zapisana je u repozitoriju, pa se razlozi iza koda mogu pročitati.",
+        "partShort": "Ideja i dizajn su moji; izradio sam aplikaciju i backend iz jednog API ugovora te je objavio na Google Playu.",
+        "stack": "Kotlin · Jetpack Compose · Spring Boot",
+        "alt": "Zasloni aplikacije Gym Tracker: plan treninga i trening u tijeku"
+      },
+      "adria-va": {
+        "name": "Adria VA",
+        "summary": "Web stranica za tvrtku koja pruža usluge virtualne asistencije i knjigovodstva.",
+        "part": "Većina posla odrađena je prije ikakvog dizajna: zajedno s tvrtkom utvrdio sam što njezini klijenti zapravo trebaju vidjeti i široku ideju pretvorio u jasan popis onoga što stranica mora raditi. Zatim sam je dizajnirao i izradio, na engleskom i hrvatskom.",
+        "partShort": "Zajedno s tvrtkom utvrdio što njezini klijenti trebaju vidjeti, zatim dizajnirao i izradio stranicu na engleskom i hrvatskom.",
+        "stack": "Next.js · Tailwind CSS",
+        "alt": "Početna stranica Adria VA u prozoru preglednika"
+      },
+      "ai-project": {
+        "name": "AI projekt",
+        "summary": "Detalji kad bude gotovo."
+      }
+    }
+  },
+  "HowIWork": {
+    "title": "Kako radim",
+    "items": {
+      "refinement": {
+        "title": "Razrada i procjene",
+        "text": "S vlasnikom proizvoda oblikujem posao prije nego što itko napiše kod i dajem procjene iza kojih stojim."
+      },
+      "architecture": {
+        "title": "Zapisana arhitektura",
+        "text": "Predlažem strukturu, objašnjavam kompromise onome tko odlučuje i zapisujem što smo odabrali."
+      },
+      "release": {
+        "title": "Sve do objave",
+        "text": "Kvaliteta i sigurnost provjeravaju se usput, a ne ostavljaju za kraj. CI/CD i objave u trgovinama aplikacija dio su posla."
+      },
+      "communication": {
+        "title": "Jasna komunikacija",
+        "text": "U velikim timovima pazim da produkt, dizajn, QA i razvoj imaju istu sliku."
+      }
+    }
+  },
+  "Services": {
+    "title": "Što preuzimam",
+    "items": {
+      "development": {
+        "title": "Razvoj web i mobilnih aplikacija",
+        "text": "Android i web aplikacije, od prve verzije do objave."
+      },
+      "ai": {
+        "title": "Integracija umjetne inteligencije",
+        "text": "Funkcije umjetne inteligencije dodane postojećim proizvodima i povezane sa stvarnim tijekovima rada."
+      },
+      "review": {
+        "title": "Arhitektura i pregled koda",
+        "text": "Jasan pogled na vaš sustav ili kod, s konkretnim sljedećim koracima."
+      }
+    }
+  },
+  "About": {
+    "title": "O meni",
+    "p1": "Ja sam Ivan Karlo Rukavina, senior softverski inženjer. Većinu karijere proveo sam u agilnim timovima, u bliskoj suradnji s vlasnicima proizvoda, dizajnerima, QA-om i drugim razvojnim timovima, preuzimajući odgovornost za svoj rad od zadatka do produkcije. Uz to izrađujem vlastite proizvode od početka do kraja.",
+    "p2": "Stalo mi je do softvera na kojem se i godinu dana nakon lansiranja lako radi: jasna struktura, zapisane odluke i nimalo više složenosti nego što problem traži. Gym Tracker nastao je iz iste ideje: aplikacija koja radi samo ono što treba, bez oglasa i nepotrebnih dodataka.",
+    "facts": {
+      "education": {
+        "label": "Obrazovanje",
+        "value": "Magisterij iz računarstva"
+      },
+      "location": {
+        "label": "Lokacija",
+        "value": "Split, Hrvatska"
+      },
+      "languages": {
+        "label": "Jezici",
+        "value": "hrvatski (materinski), engleski (tečno)"
+      }
+    }
+  },
+  "Contact": {
+    "title": "Razgovarajmo",
+    "intro": "Recite mi na čemu radite i gdje vam treba pomoć. Odgovaram u roku od 24 sata.",
+    "facts": "Split, Hrvatska · CET · engleski i hrvatski",
+    "form": {
+      "name": {
+        "label": "Ime"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "vi@tvrtka.hr"
+      },
+      "message": {
+        "label": "Na čemu radite?",
+        "placeholder": "Gdje vam treba pomoć i sve korisno o timu ili rokovima."
+      },
+      "send": "Pošalji",
+      "sending": "Šaljem…",
+      "error": "Poruka nije poslana. Pokušajte ponovno ili mi pišite izravno na <email></email>.",
+      "sentTitle": "Hvala, poruka je poslana.",
+      "sentText": "Odgovaram u roku od 24 sata.",
+      "recaptcha": "Ova stranica zaštićena je sustavom reCAPTCHA te se primjenjuju Googleova <privacy>Pravila o privatnosti</privacy> i <terms>Uvjeti pružanja usluge</terms>.",
+      "errors": {
+        "name": {
+          "required": "Upišite svoje ime.",
+          "long": "Skratite ime."
+        },
+        "email": {
+          "required": "Upišite svoju e-mail adresu.",
+          "invalid": "Upišite ispravnu e-mail adresu."
+        },
+        "message": {
+          "required": "Napišite na čemu radite.",
+          "short": "Napišite barem {min} znakova.",
+          "long": "Skratite poruku."
+        }
+      }
+    }
+  },
+  "Meta": {
+    "title": "Ivan Karlo Rukavina · Senior softverski inženjer",
+    "description": "Senior softverski inženjer iz Splita. Razvoj web i mobilnih aplikacija, integracija umjetne inteligencije te arhitektura i pregled koda: kao dio vašeg tima, izrada vašeg proizvoda ili pregled onoga što već imate."
+  },
+  "NotFound": {
+    "title": "Stranica nije pronađena",
+    "text": "Ova stranica ne postoji ili je premještena.",
+    "home": "Na početnu stranicu"
+  },
+  "Privacy": {
+    "metaTitle": "Privatnost",
+    "title": "Privatnost",
+    "intro": "Ovu stranicu vodi {name}, Split, Hrvatska. Jedini osobni podaci koje primam su oni koje pošaljete putem obrasca za kontakt.",
+    "form": {
+      "title": "Obrazac za kontakt",
+      "text": "Vaše ime, e-mail adresa i poruka stižu mi kao e-mail, putem usluge Resend. Koristim ih da vam odgovorim i za vođenje naše korespondencije, jer je odgovor na vaš upit legitimni interes (čl. 6. st. 1. t. (f) GDPR-a) ili jer ste pitali o suradnji (čl. 6. st. 1. t. (b)). E-mail čuvam dok je koristan za tu korespondenciju."
+    },
+    "recaptcha": {
+      "title": "Zaštita od spama",
+      "text": "Obrazac koristi Google reCAPTCHA za zaštitu od spama, što je nužno za siguran rad obrasca. Učitava se tek kad počnete koristiti obrazac; Google tada prima podatke o vašem posjetu, uključujući IP adresu, može postaviti vlastite kolačiće i obrađuje podatke prema svojim <google>Pravilima o privatnosti</google>. Vaša IP adresa koristi se i za ograničavanje ponovljenih slanja te se ne pohranjuje."
+    },
+    "nothingElse": {
+      "title": "Hosting",
+      "text": "Stranica je smještena na Vercelu, koji bilježi zahtjeve (poput IP adrese i preglednika) radi rada i zaštite usluge. Resend, Google i Vercel mogu obrađivati podatke izvan EU-a. Nema analitike, oglasa ni kolačića koje postavlja sama stranica."
+    },
+    "rights": {
+      "title": "Vaša prava",
+      "text": "Prema GDPR-u možete zatražiti pristup svojim podacima, njihov ispravak ili brisanje, ili prigovoriti njihovoj upotrebi, slanjem e-maila na <email></email>. Možete se obratiti i Agenciji za zaštitu osobnih podataka, <azop>AZOP</azop>."
+    }
+  },
+  "Consent": {
+    "label": "Obavijest o kolačićima",
+    "text": "Ova web-stranica koristi samo nužne kolačiće. Pojedinosti su na stranici <privacy>Privatnost</privacy>.",
+    "ok": "U redu"
+  }
+}

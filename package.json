@@ -6,17 +6,34 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "15.5.19",
-    "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@types/three": "^0.184.1",
+    "gsap": "^3.12.5",
+    "lottie-react": "^2.4.1",
+    "next": "^15.3.3",
+    "next-intl": "^3.26.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "resend": "^4.5.1",
+    "three": "^0.184.0"
   },
   "devDependencies": {
-    "@types/node": "22.19.19",
-    "@types/react": "19.2.16",
-    "@types/react-dom": "19.2.3",
-    "typescript": "5.9.3"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^15.3.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "unrs-resolver@1.12.2": true
   }
 }

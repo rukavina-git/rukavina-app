@@ -1,0 +1,225 @@
+{
+  "Header": {
+    "skip": "Skip to content",
+    "nav": "Main",
+    "work": "Work",
+    "services": "Services",
+    "about": "About",
+    "contact": "Get in touch",
+    "language": "Language"
+  },
+  "Footer": {
+    "location": "Croatia",
+    "privacy": "Privacy"
+  },
+  "Hero": {
+    "title": "Senior software engineer. Software built properly.",
+    "intro1": "I've worked on large products people depend on, including government apps and payments software. I know what it takes to keep them healthy long after launch.",
+    "intro2": "I can help with your product, whether that means joining your team, building it from the first idea to release, or reviewing what you already have and telling you plainly what to fix first.",
+    "cue": "See shipped work",
+    "carousel": "Projects",
+    "pause": "Pause slideshow",
+    "play": "Play slideshow",
+    "show": "Show project {index} of {total}: {name}",
+    "slides": {
+      "government-platform": {
+        "name": "Government platform",
+        "caption": "Government platform · Android · Kotlin",
+        "alt": "Government platform, illustration to come"
+      },
+      "payments-app": {
+        "name": "Payments app",
+        "caption": "Payments app · Android · NFC",
+        "alt": "Payments app, illustration to come"
+      },
+      "gym-tracker": {
+        "name": "Gym Tracker",
+        "caption": "Gym Tracker · Android · Kotlin, Compose",
+        "alt": "Gym Tracker workout screen, logging sets of a barbell back squat"
+      }
+    }
+  },
+  "Work": {
+    "title": "Work",
+    "myPart": "My part",
+    "slot": "Image when it ships",
+    "tags": {
+      "nda": "NDA",
+      "wip": "Work in progress"
+    },
+    "links": {
+      "play": "Google Play",
+      "github": "Code on GitHub",
+      "site": "Visit site"
+    },
+    "projects": {
+      "government-platform": {
+        "name": "Government platform",
+        "summary": "A government platform used by tens of thousands of people, with live location tracking and maps. People confirm who they are with official identity documents, so keeping their personal data private and secure came first.",
+        "part": "I joined a well-defined project and owned my work from the product owner's ticket to production: refinement, estimates, architecture proposals, implementation and store releases, in an agile team working closely with the product owner, designers, QA and the other teams.",
+        "partShort": "Owned my work from the product owner's ticket to production, in an agile team working closely with the product owner, designers, QA and other teams.",
+        "stack": "Kotlin · Location and maps · CI/CD",
+        "alt": "Illustration: a phone over a map, with a live location route"
+      },
+      "payments-app": {
+        "name": "Payments app",
+        "summary": "A digital currency you pay with by tapping your phone: money held on custom Java Cards and the phone's secure hardware, with every transaction recorded on a blockchain that all parties can see.",
+        "part": "In a small team, I built the Android side of the card communication: sending APDU commands to the cards over NFC, with the retries, failure handling, testing and debugging that make it dependable.",
+        "partShort": "In a small team, built the Android side of the card communication: APDU commands over NFC, with retries and failure handling.",
+        "stack": "NFC · Java Card · APDU · Android Secure Element · gRPC",
+        "alt": "Illustration: a phone paying by tapping a card"
+      },
+      "gym-tracker": {
+        "name": "Gym Tracker",
+        "summary": "A private workout tracker with no ads and no bloat. I built it because no app did only what I wanted.",
+        "part": "I had the idea, designed it, built the Android app and the backend from one API contract that CI checks, and put it on Google Play. Every architecture decision is written down in the repo, so the reasoning behind the code is there to read.",
+        "partShort": "Had the idea, designed it, built the app and backend from one API contract, and put it on Google Play.",
+        "stack": "Kotlin · Jetpack Compose · Spring Boot",
+        "alt": "Gym Tracker screens: a workout plan and an active workout"
+      },
+      "adria-va": {
+        "name": "Adria VA",
+        "summary": "A website for a virtual assistance and bookkeeping business.",
+        "part": "Most of the work happened before any design: working out with the owner what their clients actually needed to see, and turning a broad idea into a clear list of what the site had to do. Then I designed and built it, in English and Croatian.",
+        "partShort": "Worked out with the owner what their clients needed to see, then designed and built the site in English and Croatian.",
+        "stack": "Next.js · Tailwind CSS",
+        "alt": "Adria VA homepage in a browser window"
+      },
+      "ai-project": {
+        "name": "AI project",
+        "summary": "Details when it ships."
+      }
+    }
+  },
+  "HowIWork": {
+    "title": "How I work",
+    "items": {
+      "refinement": {
+        "title": "Refinement and estimates",
+        "text": "I help shape the work with the product owner before anyone writes code, and give estimates I can stand behind."
+      },
+      "architecture": {
+        "title": "Architecture, written down",
+        "text": "I propose the structure, explain the trade-offs to whoever decides, and record what we chose."
+      },
+      "release": {
+        "title": "Through to release",
+        "text": "Quality and security are checked along the way, not left for the end. CI/CD pipelines and store releases are part of the job."
+      },
+      "communication": {
+        "title": "Clear communication",
+        "text": "In large teams, I make sure product, design, QA and engineering are all working from the same picture."
+      }
+    }
+  },
+  "Services": {
+    "title": "What I take on",
+    "items": {
+      "development": {
+        "title": "Web and mobile development",
+        "text": "Android apps and web apps, from the first build to release."
+      },
+      "ai": {
+        "title": "AI integration",
+        "text": "AI features added to existing products, wired into real workflows."
+      },
+      "review": {
+        "title": "Architecture and code review",
+        "text": "A clear look at your system or codebase, with concrete next steps."
+      }
+    }
+  },
+  "About": {
+    "title": "About",
+    "p1": "I'm Ivan Karlo Rukavina, a senior software engineer. Most of my career has been spent in agile teams, working closely with product owners, designers, QA and other engineering teams, and taking responsibility for my work from the ticket to production. Alongside that, I build my own products end to end.",
+    "p2": "What I care about is software that is still easy to work on a year after launch: a clear structure, decisions written down, and no more complexity than the problem needs. Gym Tracker came from the same idea: an app that does only what it should, without ads or bloat.",
+    "facts": {
+      "education": {
+        "label": "Education",
+        "value": "Master's in Computer Science"
+      },
+      "location": {
+        "label": "Based in",
+        "value": "Split, Croatia"
+      },
+      "languages": {
+        "label": "Languages",
+        "value": "Croatian (native), English (fluent)"
+      }
+    }
+  },
+  "Contact": {
+    "title": "Let's talk",
+    "intro": "Tell me what you're working on and where you need help. I reply within 24 hours.",
+    "facts": "Based in Split, Croatia · CET · English and Croatian",
+    "form": {
+      "name": {
+        "label": "Name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@company.com"
+      },
+      "message": {
+        "label": "What are you working on?",
+        "placeholder": "Where you need help, and anything useful about the team or timeline."
+      },
+      "send": "Send",
+      "sending": "Sending…",
+      "error": "That didn't send. Please try again, or email me directly at <email></email>.",
+      "sentTitle": "Thanks, your message is on its way.",
+      "sentText": "I reply within 24 hours.",
+      "recaptcha": "This site is protected by reCAPTCHA and the Google <privacy>Privacy Policy</privacy> and <terms>Terms of Service</terms> apply.",
+      "errors": {
+        "name": {
+          "required": "Please enter your name.",
+          "long": "Please shorten your name."
+        },
+        "email": {
+          "required": "Please enter your email.",
+          "invalid": "Please enter a valid email address."
+        },
+        "message": {
+          "required": "Please tell me what you're working on.",
+          "short": "Please write at least {min} characters.",
+          "long": "Please shorten your message."
+        }
+      }
+    }
+  },
+  "Meta": {
+    "title": "Ivan Karlo Rukavina · Senior software engineer",
+    "description": "Senior software engineer in Split, Croatia. Web and mobile development, AI integration, and architecture and code review: joining your team, building your product, or reviewing what you have."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "text": "This page doesn't exist, or it has moved.",
+    "home": "Go to the homepage"
+  },
+  "Privacy": {
+    "metaTitle": "Privacy",
+    "title": "Privacy",
+    "intro": "This site is run by {name}, Split, Croatia. The only personal data I receive is what you send through the contact form.",
+    "form": {
+      "title": "Contact form",
+      "text": "Your name, email address and message reach me as an email, delivered through Resend. I use them to reply and to keep our correspondence, because answering your enquiry is a legitimate interest (GDPR Art. 6(1)(f)), or because you asked about working together (Art. 6(1)(b)). I keep the email as long as it's useful for that correspondence."
+    },
+    "recaptcha": {
+      "title": "Spam protection",
+      "text": "The form uses Google reCAPTCHA to keep spam out, which is necessary for the form to work safely. It loads only when you start using the form; Google then receives data about your visit, including your IP address, may set its own cookies, and processes the data under its <google>Privacy Policy</google>. Your IP address is also used to limit repeated sends and isn't stored."
+    },
+    "nothingElse": {
+      "title": "Hosting",
+      "text": "The site is hosted on Vercel, which logs requests (such as IP address and browser) to run and protect the service. Resend, Google and Vercel may process data outside the EU. There are no analytics, no advertising and no cookies set by this site itself."
+    },
+    "rights": {
+      "title": "Your rights",
+      "text": "Under the GDPR you can ask for access to your data, its correction or deletion, or object to its use, by emailing <email></email>. You can also complain to the Croatian data protection authority, <azop>AZOP</azop>."
+    }
+  },
+  "Consent": {
+    "label": "Cookie notice",
+    "text": "This site uses only necessary cookies. Details are on the <privacy>privacy page</privacy>.",
+    "ok": "OK"
+  }
+}

@@ -1,14 +1,17 @@
-node_modules/
-.next/
+node_modules
+.next
 /out/
-dist/
-.astro/
-.vercel/
-.env
-.env.*
+/build/
+.vercel
+.env*
 !.env.example
+*.pem
 *.tsbuildinfo
 next-env.d.ts
+npm-debug.log*
 .DS_Store
-*.log
 .claude/settings.local.json
+references
+# local design reviews, mocks and screenshots; images the site uses go in public/
+design/
+.playwright-mcp/

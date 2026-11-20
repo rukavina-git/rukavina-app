@@ -1,30 +1,31 @@
 ---
 name: step
-description: Execute the next pending step file from docs/plans. Use when asked to continue the plan, do the next step, or run a specific step by number.
-argument-hint: "[plan-dir] [step-number]"
+description: Run the next unchecked step of the active plan in docs/plans/. Plan, wait for approval, implement, verify, review once, record progress.
+disable-model-invocation: true
 ---
 
-# Execute a plan step
+Run exactly one step of the active plan. Keep every message short; I read on my phone.
 
-Plans live in `docs/plans/<NN-name>/`. Each plan has a `README.md` (goal, scope, done criteria) and numbered
-step files `NN-short-name.md`. A step file starts with a status line: `Status: todo | in-progress | done`.
-
-## Procedure
-
-1. Pick the step.
-   - With arguments: the given plan and step.
-   - Without: the lowest-numbered plan that has a step not `done`, and its first such step.
-   - If a step is `in-progress`, resume it rather than starting another.
-2. Read the plan `README.md`, the step file, and `CLAUDE.md`. For UI steps also read `PRODUCT.md` and
-   `DESIGN.md`.
-3. If the step is ambiguous or conflicts with `CLAUDE.md` or an accepted decision in `docs/decisions/`,
-   stop and ask. Do not guess.
-4. Set the step to `in-progress` and do exactly what it describes. Nothing from later steps.
-5. Verify:
-   - `npm run build` and `npm run check` pass.
-   - UI changes: run `/impeccable audit` on the changed surface and fix primary findings.
-   - Both `en` and `hr` strings exist for anything user-facing.
-6. Run the `reviewer` agent on the diff and address its blocking findings.
-7. Set the step to `done`, add a short `## Outcome` section to the step file (what changed, anything
-   deferred), and commit with a conventional commit message.
-8. Report what was done, what was verified, and what the next step is.
+1. Read `docs/plans/ACTIVE` (the plan folder name), then that folder's `00-overview.md` and
+   `progress.md`. Pick the first unchecked step not marked "deferred". Read only that step's file.
+   If none is left, say the plan is done, list deferred steps, and stop.
+2. If the step is marked "(me)", list what I need to check and stop. If it has no step file yet,
+   write one in the style of the others, show it, and stop for approval.
+3. Read the code the step names. Then give a plan of at most 5 lines: what changes, which files,
+   how it's verified. If the code contradicts the step file, say so. If the step changes UI, read
+   its linked Figma frame through the Figma MCP first; if there's no link or no MCP, say so and
+   stop. Wait for my "go". Don't edit anything before it.
+4. Implement. Stay inside the step's scope, CLAUDE.md and the accepted decisions. New strings go
+   into both messages/en.json and messages/hr.json.
+5. Verify: `npm run typecheck`, `npm run lint`, `npm run build`. Fix failures; don't go on while
+   red. For UI steps, start the dev server and check the page at 360px and desktop with the
+   Playwright MCP (both locales, reduced motion on and off). Screenshot to `design/review/<step>/`.
+6. Run the `reviewer` subagent once on the uncommitted diff, passing the step file path. Fix
+   BLOCKERs only. List the rest without fixing them. No second review round.
+7. Update `progress.md`: tick the step and add the commit hash. Under Deviations, note anything
+   that differs from the step file. Under Gotchas, note what the next step should know. "None"
+   if nothing.
+8. Commit code and progress.md together on develop (conventional commit, Co-Authored-By line, no
+   other attribution), then `git push origin develop`.
+9. Report in at most 10 lines: what changed, verification result, reviewer findings and what you
+   fixed, open items. End with: "Run /clear, then /step."
