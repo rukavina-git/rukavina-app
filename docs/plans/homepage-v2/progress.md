@@ -104,3 +104,10 @@
   erasure has exceptions. reCAPTCHA cookies without consent remain a low, accepted risk.
 - 08 NITs open: 404 inherits the home title/canonical (404 status keeps it out of search);
   footer privacy link under 44px; hr "Ovu stranicu vodi…" wording.
+- Consent banner (Karlo, 2026-11-20, outside the plan steps): bottom bar on first visit, Allow /
+  Decline equal weight, choice in localStorage (`src/lib/consent.ts`), footer "Cookie settings"
+  reopens it. reCAPTCHA loads only with consent; declined form shows a notice with an Allow
+  button and the email. Withdrawing after the script loaded reloads the page. Decision 0009's
+  "load on first focus" now also needs consent.
+- Open (UX check of Karlo's list): text links under 44px tall (header, footer, contact line,
+  hero caption) are the one real gap.

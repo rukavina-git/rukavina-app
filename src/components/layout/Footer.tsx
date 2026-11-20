@@ -1,5 +1,6 @@
 import { useLocale, useTranslations } from 'next-intl'
 import { site } from '@/lib/site'
+import ConsentSettingsButton from '@/components/consent/ConsentSettingsButton'
 
 const link = 'hover:text-ink hover:underline hover:underline-offset-4'
 
@@ -26,6 +27,8 @@ export default function Footer() {
           <a href={`/${locale}/privacy`} className={link}>
             {t('privacy')}
           </a>
+          <Dot />
+          <ConsentSettingsButton label={t('cookies')} className={link} />
         </p>
         <p>
           <a href={`mailto:${site.email}`} className={link}>

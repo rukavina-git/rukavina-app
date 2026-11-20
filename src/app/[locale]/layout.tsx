@@ -7,6 +7,7 @@ import { Hanken_Grotesk } from 'next/font/google'
 import { routing, type Locale } from '@/lib/i18n/routing'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import ConsentBanner from '@/components/consent/ConsentBanner'
 import { site } from '@/lib/site'
 import { languageAlternates, siteUrl } from '@/lib/seo'
 import '../globals.css'
@@ -86,6 +87,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer />
+          <ConsentBanner />
         </NextIntlClientProvider>
       </body>
     </html>

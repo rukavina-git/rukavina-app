@@ -10,6 +10,7 @@ import {
   type ContactFields,
 } from '@/lib/contact'
 import { site } from '@/lib/site'
+import { setConsent, useConsent } from '@/lib/consent'
 
 declare global {
   interface Window {
@@ -64,6 +65,11 @@ export default function ContactForm() {
   const [fields, setFields] = useState<ContactFields>({ name: '', email: '', message: '' })
   const [errors, setErrors] = useState<ContactErrors>({})
   const [status, setStatus] = useState<Status>('idle')
+  const consent = useConsent()
+  // reCAPTCHA can set Google cookies, so it runs only with consent (banner or the button below).
+  // `undefined` = not known yet (server render, hydration): no notice, so nothing flashes.
+  const blocked = Boolean(siteKey) && (consent === null || consent === 'denied')
+  const sendRef = useRef<HTMLButtonElement>(null)
   const startedAt = useRef<number | null>(null)
   const honeypot = useRef<HTMLInputElement>(null)
   const refs = {
@@ -75,7 +81,7 @@ export default function ContactForm() {
   const onFirstFocus = () => {
     if (startedAt.current !== null) return
     startedAt.current = Date.now()
-    loadRecaptcha().catch(() => {})
+    if (!blocked) loadRecaptcha().catch(() => {})
   }
 
   const update = (field: ContactField) => (value: string) => {
@@ -85,7 +91,7 @@ export default function ContactForm() {
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (status === 'sending') return
+    if (status === 'sending' || (siteKey && consent !== 'granted')) return
 
     const found = validateContact(fields)
     setErrors(found)
@@ -218,10 +224,35 @@ export default function ContactForm() {
       </div>
 
       <div>
+        {blocked && (
+          <div className="mb-4 rounded-[10px] border border-border bg-surface p-4 text-ui text-ink-soft">
+            <p>
+              {t.rich('consentNeeded', {
+                email: () => (
+                  <a href={`mailto:${site.email}`} className="text-accent underline underline-offset-4 hover:text-ink">
+                    {site.email}
+                  </a>
+                ),
+              })}
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                setConsent('granted')
+                // The notice unmounts; keep keyboard focus in the form.
+                requestAnimationFrame(() => sendRef.current?.focus())
+              }}
+              className="mt-3 inline-flex min-h-11 cursor-pointer items-center rounded-[10px] border border-ink px-4 font-semibold text-ink hover:bg-ink hover:text-white"
+            >
+              {t('consentAllow')}
+            </button>
+          </div>
+        )}
         <button
+          ref={sendRef}
           type="submit"
-          disabled={status === 'sending'}
-          className="inline-flex min-h-[49px] cursor-pointer items-center rounded-[10px] bg-accent px-6 text-base font-semibold text-white hover:bg-ink disabled:cursor-wait disabled:opacity-70"
+          disabled={status === 'sending' || blocked}
+          className="inline-flex min-h-[49px] cursor-pointer items-center rounded-[10px] bg-accent px-6 text-base font-semibold text-white hover:bg-ink disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === 'sending' ? t('sending') : t('send')}
         </button>
