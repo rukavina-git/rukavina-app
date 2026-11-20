@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next'
 import createNextIntlPlugin from 'next-intl/plugin'
+import { allLocales, routing } from './src/lib/i18n/routing'
 
 const withNextIntl = createNextIntlPlugin('./src/lib/i18n/request.ts')
 
@@ -19,10 +20,20 @@ const nextConfig: NextConfig = {
   },
   transpilePackages: ['three', '@react-three/fiber', '@react-three/drei'],
   async redirects() {
-    return oldPages.flatMap(([path, section]) => [
-      { source: `/:locale(en|hr)/${path}`, destination: `/:locale#${section}`, permanent: true },
-      { source: `/${path}`, destination: `/en#${section}`, permanent: true },
-    ])
+    // Locales with code but switched off (routing.ts) send visitors to English, temporarily.
+    const off = allLocales
+      .filter((l) => !routing.locales.includes(l))
+      .flatMap((l) => [
+        { source: `/${l}`, destination: '/en', permanent: false },
+        { source: `/${l}/:path*`, destination: '/en/:path*', permanent: false },
+      ])
+    return [
+      ...off,
+      ...oldPages.flatMap(([path, section]) => [
+        { source: `/:locale(en|hr)/${path}`, destination: `/:locale#${section}`, permanent: true },
+        { source: `/${path}`, destination: `/en#${section}`, permanent: true },
+      ]),
+    ]
   },
 }
 

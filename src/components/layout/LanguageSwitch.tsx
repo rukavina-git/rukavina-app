@@ -22,6 +22,9 @@ export default function LanguageSwitch() {
     return () => window.removeEventListener('hashchange', update)
   }, [])
 
+  // Only one locale switched on (v1 ships English only): nothing to switch to.
+  if (routing.locales.length < 2) return null
+
   return (
     <ul aria-label={t('language')} className="flex items-center gap-1.5 text-small md:text-ui">
       {routing.locales.map((locale, i) => {

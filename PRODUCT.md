@@ -9,7 +9,8 @@ web
 ## Stack
 
 Next.js 15 App Router (TypeScript, strict) on Vercel, Tailwind CSS v4, GSAP. Mostly static pages plus
-one API route for the contact form (Resend). next-intl with `/en` and `/hr`. Content in `messages/*.json`
+one API route for the contact form (Resend). next-intl with `/en` and `/hr`; v1 ships English only (Karlo, 2026-11-20), Croatian is switched off in
+`src/lib/i18n/routing.ts` until its copy is ready. Content in `messages/*.json`
 and `src/lib/data/`; no CMS.
 
 ## Users
@@ -129,4 +130,5 @@ Confirmed by Karlo on 2026-11-19 unless noted.
 
 ## Accessibility & Inclusion
 
-WCAG 2.1 AA. Bilingual (English, Croatian), with equivalent content in both.
+WCAG 2.1 AA. Bilingual (English, Croatian), with equivalent content in both. Croatian is off for v1
+but its messages are kept complete so it can be switched on.
