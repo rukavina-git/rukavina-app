@@ -1,7 +1,7 @@
 # Progress: homepage v2
 
 - [x] 1. Foundation (merge 416d6f2, then the `feat: homepage v2 foundation` commit)
-- [x] 2. Hero (HASH)
+- [x] 2. Hero (e5cb0a8)
 - [ ] 3. Work
 - [ ] 4. How I work + What I take on
 - [ ] 5. About
