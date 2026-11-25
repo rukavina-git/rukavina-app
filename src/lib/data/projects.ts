@@ -1,14 +1,13 @@
 // Launch projects for the Work section, in page order. Copy lives in messages under
 // `Work.projects.<id>`. NDA projects get illustrations only, never screenshots.
-export type ProjectId = 'government-platform' | 'payments-app' | 'gym-tracker' | 'adria-va' | 'ai-project'
+export type ProjectId = 'government-platform' | 'payments-app' | 'gym-tracker' | 'adria-va'
 
 export type ProjectLink = { label: 'play' | 'github' | 'site'; href: string }
 
 export type Project = {
   id: ProjectId
-  tag?: 'nda' | 'wip'
-  // null: dashed "image when it ships" slot.
-  picture: { src: string; width: number; height: number } | null
+  tag?: 'nda'
+  picture: { src: string; width: number; height: number }
   links: ProjectLink[]
 }
 
@@ -39,11 +38,5 @@ export const projects: readonly Project[] = [
     id: 'adria-va',
     picture: { src: '/projects/adria-va.png', ...landscape },
     links: [{ label: 'site', href: 'https://adriava.rukavina.app' }],
-  },
-  {
-    id: 'ai-project',
-    tag: 'wip',
-    picture: null,
-    links: [],
   },
 ]

@@ -92,12 +92,14 @@ Confirmed by Karlo on 2026-11-19 unless noted.
 - Government platform (NDA): a well-defined project Karlo joined after it had started (not owned by Karlo
   from the first idea). Once on it, Karlo owned the process and the responsibility for his work from the
   product owner's defined ticket to production: refinement, estimates, proposed changes and architecture,
-  implementation, store releases, and work on the CI/CD pipeline. Live location (geotracking) and maps.
+  implementation, store releases, and work on the CI/CD pipeline. Also code review of others' work, fixing
+  what QA found, and production bugs after release (Karlo, 2026-11-25: all done, not on every ticket). Live location (geotracking) and maps.
   Worked with the product owner, UI/UX, QA, backend and DevOps teams in an agile process. "Tens of
   thousands of users" (Karlo: close to 100,000 across his apps; the site keeps "tens of thousands").
   People confirm their identity with official documents (photo scan of eID/passports), so privacy and
   data security came first. Say only "official identity documents" and "personal data kept private and
-  secure"; never name the document types, the scanning or the vendor.
+  secure"; never name the document types (ID card, passport) or the vendor. Scanning a document may be
+  mentioned (Karlo, 2026-11-25).
   Login, registration and biometrics are basic: do not highlight them. Show skills, never what the app
   does or for whom.
 - Payments app (NDA): a digital currency paid by tapping the phone (NOT credit-card payments; never say

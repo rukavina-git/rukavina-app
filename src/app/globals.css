@@ -15,8 +15,11 @@
   --color-faint: #a9a59c;
   --color-border: #dcd7cc;
   --color-border-strong: #cfcabe;
+  /* Form field outline: 3.6:1 on white (WCAG 1.4.11). */
+  --color-field: #8a857c;
   --color-accent: #1d4e5f;
   --color-accent-soft: #d6e1e2;
+  --color-accent-strong: #173f4d;
   --color-danger: #b3261e;
   /* Hero phone (331:672). */
   --color-device: #121212;
@@ -94,6 +97,42 @@ main [id] {
   }
 }
 
+/* Hero entrance (E1): text rises in a short stagger, then the phone. Once, on load. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+@keyframes rise-far {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+}
+.hero-enter > * {
+  animation: rise 500ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+.hero-enter > :nth-child(2) {
+  animation-delay: 60ms;
+}
+.hero-enter > :nth-child(3) {
+  animation-delay: 120ms;
+}
+.hero-stage {
+  animation: rise-far 600ms cubic-bezier(0.23, 1, 0.32, 1) 120ms both;
+}
+
+/* Text link whose underline draws in from the left on hover and focus. */
+@utility link-draw {
+  background: linear-gradient(currentColor, currentColor) left calc(100% - 8px) / 0 1.5px no-repeat;
+  transition: background-size 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  &:hover,
+  &:focus-visible {
+    background-size: 100% 1.5px;
+  }
+}
+
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
@@ -114,19 +153,6 @@ main [id] {
   }
 }
 
-/* Same, growing upward only: for a link with controls directly below it (hero caption). */
-@utility tap-target-up {
-  position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -0.25rem;
-    right: -0.25rem;
-    height: max(100%, 44px);
-  }
-}
-
 /* Cookie notice: rises from the bottom edge once, from its own height. */
 @keyframes notice-rise {
   from {
@@ -140,6 +166,10 @@ main [id] {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .hero-enter > *,
+  .hero-stage {
+    animation: none;
   }
   *,
   *::before,
