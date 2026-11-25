@@ -1,6 +1,6 @@
 # 0010: Redesign v1, or refine it?
 
-- Status: reopened (2026-11-25)
+- Status: accepted, direction E1 (2026-11-25)
 - Date: 2026-11-25
 
 ## Question
@@ -49,6 +49,13 @@ project exist.
 Reopened 2026-11-25: Karlo had said he is open to a medium to large redesign; the record below
 wrongly turned the review verdict into his choice. Headline direction and header glass still stand.
 Redesign directions are being drawn in Figma before this is decided.
+
+Karlo (2026-11-25): direction E1. D1's scroll stage plus depth: type hero with a tilted phone that
+rotates through Government, Payments and Gym Tracker (all three get NDA-safe screens) and straightens
+on scroll; a still section index under the hero; Work as a pinned picture that swaps per project, with
+vertical ticks; Services, About and Contact scroll normally; no pinning on phones. Rejected: B2, B3,
+D4 (hard no), B1 (panel too wide), D3 (one project as hero). Figma: Ideas, "E1 · Design v1". To be
+refined there before code.
 
 
 Karlo (2026-11-25): option 2. Hero headline direction "Senior software engineer who owns the work
