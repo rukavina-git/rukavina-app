@@ -69,6 +69,8 @@ Karlo (2026-11-25): hero keeps the bars under the phone (not the small-phone she
 Karlo (2026-11-25): headline changed to fit team and solo clients: "Senior software engineer for web,
 mobile and AI." Sub-line: "I join your team or build the whole product with you, from estimate to
 release. Apps I've worked on are used by tens of thousands of people."
+Karlo (2026-11-25, after release): bring the profile photo back in About (trust for hiring
+managers). D4 rejected a face-led hero, not a photo in About.
 
 
 Karlo (2026-11-25): option 2. Hero headline direction "Senior software engineer who owns the work
