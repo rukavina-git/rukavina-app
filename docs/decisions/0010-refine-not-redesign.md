@@ -1,6 +1,6 @@
 # 0010: Redesign v1, or refine it?
 
-- Status: accepted
+- Status: reopened (2026-11-25)
 - Date: 2026-11-25
 
 ## Question
@@ -45,6 +45,11 @@ still look like many clean portfolios; revisit once real Gym Tracker screenshots
 project exist.
 
 ## Decision
+
+Reopened 2026-11-25: Karlo had said he is open to a medium to large redesign; the record below
+wrongly turned the review verdict into his choice. Headline direction and header glass still stand.
+Redesign directions are being drawn in Figma before this is decided.
+
 
 Karlo (2026-11-25): option 2. Hero headline direction "Senior software engineer who owns the work
 from ticket to production." Liquid Glass on the sticky header only, once scrolled.
