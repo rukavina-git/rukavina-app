@@ -62,6 +62,9 @@ direction is withdrawn and the headline is being rewritten. On team projects he 
 breakdowns, chose the technical approach, reviewed code, fixed what QA found, and handled releases and
 production bugs (not on every ticket). The site is for hiring managers first, full freelance projects
 second.
+Karlo (2026-11-25): headline "Senior software engineer for your team." Sub-line (draft): "I join your
+team and carry my work from estimate to release, and the fixes after. Apps I've worked on are used by
+tens of thousands of people." No "my own app" in the hero; Gym Tracker details stay in Work.
 
 
 Karlo (2026-11-25): option 2. Hero headline direction "Senior software engineer who owns the work
