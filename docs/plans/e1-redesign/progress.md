@@ -14,7 +14,7 @@
   same, and it needs no scroll script.
 - Services rows are plain rows, not links with arrows, until the services have pages.
 - AI project row removed: E1 shows four projects.
-- Government screen says "Use an official document", not "Scan your ID document" (PRODUCT.md: never
-  name the scanning).
+- Government screen says "Scan an official document", not "Scan your ID document" (Karlo,
+  2026-11-25: scanning may be mentioned; never name ID cards or passports).
 
 ## Gotchas

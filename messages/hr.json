@@ -39,7 +39,7 @@
     "screens": {
       "government-platform": {
         "title": "Potvrdite identitet",
-        "text": "Službeni dokument",
+        "text": "Skenirajte službeni dokument",
         "route": "Ruta · 4,2 km · 12 min",
         "action": "Nastavi"
       },

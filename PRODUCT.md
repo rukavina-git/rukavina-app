@@ -98,7 +98,8 @@ Confirmed by Karlo on 2026-11-19 unless noted.
   thousands of users" (Karlo: close to 100,000 across his apps; the site keeps "tens of thousands").
   People confirm their identity with official documents (photo scan of eID/passports), so privacy and
   data security came first. Say only "official identity documents" and "personal data kept private and
-  secure"; never name the document types, the scanning or the vendor.
+  secure"; never name the document types (ID card, passport) or the vendor. Scanning a document may be
+  mentioned (Karlo, 2026-11-25).
   Login, registration and biometrics are basic: do not highlight them. Show skills, never what the app
   does or for whom.
 - Payments app (NDA): a digital currency paid by tapping the phone (NOT credit-card payments; never say

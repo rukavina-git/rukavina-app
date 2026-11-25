@@ -39,7 +39,7 @@
     "screens": {
       "government-platform": {
         "title": "Confirm identity",
-        "text": "Use an official document",
+        "text": "Scan an official document",
         "route": "Route · 4.2 km · 12 min",
         "action": "Continue"
       },
