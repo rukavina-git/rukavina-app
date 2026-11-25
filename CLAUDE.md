@@ -43,7 +43,10 @@ Accepted decisions are in `docs/decisions/`. They outrank everything else except
   `messages/README.md` until he has checked it.
 
 ## Design
-- Base direction: Q (scroll stage), decision 0007. Figma is the source for layout.
+- Every design (Figma option, demo, mock, UI change) is shaped and checked with the `impeccable` and
+  `design-taste-frontend` skills before Karlo sees it. Never design alone; say which skill shaped or
+  checked what.
+- Base direction: E1 (decision 0010) on top of Q (scroll stage, decision 0007). Figma is the source for layout.
 - Font: Hanken Grotesk only (`font-sans`, loaded in the locale layout). No other families.
 - Tokens come from `globals.css`. `BRAND.md` (June) still holds colors, spacing and motion rules;
   where it conflicts with decisions 0006/0007, the decisions win.

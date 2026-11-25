@@ -123,6 +123,29 @@ Never scale above 80px — they lose crispness.
 
 ## Animation
 
+### Motion and interaction principles (Karlo, 2026-11-25)
+
+These win over the June recipes below. Check every change and review against them.
+
+- **Fitts's law:** every link and control outside running text has a 44px tap area (`tap-target`).
+- **Hick's law:** few choices per screen. One contact ask; one primary action in the hero.
+- **Von Restorff:** one thing stands out per screen. Only "Get in touch" gets the filled accent.
+- **Doherty threshold:** visible response in under 400 ms. Press states on pointer-down; form
+  feedback ("Sending…") at once.
+- **Peak-end rule:** design the peak (hero) and the end (the contact form's success state) with care.
+- **Origin:** anything that opens (menu, popover) grows from the control that opened it.
+- **Slow in, slow out and timing:** ease-out (e.g. `cubic-bezier(0.23, 1, 0.32, 1)`); exits shorter
+  than entrances, also ease-out (ease-in feels laggy in UI). 150–300 ms for UI feedback, up to about
+  600 ms for the hero entrance.
+- **Interruptible:** no animation blocks input; loops have a pause control; scroll tweens clean up.
+- **Stagger:** once, on the hero entrance. Never on every section (the rejected "fade-up on everything").
+- **Frequency:** the more often something is seen, the less it moves. The header and repeated rows
+  barely animate.
+- **Arcs:** allowed for the illustration paths (the government map line), drawn once.
+- Not for this site: exaggeration, squash and stretch, rubber band, anticipation, follow-through,
+  secondary action. They read as playful, not as a senior professional.
+- Every rule above still respects `prefers-reduced-motion`.
+
 **Library:** GSAP 3 + ScrollTrigger
 **Ambient/continuous:** Pure CSS keyframes (hero blobs, availability dot pulse)
 

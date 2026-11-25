@@ -6,9 +6,5 @@ export const site = {
   github: 'https://github.com/rukavina-git',
 } as const
 
-// Homepage section anchors, in page order.
-export const sections = ['work', 'how-i-work', 'about', 'services', 'contact'] as const
-export type SectionId = (typeof sections)[number]
-
 // Anchor id of a project's row in the Work section.
 export const projectAnchor = (id: string) => `work-${id}`

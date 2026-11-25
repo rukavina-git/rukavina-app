@@ -8,11 +8,11 @@ adding hr strings so it can be switched back on.
 
 ## Unreviewed (hr)
 
-- `Header.*` (skip, nav, work, services, about, contact, language)
+- `Header.*` (skip, nav, work, services, about, contact, language, menu)
 - `Footer.location`
-- `Hero.*` (title, intro1, intro2, cue, carousel, pause, play, show, slides.*)
-- `Work.*` (title, myPart, slot, tags.*, links.*, projects.*)
-- `HowIWork.*`, `Services.*`
+- `Hero.*` (title, intro, cue, carousel, pause, play, browse, show, slides.*, screens.*)
+- `Work.*` (title, myPart, ticks, tags.*, links.*, projects.*)
+- `Services.*`
 - `About.*`
 - `Contact.*`
 - `Meta.*`, `NotFound.*`, `Privacy.*`, `Footer.privacy`

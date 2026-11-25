@@ -15,3 +15,6 @@ references
 # local design reviews, mocks and screenshots; images the site uses go in public/
 design/
 .playwright-mcp/
+
+# Impeccable local state (critique snapshots, detector ignores)
+.impeccable/

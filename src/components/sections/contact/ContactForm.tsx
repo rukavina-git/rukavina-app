@@ -178,7 +178,7 @@ export default function ContactForm() {
           maxLength={contactLimits.name}
           value={fields.name}
           onChange={(e) => update('name')(e.target.value)}
-          className={`${inputClass} h-[52px] ${errors.name ? '' : 'border-border'}`}
+          className={`${inputClass} h-[52px] ${errors.name ? '' : 'border-field'}`}
         />,
       )}
       {field(
@@ -193,7 +193,7 @@ export default function ContactForm() {
           placeholder={t('email.placeholder')}
           value={fields.email}
           onChange={(e) => update('email')(e.target.value)}
-          className={`${inputClass} h-[52px] ${errors.email ? '' : 'border-border'}`}
+          className={`${inputClass} h-[52px] ${errors.email ? '' : 'border-field'}`}
         />,
       )}
       {field(
@@ -207,7 +207,7 @@ export default function ContactForm() {
           placeholder={t('message.placeholder')}
           value={fields.message}
           onChange={(e) => update('message')(e.target.value)}
-          className={`${inputClass} min-h-[150px] resize-y py-3 ${errors.message ? '' : 'border-border'}`}
+          className={`${inputClass} min-h-[150px] resize-y py-3 ${errors.message ? '' : 'border-field'}`}
         />,
       )}
 
@@ -221,7 +221,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="inline-flex min-h-[49px] cursor-pointer items-center rounded-[10px] bg-accent px-6 text-base font-semibold text-white hover:bg-ink disabled:cursor-wait disabled:opacity-70"
+          className="inline-flex min-h-[49px] cursor-pointer items-center rounded-[10px] bg-accent px-6 text-base font-semibold text-white transition-[background-color,transform] duration-150 hover:bg-accent-strong active:scale-[0.97] disabled:cursor-wait disabled:opacity-70"
         >
           {status === 'sending' ? t('sending') : t('send')}
         </button>
