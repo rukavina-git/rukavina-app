@@ -65,6 +65,7 @@ second.
 Karlo (2026-11-25): headline "Senior software engineer for your team." Sub-line (draft): "I join your
 team and carry my work from estimate to release, and the fixes after. Apps I've worked on are used by
 tens of thousands of people." No "my own app" in the hero; Gym Tracker details stay in Work.
+Karlo (2026-11-25): hero keeps the bars under the phone (not the small-phone shelf, Figma 531:5041).
 
 
 Karlo (2026-11-25): option 2. Hero headline direction "Senior software engineer who owns the work
