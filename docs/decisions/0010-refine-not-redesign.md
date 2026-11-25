@@ -57,6 +57,12 @@ vertical ticks; Services, About and Contact scroll normally; no pinning on phone
 D4 (hard no), B1 (panel too wide), D3 (one project as hero). Figma: Ideas, "E1 · Design v1". To be
 refined there before code.
 
+Karlo (2026-11-25, later): no "ticket" in the hero headline; the "ticket to production" headline
+direction is withdrawn and the headline is being rewritten. On team projects he did estimates and
+breakdowns, chose the technical approach, reviewed code, fixed what QA found, and handled releases and
+production bugs (not on every ticket). The site is for hiring managers first, full freelance projects
+second.
+
 
 Karlo (2026-11-25): option 2. Hero headline direction "Senior software engineer who owns the work
 from ticket to production." Liquid Glass on the sticky header only, once scrolled.
