@@ -19,8 +19,8 @@ Copy only, no layout changes. Karlo approves the final wording before commit.
    "working from the same picture", "estimates I can stand behind", "save people real work".
    "Decisions written down" appears in four places: keep it in Gym Tracker and How I work only.
 5. **Hero slide alt texts**: replace "…, illustration to come" with real descriptions.
-6. **Buttons**: "Send" → "Send message" (supersedes 0009's "Send"; Karlo to confirm).
-   "Let's talk" stays unless Karlo prefers "Get in touch".
+6. **Buttons**: keep "Send" (0009) and the "Let's talk" heading (Karlo left it to Claude,
+   2026-11-25: the form makes "Send" clear; the heading shouldn't repeat the header button).
 7. hr for every change; mark unreviewed in `messages/README.md`.
 
 ## Done when
