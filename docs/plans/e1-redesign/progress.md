@@ -1,8 +1,8 @@
 # Progress: E1 redesign
 
-- [x] 01 Header and hero (1b70313) (new headline, tilted phone, drawn NDA screens, tap/swipe/arrow keys)
-- [x] 02 Work stage (1b70313) (pinned picture from lg, counter, ticks; stacked on phones)
-- [x] 03 Services, About, Contact (1b70313); remove How I work
+- [x] 01 Header and hero (59ea7b7) (new headline, tilted phone, drawn NDA screens, tap/swipe/arrow keys)
+- [x] 02 Work stage (59ea7b7) (pinned picture from lg, counter, ticks; stacked on phones)
+- [x] 03 Services, About, Contact (59ea7b7); remove How I work
 - [ ] 04 Checks (360/768/1440, reduced motion, impeccable detect, taste copy lint)
 
 ## Deviations
