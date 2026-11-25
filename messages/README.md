@@ -13,7 +13,7 @@ adding hr strings so it can be switched back on.
 - `Hero.*` (title, intro, cue, carousel, pause, play, browse, show, slides.*, screens.*)
 - `Work.*` (title, myPart, ticks, tags.*, links.*, projects.*)
 - `Services.*`
-- `About.*`
+- `About.*` (incl. p3)
 - `Contact.*`
 - `Meta.*`, `NotFound.*`, `Privacy.*`, `Footer.privacy`
 - `Consent.*`

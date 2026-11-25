@@ -3,11 +3,11 @@ import { useTranslations } from 'next-intl'
 import { site } from '@/lib/site'
 
 const facts = ['education', 'location', 'languages'] as const
-const paragraphs = ['p1', 'p2'] as const
+const paragraphs = ['p1', 'p2', 'p3'] as const
 
-// About (E1, Figma 511:2807): photo and facts left, text right from lg; text first on phones.
-// The photo is a trust signal for hiring managers (Karlo, 2026-11-25); only the face-led hero
-// (D4) was rejected.
+// About: text and facts left, photo right from lg, the same direction as the Work split
+// (taste: one split direction per page; impeccable: facts grouped with the story). Phones: text,
+// facts, then the photo. The photo is a trust signal for hiring managers (Karlo, 2026-11-25).
 export default function About() {
   const t = useTranslations('About')
 
@@ -20,8 +20,8 @@ export default function About() {
         >
           {t('title')}
         </h2>
-        <div className="mt-8 grid gap-10 md:mt-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-8">
-          <div className="lg:order-2">
+        <div className="mt-8 grid gap-10 md:mt-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-16">
+          <div>
             <div className="max-w-[36em] space-y-5 text-body text-pretty text-ink-soft md:text-lg">
               {paragraphs.map((key) => (
                 <p key={key}>{t(key)}</p>
@@ -35,26 +35,24 @@ export default function About() {
             >
               LinkedIn
             </a>
-          </div>
-
-          <div className="w-full max-w-[320px] lg:order-1">
-            <Image
-              src="/profile/ivan-karlo-rukavina.jpg"
-              alt={site.name}
-              width={720}
-              height={960}
-              sizes="320px"
-              className="aspect-[3/4] w-full rounded-xl object-cover"
-            />
-            <dl className="mt-6 border-t border-border">
+            <dl className="mt-8 grid max-w-[46rem] gap-x-6 sm:grid-cols-3">
               {facts.map((key) => (
-                <div key={key} className="border-b border-border py-4">
+                <div key={key} className="border-t border-border py-4">
                   <dt className="text-caption text-muted">{t(`facts.${key}.label`)}</dt>
                   <dd className="mt-1 text-base font-medium text-ink">{t(`facts.${key}.value`)}</dd>
                 </div>
               ))}
             </dl>
           </div>
+
+          <Image
+            src="/profile/ivan-karlo-rukavina.jpg"
+            alt={site.name}
+            width={720}
+            height={960}
+            sizes="(min-width: 1024px) 400px, 320px"
+            className="aspect-[3/4] w-full max-w-[320px] rounded-xl object-cover lg:max-w-[400px] lg:justify-self-end"
+          />
         </div>
       </div>
     </section>
