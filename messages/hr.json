@@ -6,46 +6,55 @@
     "services": "Usluge",
     "about": "O meni",
     "contact": "Javite se",
-    "language": "Jezik"
+    "language": "Jezik",
+    "menu": "Izbornik"
   },
   "Footer": {
     "location": "Hrvatska",
     "privacy": "Privatnost"
   },
   "Hero": {
-    "title": "Senior softverski inženjer. Softver napravljen kako treba.",
-    "intro1": "Radio sam na velikim proizvodima o kojima ljudi ovise, uključujući državne aplikacije i softver za plaćanje. Znam što je potrebno da ostanu u dobrom stanju dugo nakon lansiranja.",
-    "intro2": "Mogu pomoći s vašim proizvodom, bilo da se pridružim vašem timu, izgradim ga od prve ideje do objave ili pregledam ono što već imate i jasno vam kažem što prvo popraviti.",
-    "cue": "Pogledajte objavljene projekte",
+    "title": "Senior softverski inženjer za web, mobilne aplikacije i AI.",
+    "intro": "Pridružujem se vašem timu ili s vama gradim cijeli proizvod, od procjene do objave. Aplikacije na kojima sam radio koriste deseci tisuća ljudi.",
+    "cue": "Pogledajte radove",
     "carousel": "Projekti",
-    "pause": "Zaustavi prikaz",
-    "play": "Pokreni prikaz",
+    "pause": "Zaustavi prikaz. Povucite ili koristite strelice za promjenu projekta.",
+    "play": "Pokreni prikaz. Povucite ili koristite strelice za promjenu projekta.",
+    "browse": "Povucite ili koristite strelice za promjenu projekta.",
     "show": "Prikaži projekt {index} od {total}: {name}",
     "slides": {
       "government-platform": {
         "name": "Državna platforma",
-        "caption": "Državna platforma · Android · Kotlin",
-        "alt": "Državna platforma, ilustracija slijedi"
+        "alt": "Državna platforma: karta s rutom i provjerom identiteta"
       },
       "payments-app": {
         "name": "Aplikacija za plaćanje",
-        "caption": "Aplikacija za plaćanje · Android · NFC",
-        "alt": "Aplikacija za plaćanje, ilustracija slijedi"
+        "alt": "Aplikacija za plaćanje: plaćanje potvrđeno dodirom mobitela"
       },
       "gym-tracker": {
         "name": "Gym Tracker",
-        "caption": "Gym Tracker · Android · Kotlin, Compose",
         "alt": "Gym Tracker, zaslon treninga s unosom serija čučnja sa šipkom"
+      }
+    },
+    "screens": {
+      "government-platform": {
+        "title": "Potvrdite identitet",
+        "text": "Službeni dokument",
+        "route": "Ruta · 4,2 km · 12 min",
+        "action": "Nastavi"
+      },
+      "payments-app": {
+        "label": "Dodirnite za plaćanje",
+        "amount": "12,40 €",
+        "done": "Plaćanje poslano"
       }
     }
   },
   "Work": {
     "title": "Radovi",
     "myPart": "Moj dio",
-    "slot": "Slika kad bude gotovo",
     "tags": {
-      "nda": "NDA",
-      "wip": "U izradi"
+      "nda": "NDA"
     },
     "links": {
       "play": "Google Play",
@@ -84,33 +93,9 @@
         "partShort": "Zajedno s tvrtkom utvrdio što njezini klijenti trebaju vidjeti, zatim dizajnirao i izradio stranicu na engleskom i hrvatskom.",
         "stack": "Next.js · Tailwind CSS",
         "alt": "Početna stranica Adria VA u prozoru preglednika"
-      },
-      "ai-project": {
-        "name": "AI projekt",
-        "summary": "Detalji kad bude gotovo."
       }
-    }
-  },
-  "HowIWork": {
-    "title": "Kako radim",
-    "items": {
-      "refinement": {
-        "title": "Razrada i procjene",
-        "text": "S vlasnikom proizvoda oblikujem posao prije nego što itko napiše kod i dajem procjene iza kojih stojim."
-      },
-      "architecture": {
-        "title": "Zapisana arhitektura",
-        "text": "Predlažem strukturu, objašnjavam kompromise onome tko odlučuje i zapisujem što smo odabrali."
-      },
-      "release": {
-        "title": "Sve do objave",
-        "text": "Kvaliteta i sigurnost provjeravaju se usput, a ne ostavljaju za kraj. CI/CD i objave u trgovinama aplikacija dio su posla."
-      },
-      "communication": {
-        "title": "Jasna komunikacija",
-        "text": "U velikim timovima pazim da produkt, dizajn, QA i razvoj imaju istu sliku."
-      }
-    }
+    },
+    "ticks": "Projekti"
   },
   "Services": {
     "title": "Što preuzimam",

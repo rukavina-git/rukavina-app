@@ -3,6 +3,8 @@ import { heroSlides } from '@/lib/data/heroSlides'
 import { projectAnchor } from '@/lib/site'
 import PhoneLoop from './PhoneLoop'
 
+// E1 hero (decision 0010, Figma 511:2807): headline left, tilted phone right that rotates
+// through the projects. Text and phone rise once on load.
 export default function Hero() {
   const t = useTranslations('Hero')
 
@@ -10,50 +12,51 @@ export default function Hero() {
     ...slide,
     href: `#${projectAnchor(slide.id)}`,
     name: t(`slides.${slide.id}.name`),
-    caption: t(`slides.${slide.id}.caption`),
     alt: t(`slides.${slide.id}.alt`),
   }))
 
   return (
     <section aria-labelledby="hero-title" className="px-page mx-auto max-w-page">
-      <div className="grid gap-14 pt-14 pb-16 md:pt-24 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-10 lg:pt-44 lg:pb-12 xl:mr-7">
-        <div>
+      <div className="grid items-center gap-12 pt-10 pb-16 md:pt-16 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-12 lg:pt-20 lg:pb-20">
+        <div className="hero-enter">
           <h1
             id="hero-title"
-            className="max-w-[860px] text-[2.5rem] leading-[1.02] font-semibold tracking-[-0.035em] text-balance text-ink md:text-[3.5rem] xl:text-display"
+            className="max-w-[760px] text-[2.5rem] leading-[1.04] font-semibold tracking-[-0.03em] text-balance text-ink md:text-[3.25rem] xl:text-[4rem]"
           >
             {t('title')}
           </h1>
-          <div className="mt-6 max-w-[600px] space-y-4 text-body text-ink-soft md:mt-10 md:text-lead">
-            <p>{t('intro1')}</p>
-            <p>{t('intro2')}</p>
-          </div>
+          <p className="mt-6 max-w-[34em] text-body text-pretty text-ink-soft md:mt-7 md:text-lg">
+            {t('intro')}
+          </p>
           <a
             href="#work"
-            className="group mt-8 inline-flex min-h-11 items-center gap-2 text-base font-medium text-ink hover:underline hover:underline-offset-4 md:mt-9"
+            className="link-draw mt-6 inline-flex min-h-11 items-center gap-2 text-base font-medium text-ink md:mt-8"
           >
             {t('cue')}
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 16 16"
-              className="size-4 transition-transform duration-200 group-hover:translate-y-0.5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M8 3v10M3.5 8.5 8 13l4.5-4.5" />
-            </svg>
+            <span aria-hidden="true">↓</span>
           </a>
         </div>
 
         <PhoneLoop
           slides={slides}
+          screens={{
+            'government-platform': {
+              title: t('screens.government-platform.title'),
+              text: t('screens.government-platform.text'),
+              route: t('screens.government-platform.route'),
+              action: t('screens.government-platform.action'),
+            },
+            'payments-app': {
+              label: t('screens.payments-app.label'),
+              amount: t('screens.payments-app.amount'),
+              done: t('screens.payments-app.done'),
+            },
+          }}
           labels={{
             region: t('carousel'),
             pause: t('pause'),
             play: t('play'),
+            browse: t('browse'),
             show: slides.map((s, i) =>
               t('show', { index: i + 1, total: slides.length, name: s.name }),
             ),

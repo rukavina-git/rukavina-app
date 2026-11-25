@@ -4,17 +4,17 @@ import ContactForm from './ContactForm'
 
 const link = 'tap-target hover:underline hover:underline-offset-4'
 
-// "Let's talk", Figma 331:828. Phones: text first, form below.
+// "Let's talk" (E1: on the warm band, Figma 511:3427). Phones: text first, form below.
 export default function Contact() {
   const t = useTranslations('Contact')
 
   return (
-    <section id="contact" aria-labelledby="contact-title" className="px-page mx-auto max-w-page">
-      <div className="grid gap-10 py-16 md:py-24 lg:grid-cols-[minmax(0,520px)_minmax(0,620px)] lg:justify-between lg:py-28">
+    <section id="contact" aria-labelledby="contact-title" className="bg-bg-alt">
+      <div className="px-page mx-auto grid max-w-page gap-10 py-16 md:py-24 lg:grid-cols-[minmax(0,520px)_minmax(0,620px)] lg:justify-between lg:py-28">
         <div>
           <h2
             id="contact-title"
-            className="text-[2.75rem] leading-[1.1] font-semibold tracking-[-0.04em] text-ink md:text-[4.5rem] md:leading-[1.3]"
+            className="text-[2rem] leading-[1.1] font-semibold tracking-[-0.02em] text-ink md:text-[2.75rem]"
           >
             {t('title')}
           </h2>

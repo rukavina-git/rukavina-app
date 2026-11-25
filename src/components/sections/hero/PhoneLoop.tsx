@@ -1,22 +1,35 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type KeyboardEvent, type PointerEvent } from 'react'
 import { heroStaticSlide, type HeroSlide } from '@/lib/data/heroSlides'
+import {
+  GovernmentScreen,
+  PaymentsScreen,
+  type GovernmentScreenText,
+  type PaymentsScreenText,
+} from './HeroScreens'
 
-type Slide = HeroSlide & { href: string; name: string; caption: string; alt: string }
+type Slide = HeroSlide & { href: string; name: string; alt: string }
 
 type Props = {
   slides: Slide[]
-  labels: { region: string; pause: string; play: string; show: string[] }
+  screens: { 'government-platform': GovernmentScreenText; 'payments-app': PaymentsScreenText }
+  labels: { region: string; pause: string; play: string; browse: string; show: string[] }
 }
 
 // How long each slide stays. The active bar's fill animation drives the timing: when it
 // ends, the next slide comes in. Pausing freezes the fill, so timing and indicator agree.
 const SLIDE_MS = 5000
+// Horizontal travel that counts as a swipe, and the most a tap may move.
+const SWIPE_PX = 40
+const TAP_PX = 10
 
-export default function PhoneLoop({ slides, labels }: Props) {
+// Tilted phone (E1, Figma 511:2819). The tilt is static: depth, not motion. Tap or Enter
+// pauses (WCAG 2.2.2), keyboard focus pauses too, swipe, drag or the arrow keys change project, the bars jump to one.
+export default function PhoneLoop({ slides, screens, labels }: Props) {
   const rootRef = useRef<HTMLDivElement>(null)
+  const start = useRef<{ x: number; y: number } | null>(null)
   const [index, setIndex] = useState(heroStaticSlide)
   // null until mounted: no rotation before we know the motion preference.
   const [motion, setMotion] = useState<'full' | 'reduced' | null>(null)
@@ -27,10 +40,7 @@ export default function PhoneLoop({ slides, labels }: Props) {
 
   useEffect(() => {
     const query = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const apply = () => {
-      setMotion(query.matches ? 'reduced' : 'full')
-      if (query.matches) setIndex(heroStaticSlide)
-    }
+    const apply = () => setMotion(query.matches ? 'reduced' : 'full')
     apply()
     query.addEventListener('change', apply)
     return () => query.removeEventListener('change', apply)
@@ -46,9 +56,30 @@ export default function PhoneLoop({ slides, labels }: Props) {
 
   const rotating = motion === 'full'
   const paused = userPaused || hovered || focused || !onScreen
+  const step = (by: number) => setIndex((i) => (i + by + slides.length) % slides.length)
+  const togglePause = () => {
+    if (rotating) setUserPaused((p) => !p)
+  }
 
-  const next = () => {
-    if (rotating) setIndex((i) => (i + 1) % slides.length)
+  const onPointerDown = (e: PointerEvent) => {
+    start.current = { x: e.clientX, y: e.clientY }
+  }
+  const onPointerUp = (e: PointerEvent) => {
+    if (!start.current) return
+    const dx = e.clientX - start.current.x
+    const dy = e.clientY - start.current.y
+    start.current = null
+    if (Math.abs(dx) > SWIPE_PX && Math.abs(dx) > Math.abs(dy)) step(dx < 0 ? 1 : -1)
+    else if (Math.abs(dx) < TAP_PX && Math.abs(dy) < TAP_PX) togglePause()
+  }
+  const onKeyDown = (e: KeyboardEvent) => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault()
+      step(e.key === 'ArrowRight' ? 1 : -1)
+    } else if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      togglePause()
+    }
   }
 
   return (
@@ -57,76 +88,99 @@ export default function PhoneLoop({ slides, labels }: Props) {
       role="region"
       aria-roledescription="carousel"
       aria-label={labels.region}
-      className="mx-auto w-full max-w-[360px] lg:mt-10"
+      className="hero-stage mx-auto grid w-full max-w-[360px] justify-items-center"
     >
-      {/* Hover and focus pause only here, not on the controls, so Play works on first click. */}
       <div
         onPointerEnter={(e) => e.pointerType === 'mouse' && setHovered(true)}
-        onPointerLeave={(e) => e.pointerType === 'mouse' && setHovered(false)}
-        onFocus={() => setFocused(true)}
-        onBlur={(e) => {
-          if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setFocused(false)
-        }}
+        onPointerLeave={() => setHovered(false)}
+        className="relative aspect-[256/496] w-[216px] rounded-[14%/7.2%] bg-device px-[2.7%] py-[4.7%] shadow-[0_2px_4px_rgb(22_20_16/0.12),0_14px_28px_rgb(22_20_16/0.12),25px_44px_80px_-10px_rgb(22_20_16/0.22)] [transform:perspective(1400px)_rotateY(-15deg)_rotateX(7deg)_rotateZ(-3.4deg)] md:w-[256px]"
       >
-        <div className="relative mx-auto aspect-[256/496] w-[216px] rounded-[13.75%/7.1%] bg-device shadow-[0_19px_38px_rgb(0_0_0/0.16)] md:w-[256px]">
-          <div
-            aria-live={rotating && !paused ? 'off' : 'polite'}
-            className="absolute top-[2.74%] left-[2.5%] h-[94.52%] w-[95%] overflow-hidden rounded-[11.18%/5.8%] bg-device-screen"
-          >
-            {slides.map((slide, i) => {
-              const active = i === index
-              return (
-                <div
-                  key={slide.id}
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-label={`${i + 1} / ${slides.length}`}
-                  aria-hidden={!active}
-                  inert={!active}
-                  className={`absolute inset-0 transition-[opacity,transform] duration-700 ease-out ${
-                    active ? 'opacity-100' : 'scale-[1.03] opacity-0'
-                  }`}
-                >
-                  {slide.image ? (
-                    <Image
-                      src={slide.image}
-                      alt={slide.alt}
-                      fill
-                      sizes="(min-width: 768px) 244px, 206px"
-                      priority={i === heroStaticSlide}
-                      className="object-cover"
-                    />
-                  ) : (
-                    <PlaceholderScreen label={slide.alt} />
-                  )}
-                </div>
-              )
-            })}
-          </div>
-        </div>
-
-        <div className="mt-5 grid justify-items-center">
+        {/* The control sits over the screen as a sibling of the slides, so the slides and the
+            live region stay readable (a button's children are presentational). */}
+        <button
+          type="button"
+          aria-label={!rotating ? labels.browse : userPaused ? labels.play : labels.pause}
+          onPointerDown={onPointerDown}
+          onPointerUp={onPointerUp}
+          onPointerCancel={() => (start.current = null)}
+          onKeyDown={onKeyDown}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          className="absolute inset-0 z-20 cursor-grab touch-pan-y rounded-[14%/7.2%]! select-none focus-visible:outline-offset-[6px] active:cursor-grabbing"
+        />
+        <span
+          aria-hidden="true"
+          className={`absolute top-[5%] right-[8%] z-10 grid size-8 place-items-center rounded-full bg-ink/70 transition-[opacity,transform] duration-200 ${
+            userPaused && rotating ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
+          }`}
+        >
+          <span className="h-3 w-2.5 border-x-[3px] border-white" />
+        </span>
+        <div
+          aria-live={rotating && !paused ? 'off' : 'polite'}
+          className="relative h-full w-full overflow-hidden rounded-[11.5%/6%] bg-white"
+        >
           {slides.map((slide, i) => {
             const active = i === index
             return (
-              <a
+              <div
                 key={slide.id}
-                href={slide.href}
+                role="group"
+                aria-roledescription="slide"
+                aria-label={`${i + 1} / ${slides.length}`}
                 aria-hidden={!active}
                 inert={!active}
-                className={`tap-target-up inline-flex min-h-6 items-center text-center text-ui font-medium text-ink transition-opacity duration-500 [grid-area:1/1] hover:underline hover:underline-offset-4 ${
-                  active ? 'opacity-100' : 'opacity-0'
+                className={`absolute inset-0 transition-[opacity,transform] duration-600 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+                  active ? 'opacity-100' : 'scale-[1.03] opacity-0'
                 }`}
               >
-                {slide.caption}
-              </a>
+                {slide.image ? (
+                  <Image
+                    src={slide.image}
+                    alt={slide.alt}
+                    fill
+                    sizes="(min-width: 768px) 242px, 204px"
+                    priority={i === heroStaticSlide}
+                    draggable={false}
+                    className="object-cover"
+                  />
+                ) : slide.id === 'government-platform' ? (
+                  <GovernmentScreen label={slide.alt} text={screens['government-platform']} />
+                ) : (
+                  <PaymentsScreen label={slide.alt} text={screens['payments-app']} />
+                )}
+              </div>
             )
           })}
         </div>
       </div>
 
-      {/* Indicator and pause control. Hidden with reduced motion: one static slide, nothing to control. */}
-      <div className="relative -mt-2 flex justify-center gap-[5px] motion-reduce:hidden">
+      <div
+        aria-hidden="true"
+        className="mt-7 h-[26px] w-[220px] rounded-[50%] bg-ink/[0.14] blur-[14px]"
+      />
+
+      <div className="mt-2 grid justify-items-center">
+        {slides.map((slide, i) => {
+          const active = i === index
+          return (
+            <a
+              key={slide.id}
+              href={slide.href}
+              aria-hidden={!active}
+              inert={!active}
+              className={`link-draw inline-flex min-h-11 items-center gap-2 text-ui font-medium text-ink transition-opacity duration-500 [grid-area:1/1] ${
+                active ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              {slide.name}
+              <span aria-hidden="true">→</span>
+            </a>
+          )
+        })}
+      </div>
+
+      <div className="flex justify-center gap-2">
         {slides.map((slide, i) => {
           const active = i === index
           return (
@@ -136,59 +190,28 @@ export default function PhoneLoop({ slides, labels }: Props) {
               aria-label={labels.show[i]}
               aria-current={active ? 'true' : undefined}
               onClick={() => setIndex(i)}
-              className="flex h-11 w-14 cursor-pointer items-center"
+              className="flex h-11 w-11 cursor-pointer items-center"
             >
-              <span className="relative block h-[3px] w-full overflow-hidden rounded-[2px] bg-ink/15">
+              <span className="relative block h-[3px] w-full overflow-hidden rounded-[2px] bg-field">
                 {active &&
                   (rotating ? (
                     <span
                       key={index}
-                      onAnimationEnd={next}
+                      onAnimationEnd={() => step(1)}
                       style={{
                         animation: `hero-progress ${SLIDE_MS}ms linear forwards`,
                         animationPlayState: paused ? 'paused' : 'running',
                       }}
-                      className="absolute inset-0 origin-left bg-ink/85"
+                      className="absolute inset-0 origin-left bg-ink"
                     />
                   ) : (
-                    <span className="absolute inset-0 bg-ink/85" />
+                    <span className="absolute inset-0 bg-ink" />
                   ))}
               </span>
             </button>
           )
         })}
-        <button
-          type="button"
-          onClick={() => setUserPaused((p) => !p)}
-          aria-label={userPaused ? labels.play : labels.pause}
-          className="absolute top-0 right-0 flex size-11 cursor-pointer items-center justify-center rounded-full text-ink/70 hover:text-ink"
-        >
-          {userPaused ? (
-            <svg aria-hidden="true" viewBox="0 0 16 16" className="size-3.5" fill="currentColor">
-              <path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.3-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5Z" />
-            </svg>
-          ) : (
-            <svg aria-hidden="true" viewBox="0 0 16 16" className="size-3.5" fill="currentColor">
-              <rect x="3.5" y="2.5" width="3" height="11" rx="0.8" />
-              <rect x="9.5" y="2.5" width="3" height="11" rx="0.8" />
-            </svg>
-          )}
-        </button>
       </div>
-    </div>
-  )
-}
-
-// Neutral app screen for projects whose illustration doesn't exist yet. No text, no details.
-function PlaceholderScreen({ label }: { label: string }) {
-  return (
-    <div role="img" aria-label={label} className="flex h-full flex-col gap-3 p-[9%] pt-[14%]">
-      <span className="h-2.5 w-1/3 rounded-full bg-white/15" />
-      <span className="mt-2 h-5 w-2/3 rounded-full bg-white/20" />
-      <span className="mt-3 aspect-[4/3] w-full rounded-2xl bg-white/10" />
-      <span className="h-10 w-full rounded-xl bg-white/[0.07]" />
-      <span className="h-10 w-full rounded-xl bg-white/[0.07]" />
-      <span className="mt-auto h-10 w-full rounded-full bg-accent-soft/30" />
     </div>
   )
 }
