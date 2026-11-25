@@ -80,6 +80,9 @@ trade-offs clearly to whoever has to decide.
 
 Confirmed by Karlo on 2026-11-19 unless noted.
 
+- Outside work (Karlo, 2026-11-25): helps with the olive trees at his family home, plays Dungeons &
+  Dragons with friends, goes to pub quizzes, likes sci-fi and fantasy (has read all six Dune books).
+  Not tennis, not hiking. Trains at the gym, but don't mention it in About (Gym Tracker covers it).
 - Gym Tracker (public; repo and Android package are still named GymBuddy, [repo](https://github.com/rukavina-git/GymBuddy)).
   Always "Gym Tracker" on the site, never "GymBuddy". A private workout tracker with no
   ads and no bloat; he built it because no app did only what he wanted, simply. Offline-first. Android
