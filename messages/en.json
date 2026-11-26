@@ -14,7 +14,7 @@
     "privacy": "Privacy"
   },
   "Hero": {
-    "title": "Senior software engineer for web, mobile and AI.",
+    "title": "Senior software engineer for web and mobile apps and AI integration.",
     "intro": "I join your team or build the whole product with you, from estimate to release. Apps I've worked on are used by tens of thousands of people.",
     "cue": "See the work",
     "carousel": "Projects",
@@ -65,8 +65,8 @@
       "government-platform": {
         "name": "Government platform",
         "summary": "A government platform used by tens of thousands of people, with live location tracking and maps. People confirm who they are with official identity documents, so keeping their personal data private and secure came first.",
-        "part": "I joined a well-defined project and owned my work from the product owner's ticket to production: refinement, estimates, architecture proposals, implementation and store releases, in an agile team working closely with the product owner, designers, QA and the other teams.",
-        "partShort": "Owned my work from the product owner's ticket to production, in an agile team working closely with the product owner, designers, QA and other teams.",
+        "part": "I joined a well-defined project and owned the mobile side, from the client's request to production: estimates, architecture proposals, implementation and Google Play releases, in an agile team working closely with the product owner, designers, QA and the other teams.",
+        "partShort": "Owned the mobile side, from the client's request to production, in an agile team working closely with the product owner, designers, QA and other teams.",
         "stack": "Kotlin · Location and maps · CI/CD",
         "alt": "Illustration: a phone over a map, with a live location route"
       },
@@ -98,19 +98,19 @@
     "ticks": "Projects"
   },
   "Services": {
-    "title": "What I take on",
+    "title": "Services",
     "items": {
       "development": {
         "title": "Web and mobile development",
-        "text": "Android and web apps, from the first version to store release and the updates after it. The structure and the decisions behind it are written down, so your team can keep building on it."
+        "text": "Android and web apps, from the first version to store release and the updates after it. The structure and decisions are documented, and the code is thoroughly tested and built to be easy to maintain and extend."
       },
       "ai": {
         "title": "AI integration",
-        "text": "AI features added to an existing product where they save people real work, built with the same care for privacy, failure cases and cost as the rest of the system."
+        "text": "AI features added to an existing product where they save people time and make it easier to use, with a focus on privacy, functionality and keeping costs down."
       },
       "review": {
-        "title": "Architecture and code review",
-        "text": "A clear look at your system or codebase: what holds up, what will cause problems next, and what to fix first, written down so your team can act on it."
+        "title": "Architecture, code review and audit",
+        "text": "A clear look at your system or codebase: what holds up, what will cause problems next, and what to fix first, all documented, so your team knows how to move forward."
       }
     }
   },

@@ -71,6 +71,8 @@ mobile and AI." Sub-line: "I join your team or build the whole product with you,
 release. Apps I've worked on are used by tens of thousands of people."
 Karlo (2026-11-25, after release): bring the profile photo back in About (trust for hiring
 managers). D4 rejected a face-led hero, not a photo in About.
+Karlo (2026-11-25): headline "Senior software engineer for web and mobile apps and AI integration."
+("AI" alone could read as prompt writing). In Croatian the title stays in English.
 
 
 Karlo (2026-11-25): option 2. Hero headline direction "Senior software engineer who owns the work
