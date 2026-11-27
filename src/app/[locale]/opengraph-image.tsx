@@ -39,7 +39,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
         }}
       >
         <div style={{ fontSize: 30, fontWeight: 600 }}>{site.name}</div>
-        <div style={{ fontSize: 76, fontWeight: 600, lineHeight: 1.02, letterSpacing: '-0.035em', maxWidth: 980 }}>
+        <div style={{ fontSize: 76, fontWeight: 600, lineHeight: 1.02, letterSpacing: '-0.035em', maxWidth: 980, textWrap: 'balance' }}>
           {t('title')}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, fontSize: 26, color: '#6b6862' }}>
