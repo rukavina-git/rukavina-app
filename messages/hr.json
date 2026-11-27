@@ -2,7 +2,7 @@
   "Header": {
     "skip": "Preskoči na sadržaj",
     "nav": "Glavna navigacija",
-    "work": "Radovi",
+    "work": "Projekti",
     "services": "Usluge",
     "about": "O meni",
     "contact": "Javite se",
@@ -14,9 +14,9 @@
     "privacy": "Privatnost"
   },
   "Hero": {
-    "title": "Senior softverski inženjer za web, mobilne aplikacije i AI.",
+    "title": "Senior software engineer za web i mobilne aplikacije te AI integraciju.",
     "intro": "Pridružujem se vašem timu ili s vama gradim cijeli proizvod, od procjene do objave. Aplikacije na kojima sam radio koriste deseci tisuća ljudi.",
-    "cue": "Pogledajte radove",
+    "cue": "Pogledajte projekte",
     "carousel": "Projekti",
     "pause": "Zaustavi prikaz. Povucite ili koristite strelice za promjenu projekta.",
     "play": "Pokreni prikaz. Povucite ili koristite strelice za promjenu projekta.",
@@ -51,8 +51,8 @@
     }
   },
   "Work": {
-    "title": "Radovi",
-    "myPart": "Moj dio",
+    "title": "Projekti",
+    "myPart": "Moja uloga",
     "tags": {
       "nda": "NDA"
     },
@@ -64,9 +64,9 @@
     "projects": {
       "government-platform": {
         "name": "Državna platforma",
-        "summary": "Državna platforma koju koriste desetci tisuća ljudi, s praćenjem lokacije uživo i kartama. Ljudi potvrđuju identitet službenim identifikacijskim dokumentima, pa su privatnost i sigurnost njihovih osobnih podataka bile na prvom mjestu.",
-        "part": "Pridružio sam se jasno definiranom projektu i preuzeo odgovornost za svoj rad od zadatka vlasnika proizvoda do produkcije: razrada, procjene, prijedlozi arhitekture, implementacija i objave u trgovinama aplikacija, u agilnom timu u bliskoj suradnji s vlasnikom proizvoda, dizajnerima, QA-om i ostalim timovima.",
-        "partShort": "Odgovoran za svoj rad od zadatka vlasnika proizvoda do produkcije, u agilnom timu u bliskoj suradnji s vlasnikom proizvoda, dizajnerima, QA-om i ostalim timovima.",
+        "summary": "Državna platforma koju koriste deseci tisuća ljudi, s praćenjem lokacije uživo i kartama. Ljudi potvrđuju identitet službenim identifikacijskim dokumentima, pa su privatnost i sigurnost njihovih osobnih podataka bile na prvom mjestu.",
+        "part": "Pridružio sam se jasno definiranom projektu i preuzeo odgovornost za mobilni dio projekta, od zahtjeva kupca pa sve do produkcije: procjena trajanja implementacije, prijedlozi arhitekture, implementacija i objave u Google Play Store. Radio sam u agilnom timu u bliskoj suradnji s Product ownerom, dizajnerima, QA-om i ostalim timovima.",
+        "partShort": "Odgovoran za mobilni dio projekta, od zahtjeva kupca pa sve do produkcije. Radio sam u agilnom timu u bliskoj suradnji s Product ownerom, dizajnerima, QA-om i ostalim timovima.",
         "stack": "Kotlin · Lokacija i karte · CI/CD",
         "alt": "Ilustracija: mobitel iznad karte, s rutom lokacije uživo"
       },
@@ -81,16 +81,16 @@
       "gym-tracker": {
         "name": "Gym Tracker",
         "summary": "Privatna aplikacija za praćenje treninga, bez oglasa i nepotrebnih dodataka. Napravio sam je jer nijedna aplikacija nije radila samo ono što sam htio.",
-        "part": "Ideja i dizajn su moji. Izradio sam Android aplikaciju i backend iz jednog API ugovora koji provjerava CI te aplikaciju objavio na Google Playu. Svaka odluka o arhitekturi zapisana je u repozitoriju, pa se razlozi iza koda mogu pročitati.",
-        "partShort": "Ideja i dizajn su moji; izradio sam aplikaciju i backend iz jednog API ugovora te je objavio na Google Playu.",
+        "part": "Ideja i dizajn su moji. Izradio sam Android aplikaciju i backend iz jedne API specifikacije koju provjerava CI te aplikaciju objavio na Google Playu. Svaka odluka o arhitekturi zapisana je u repozitoriju, pa se razlozi iza koda mogu pročitati.",
+        "partShort": "Ideja i dizajn su moji; izradio sam aplikaciju i backend iz jedne API specifikacije te je objavio na Google Playu.",
         "stack": "Kotlin · Jetpack Compose · Spring Boot",
         "alt": "Zasloni aplikacije Gym Tracker: plan treninga i trening u tijeku"
       },
       "adria-va": {
         "name": "Adria VA",
-        "summary": "Web stranica za tvrtku koja pruža usluge virtualne asistencije i knjigovodstva.",
-        "part": "Većina posla odrađena je prije ikakvog dizajna: zajedno s tvrtkom utvrdio sam što njezini klijenti zapravo trebaju vidjeti i široku ideju pretvorio u jasan popis onoga što stranica mora raditi. Zatim sam je dizajnirao i izradio, na engleskom i hrvatskom.",
-        "partShort": "Zajedno s tvrtkom utvrdio što njezini klijenti trebaju vidjeti, zatim dizajnirao i izradio stranicu na engleskom i hrvatskom.",
+        "summary": "Web stranica za obrt koji pruža usluge virtualne asistencije i knjigovodstva.",
+        "part": "Većina posla odrađena je prije ikakvog dizajna: zajedno s obrtom utvrdio sam što njegovi klijenti zapravo trebaju vidjeti i široku ideju pretvorio u jasan popis onoga što stranica mora raditi. Zatim sam je dizajnirao i izradio, na engleskom i hrvatskom.",
+        "partShort": "Zajedno s obrtom utvrdio što njegovi klijenti trebaju vidjeti, zatim dizajnirao i izradio stranicu na engleskom i hrvatskom.",
         "stack": "Next.js · Tailwind CSS",
         "alt": "Početna stranica Adria VA u prozoru preglednika"
       }
@@ -98,19 +98,19 @@
     "ticks": "Projekti"
   },
   "Services": {
-    "title": "Što preuzimam",
+    "title": "Usluge",
     "items": {
       "development": {
         "title": "Razvoj web i mobilnih aplikacija",
-        "text": "Android i web aplikacije, od prve verzije do objave u trgovinama i ažuriranja nakon toga. Struktura i odluke iza nje su zapisane, pa vaš tim može nastaviti graditi na njoj."
+        "text": "Android i web aplikacije, od prve verzije do objave u trgovinama i ažuriranja nakon toga. Struktura i odluke su dokumentirane, kod je temeljito testiran i kreiran tako da održavanje i nadogradnja budu jednostavni."
       },
       "ai": {
-        "title": "Integracija umjetne inteligencije",
-        "text": "Funkcije umjetne inteligencije dodane postojećem proizvodu ondje gdje ljudima štede stvaran posao, izrađene s jednakom brigom o privatnosti, greškama i troškovima kao i ostatak sustava."
+        "title": "AI integracija",
+        "text": "AI značajke dodane postojećem proizvodu ondje gdje ljudima štede vrijeme i olakšavaju korištenje, s fokusom na privatnost, funkcionalnost i optimizaciju troškova."
       },
       "review": {
-        "title": "Arhitektura i pregled koda",
-        "text": "Jasan pogled na vaš sustav ili kod: što je dobro postavljeno, što će sljedeće stvarati probleme i što prvo popraviti, sve zapisano, pa vaš tim zna kako dalje."
+        "title": "Arhitektura, pregled i revizija koda",
+        "text": "Jasan pogled na vaš sustav ili kod: što je dobro postavljeno, što će sljedeće stvarati probleme i što prvo popraviti, sve dokumentirano, pa vaš tim zna kako nastaviti dalje."
       }
     }
   },

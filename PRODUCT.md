@@ -52,7 +52,7 @@ trade-offs clearly to whoever has to decide.
 
 ## Capabilities and Constraints
 
-- Services: Web and mobile development, AI integration, Architecture and code review, and a separate
+- Services: Web and mobile development, AI integration, Architecture, code review and audit, and a separate
   page for businesses (websites and apps). "Android" is never a service name; say "web and mobile",
   not only "mobile".
 - No prices for now; undecided whether they will be shown later.
